@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Check Username Availability | YourProfile.in</title>
-<meta name="description" content="Check if your desired username is available on YourProfile.in. Get your own unique profile link like domain.in/yourname.">
+<title>Check Username Availability | Profilix.in</title>
+<meta name="description" content="Check if your desired username is available on Profilix.in. Get your own unique profile link like profilix.in/yourname.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -19,6 +19,8 @@ nav,main,footer,.smenu{position:relative;z-index:1}
 
 /* NAV */
 nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;backdrop-filter:blur(20px);background:var(--nav);border-bottom:1px solid var(--cb);position:sticky;top:0;z-index:200}
+.nlogo-wrap{display:flex;align-items:center;gap:.5rem;text-decoration:none}
+.nlogo-img{height:32px;width:auto}
 .nlogo{font-family:var(--fd);font-weight:800;font-size:1.2rem;background:linear-gradient(135deg,var(--blue),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none}
 .nright{display:flex;align-items:center;gap:.75rem}
 .tbtn{width:36px;height:36px;border-radius:50%;border:1px solid var(--cb);background:var(--card);color:var(--text);font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s,transform .2s;backdrop-filter:blur(10px)}
@@ -38,6 +40,7 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 2
 .smenu{position:fixed;top:0;right:-320px;width:300px;height:100vh;height:100dvh;background:var(--bg2);border-left:1px solid var(--cb);z-index:300;transition:right .35s cubic-bezier(.4,0,.2,1);backdrop-filter:blur(20px);display:flex;flex-direction:column;padding:0;box-shadow:-10px 0 60px rgba(0,0,0,.4);overflow:hidden}
 .smenu.open{right:0}
 .mhdr{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 1.5rem 1rem;flex-shrink:0;border-bottom:1px solid var(--cb)}
+.mlogo-wrap{display:flex;align-items:center;gap:.5rem}
 .mlogo{font-family:var(--fd);font-weight:800;font-size:1.1rem;background:linear-gradient(135deg,var(--blue),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .mclose{width:32px;height:32px;border-radius:8px;border:1px solid var(--cb);background:var(--card);color:var(--text);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem}
 .mnav{list-style:none;display:flex;flex-direction:column;gap:.15rem;flex:1;overflow-y:auto;padding:1rem 1.5rem;-webkit-overflow-scrolling:touch}
@@ -78,7 +81,11 @@ main{padding:4rem 1.5rem 5rem;min-height:80vh;display:flex;flex-direction:column
 .result-available h3{font-family:var(--fd);font-size:1.4rem;font-weight:800;color:#34d399;margin-bottom:.5rem}
 .result-available .res-url{font-family:'Courier New',monospace;font-size:1.05rem;color:var(--text);background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.2);border-radius:10px;padding:.5rem 1rem;display:inline-block;margin-bottom:1.25rem}
 .result-available p{color:var(--muted);font-size:.9rem;margin-bottom:1.5rem}
-.btn-grab{display:inline-flex;align-items:center;gap:.6rem;background:linear-gradient(135deg,#25d366,#128c7e);color:#fff;padding:.9rem 2rem;border-radius:50px;text-decoration:none;font-weight:600;font-size:1rem;box-shadow:0 0 30px rgba(37,211,102,.25);transition:transform .2s,box-shadow .2s}
+
+/* Actions Wrapper (Used for both Taken & Available) */
+.action-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+
+.btn-grab{display:inline-flex;align-items:center;gap:.6rem;background:linear-gradient(135deg,#25d366,#128c7e);color:#fff;padding:.85rem 1.5rem;border-radius:50px;text-decoration:none;font-weight:600;font-size:.9rem;box-shadow:0 0 30px rgba(37,211,102,.25);transition:transform .2s,box-shadow .2s}
 .btn-grab:hover{transform:translateY(-2px);box-shadow:0 0 50px rgba(37,211,102,.4)}
 
 /* Taken */
@@ -87,7 +94,7 @@ main{padding:4rem 1.5rem 5rem;min-height:80vh;display:flex;flex-direction:column
 .result-taken h3{font-family:var(--fd);font-size:1.4rem;font-weight:800;color:#f87171;margin-bottom:.5rem}
 .result-taken .res-url{font-family:'Courier New',monospace;font-size:1.05rem;color:var(--muted);background:rgba(239,68,68,.07);border:1px solid rgba(239,68,68,.2);border-radius:10px;padding:.5rem 1rem;display:inline-block;margin-bottom:.75rem;text-decoration:line-through}
 .result-taken p{color:var(--muted);font-size:.9rem;margin-bottom:1.5rem}
-.taken-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+
 .btn-visit{display:inline-flex;align-items:center;gap:.6rem;background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;padding:.85rem 1.5rem;border-radius:50px;text-decoration:none;font-weight:600;font-size:.9rem;transition:transform .2s,opacity .2s}
 .btn-visit:hover{transform:translateY(-2px);opacity:.9}
 .btn-other{display:inline-flex;align-items:center;gap:.6rem;background:var(--card);border:1px solid var(--cb);color:var(--text);padding:.85rem 1.5rem;border-radius:50px;text-decoration:none;font-weight:500;font-size:.9rem;cursor:pointer;transition:background .2s}
@@ -114,6 +121,7 @@ main{padding:4rem 1.5rem 5rem;min-height:80vh;display:flex;flex-direction:column
 /* FOOTER */
 footer{border-top:1px solid var(--cb);padding:2rem 1.5rem;text-align:center;position:relative;z-index:1}
 .finr{max-width:700px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:1rem}
+.flog-wrap{display:flex;align-items:center;gap:.5rem}
 .flog{font-family:var(--fd);font-weight:800;font-size:1.1rem;background:linear-gradient(135deg,var(--blue),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .flnk{display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center}
 .flnk a{color:var(--muted);text-decoration:none;font-size:.85rem;transition:color .2s}
@@ -137,8 +145,8 @@ footer{border-top:1px solid var(--cb);padding:2rem 1.5rem;text-align:center;posi
   .search-prefix{font-size:.85rem;padding-left:1rem}
   .search-input{font-size:.9rem}
   .ncta{display:none}
-  .taken-actions{flex-direction:column;align-items:center}
-  .btn-visit,.btn-other{width:100%;max-width:280px;justify-content:center}
+  .action-buttons{flex-direction:column;align-items:center}
+  .btn-visit,.btn-other,.btn-grab{width:100%;max-width:280px;justify-content:center}
 }
 </style>
 </head>
@@ -149,20 +157,23 @@ footer{border-top:1px solid var(--cb);padding:2rem 1.5rem;text-align:center;posi
 
 <div class="smenu" id="smenu">
   <div class="mhdr">
-    <div class="mlogo">YourProfile.in</div>
+    <div class="mlogo-wrap">
+      <img src="https://i.ibb.co/8DLhs98M/Profilix-icon.png" alt="Profilix Logo" style="height:28px;">
+      <div class="mlogo">Profilix.in</div>
+    </div>
     <button class="mclose" onclick="closeMenu()">&#10005;</button>
   </div>
   <ul class="mnav">
-    <li><a href="https://yourprofile.in/" onclick="closeMenu()"><span class="mi">&#127968;</span> Home</a></li>
-    <li><a href="https://yourprofile.in/#about" onclick="closeMenu()"><span class="mi">&#8505;&#65039;</span> About Us</a></li>
-    <li><a href="https://yourprofile.in/check-username.html" class="active" onclick="closeMenu()"><span class="mi">&#128269;</span> Check Username</a></li>
-    <li><a href="https://yourprofile.in/#pricing" onclick="closeMenu()"><span class="mi">&#128176;</span> Pricing</a></li>
-    <li><a href="https://yourprofile.in/#compare" onclick="closeMenu()"><span class="mi">&#9878;&#65039;</span> Us vs Others</a></li>
-    <li><a href="https://yourprofile.in/#how" onclick="closeMenu()"><span class="mi">&#128203;</span> How It Works</a></li>
-    <li><a href="https://yourprofile.in/#faq" onclick="closeMenu()"><span class="mi">&#10067;</span> FAQ</a></li>
+    <li><a href="https://profilix.in/" onclick="closeMenu()"><span class="mi">&#127968;</span> Home</a></li>
+    <li><a href="https://profilix.in/#about" onclick="closeMenu()"><span class="mi">&#8505;&#65039;</span> About Us</a></li>
+    <li><a href="https://profilix.in/check-username.html" class="active" onclick="closeMenu()"><span class="mi">&#128269;</span> Check Username</a></li>
+    <li><a href="https://profilix.in/#pricing" onclick="closeMenu()"><span class="mi">&#128176;</span> Pricing</a></li>
+    <li><a href="https://profilix.in/#compare" onclick="closeMenu()"><span class="mi">&#9878;&#65039;</span> Us vs Others</a></li>
+    <li><a href="https://profilix.in/#how" onclick="closeMenu()"><span class="mi">&#128203;</span> How It Works</a></li>
+    <li><a href="https://profilix.in/#faq" onclick="closeMenu()"><span class="mi">&#10067;</span> FAQ</a></li>
     <div class="mdiv"></div>
-    <li><a href="https://yourprofile.in/#privacy" onclick="closeMenu()"><span class="mi">&#128274;</span> Privacy Policy</a></li>
-    <li><a href="mailto:contact@yourprofile.in"><span class="mi">&#9993;&#65039;</span> Contact Us</a></li>
+    <li><a href="https://profilix.in/#privacy" onclick="closeMenu()"><span class="mi">&#128274;</span> Privacy Policy</a></li>
+    <li><a href="mailto:contact@profilix.in"><span class="mi">&#9993;&#65039;</span> Contact Us</a></li>
   </ul>
   <a href="https://wa.me/916207126785?text=Hi%2C%20I%20want%20my%20personal%20profile%20website" target="_blank" class="mwa">
     &#128172; Chat on WhatsApp
@@ -170,7 +181,10 @@ footer{border-top:1px solid var(--cb);padding:2rem 1.5rem;text-align:center;posi
 </div>
 
 <nav>
-  <a href="https://yourprofile.in/" class="nlogo">YourProfile.in</a>
+  <a href="https://profilix.in/" class="nlogo-wrap">
+    <img src="https://i.ibb.co/8DLhs98M/Profilix-icon.png" alt="Profilix Logo" class="nlogo-img">
+    <span class="nlogo">Profilix.in</span>
+  </a>
   <div class="nright">
     <button class="tbtn" id="tbtn" onclick="toggleTheme()" title="Toggle dark/light">&#127769;</button>
     <a href="https://wa.me/916207126785?text=Hi%2C%20I%20want%20my%20personal%20profile%20website" target="_blank" class="ncta">Get Started &#8594;</a>
@@ -185,11 +199,11 @@ footer{border-top:1px solid var(--cb);padding:2rem 1.5rem;text-align:center;posi
 
   <div class="page-badge">&#128269; Username Checker</div>
   <h1 class="page-title">Is your username<br><span>still available?</span></h1>
-  <p class="page-sub">Type any name below to check if domain.in/yourname is free to grab. First come, first served &mdash; forever.</p>
+  <p class="page-sub">Type any name below to check if profilix.in/yourname is free to grab. First come, first served &mdash; forever.</p>
 
   <div class="search-wrap">
     <div class="search-box">
-      <span class="search-prefix">domain.in/</span>
+      <span class="search-prefix">profilix.in/</span>
       <input class="search-input" id="searchInput" type="text" placeholder="yourname" maxlength="30" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" oninput="onInput()" onkeydown="onKey(event)">
       <button class="search-btn" onclick="checkUsername()">Check &#8594;</button>
     </div>
@@ -207,14 +221,17 @@ footer{border-top:1px solid var(--cb);padding:2rem 1.5rem;text-align:center;posi
 
 <footer>
   <div class="finr">
-    <div class="flog">YourProfile.in</div>
-    <div class="flnk">
-      <a href="mailto:contact@yourprofile.in">&#9993;&#65039; contact@yourprofile.in</a>
-      <a href="https://wa.me/916207126785" target="_blank">&#128172; +91 62071 26785</a>
-      <a href="https://yourprofile.in/#privacy">Privacy</a>
-      <a href="https://yourprofile.in/#pricing">Pricing</a>
+    <div class="flog-wrap">
+      <img src="https://i.ibb.co/8DLhs98M/Profilix-icon.png" alt="Profilix Logo" style="height:32px;">
+      <div class="flog">Profilix.in</div>
     </div>
-    <p class="fcp">&#169; 2025 YourProfile.in &middot; Your identity. Your link. Your web.</p>
+    <div class="flnk">
+      <a href="mailto:contact@profilix.in">&#9993;&#65039; contact@profilix.in</a>
+      <a href="https://wa.me/916207126785" target="_blank">&#128172; +91 62071 26785</a>
+      <a href="https://profilix.in/#privacy">Privacy</a>
+      <a href="https://profilix.in/#pricing">Pricing</a>
+    </div>
+    <p class="fcp">&#169; 2025 Profilix.in &middot; Your identity. Your link. Your web.</p>
   </div>
 </footer>
 
@@ -328,7 +345,7 @@ function checkUsername(){
   }, 600);
 }
 
-// Ye raha aapka Reset Search Function jisme koi link nahi hai
+// Reset Search Function
 function resetSearch(){
   document.getElementById('searchInput').value='';
   document.getElementById('resultWrap').innerHTML='';
@@ -343,16 +360,18 @@ function showAvailable(username){
     '<div class="result-available">' +
       '<div class="res-icon">&#127881;</div>' +
       '<h3>Username is Available!</h3>' +
-      '<div class="res-url">domain.in/' + username + '</div>' +
-      '<p>Great news! <strong>domain.in/' + username + '</strong> is free. Grab it now before someone else does &mdash; usernames are unique and permanent.</p>' +
-      '<a href="https://wa.me/916207126785?text=' + waMsg + '" target="_blank" class="btn-grab">&#128172; Reserve This Username</a>' +
+      '<div class="res-url">profilix.in/' + username + '</div>' +
+      '<p>Great news! <strong>profilix.in/' + username + '</strong> is free. Grab it now before someone else does &mdash; usernames are unique and permanent.</p>' +
+      '<div class="action-buttons">' +
+        '<a href="https://wa.me/916207126785?text=' + waMsg + '" target="_blank" class="btn-grab">&#128172; Reserve Username</a>' +
+        '<button onclick="resetSearch()" class="btn-other">&#128269; Check Another</button>' +
+      '</div>' +
     '</div>';
 }
 
 function showTaken(username){
   var rw=document.getElementById('resultWrap');
-  // Ye auto-fetch kar lega profile ka link ussi domain se
-  var visitUrl='https://yourprofile.in/' + username;
+  var visitUrl='https://profilix.in/' + username;
   var avatarLetter=username.charAt(0).toUpperCase();
   var colors=['linear-gradient(135deg,#3b82f6,#06b6d4)','linear-gradient(135deg,#8b5cf6,#ec4899)','linear-gradient(135deg,#10b981,#3b82f6)','linear-gradient(135deg,#f59e0b,#ef4444)','linear-gradient(135deg,#06b6d4,#8b5cf6)'];
   var color=colors[username.charCodeAt(0) % colors.length];
@@ -361,17 +380,17 @@ function showTaken(username){
     '<div class="result-taken">' +
       '<div class="res-icon">&#128274;</div>' +
       '<h3>Username is Taken</h3>' +
-      '<div class="res-url">domain.in/' + username + '</div>' +
+      '<div class="res-url">profilix.in/' + username + '</div>' +
       '<div class="profile-preview-mini">' +
         '<div class="pp-avatar" style="background:' + color + '">' + avatarLetter + '</div>' +
         '<div>' +
-          '<div class="pp-name">domain.in/' + username + '</div>' +
+          '<div class="pp-name">profilix.in/' + username + '</div>' +
           '<div class="pp-role">This username is already reserved</div>' +
         '</div>' +
       '</div>' +
       '<p>This username is already owned. You can visit their profile page or search for a different username.</p>' +
-      '<div class="taken-actions">' +
-        '<a href="' + visitUrl + '" target="_blank" class="btn-visit">&#128064; Visit Profile Page</a>' +
+      '<div class="action-buttons">' +
+        '<a href="' + visitUrl + '" target="_blank" class="btn-visit">&#128064; Visit Profile</a>' +
         '<button onclick="resetSearch()" class="btn-other">&#128269; Search Another</button>' +
       '</div>' +
     '</div>';
