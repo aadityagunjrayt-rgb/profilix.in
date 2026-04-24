@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms & Policies | Profilix</title>
+<meta name="description" content="Legal agreements, terms, and privacy policies for Profilix services.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* === CORE STYLES FROM HOMEPAGE === */
+:root{--bg:#050810;--bg2:#080d1a;--card:rgba(255,255,255,0.04);--cb:rgba(255,255,255,0.08);--blue:#3b82f6;--bl:#60a5fa;--cyan:#06b6d4;--purple:#8b5cf6;--green:#10b981;--red:#ef4444;--text:#f1f5f9;--muted:#94a3b8;--fd:'Syne',sans-serif;--fb:'Inter',sans-serif;--nav:rgba(5,8,16,0.88)}
+[data-theme="light"]{--bg:#f0f4ff;--bg2:#e4eaf7;--card:rgba(255,255,255,0.8);--cb:rgba(59,130,246,0.15);--text:#0f172a;--muted:#475569;--nav:rgba(240,244,255,0.92)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{background:var(--bg);color:var(--text);font-family:var(--fb);font-size:16px;line-height:1.6;overflow-x:hidden;transition:background .4s,color .3s}
+#bgc{position:fixed;inset:0;z-index:0;pointer-events:none}
+section,nav,footer,.smenu,.page-wrap{position:relative;z-index:1}
+
+/* === NAVBAR === */
+nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;backdrop-filter:blur(20px);background:var(--nav);border-bottom:1px solid var(--cb);position:sticky;top:0;z-index:200}
+.nleft{display:flex;align-items:center;gap:0.75rem}
+.nback{color:var(--muted);font-size:1.4rem;text-decoration:none;transition:color 0.2s, transform 0.2s;display:flex;align-items:center;justify-content:center}
+.nback:hover{color:var(--text);transform:translateX(-3px)}
+.nlogo{font-family:var(--fd);font-weight:800;font-size:1.2rem;background:linear-gradient(135deg,var(--blue),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.nright{display:flex;align-items:center;gap:.75rem}
+.tbtn{width:36px;height:36px;border-radius:50%;border:1px solid var(--cb);background:var(--card);color:var(--text);font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s,transform .2s;backdrop-filter:blur(10px)}
+.tbtn:hover{background:rgba(59,130,246,.15);transform:rotate(20deg)}
+.mbtn{width:36px;height:36px;border-radius:8px;border:1px solid var(--cb);background:var(--card);cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:8px;transition:background .2s;display:none}
+.mbtn:hover{background:rgba(59,130,246,.15)}
+.mbtn span{display:block;width:18px;height:2px;background:var(--text);border-radius:2px;transition:transform .3s,opacity .3s}
+.mbtn.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.mbtn.open span:nth-child(2){opacity:0}
+.mbtn.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.ncta{background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;border:none;padding:.6rem 1.4rem;border-radius:50px;font-family:var(--fb);font-weight:500;font-size:.9rem;cursor:pointer;text-decoration:none;transition:opacity .2s,transform .2s}
+.ncta:hover{opacity:.85;transform:translateY(-1px)}
+
+/* === MOBILE MENU === */
+.movl{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:250;opacity:0;pointer-events:none;transition:opacity .3s;backdrop-filter:blur(4px)}
+.movl.show{opacity:1;pointer-events:all}
+.smenu{position:fixed;top:0;right:-320px;width:300px;height:100vh;height:100dvh;background:var(--bg2);border-left:1px solid var(--cb);z-index:300;transition:right .35s cubic-bezier(.4,0,.2,1);backdrop-filter:blur(20px);display:flex;flex-direction:column;padding:0;box-shadow:-10px 0 60px rgba(0,0,0,.4);overflow:hidden}
+.smenu.open{right:0}
+.mhdr{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 1.5rem 1rem;flex-shrink:0;border-bottom:1px solid var(--cb);margin-bottom:0}
+.mclose{width:32px;height:32px;border-radius:8px;border:1px solid var(--cb);background:var(--card);color:var(--text);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem}
+.mnav{list-style:none;display:flex;flex-direction:column;gap:.15rem;flex:1;overflow-y:auto;padding:1rem 1.5rem;-webkit-overflow-scrolling:touch}
+.mnav li a{display:flex;align-items:center;gap:.85rem;color:var(--muted);text-decoration:none;padding:.85rem 1rem;border-radius:12px;font-size:.95rem;font-weight:500;transition:background .2s,color .2s}
+.mnav li a:hover{background:rgba(59,130,246,.1);color:var(--text)}
+.mi{font-size:1.1rem;width:24px;text-align:center}
+.mwa{display:flex;align-items:center;gap:.75rem;background:linear-gradient(135deg,#25d366,#128c7e);color:#fff;padding:1rem 1.25rem;border-radius:14px;text-decoration:none;font-weight:600;font-size:.95rem;margin:0 1.5rem 1.5rem;flex-shrink:0;transition:opacity .2s}
+.mwa:hover{opacity:.9}
+
+/* === PAGE SPECIFIC STYLES === */
+.legal-header {
+  text-align: center;
+  padding: 5rem 1.5rem 2rem;
+}
+.legal-header h1 {
+  font-family: var(--fd);
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+  animation: fdwn .7s ease .1s both;
+}
+.legal-header p {
+  color: var(--muted);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  animation: fdwn .7s ease .2s both;
+}
+
+/* === TABS UI === */
+.tab-nav {
+  position: sticky;
+  top: 73px; /* Just below navbar */
+  z-index: 150;
+  background: var(--nav);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--cb);
+  padding: 1rem 1.5rem;
+  animation: fdwn .7s ease .3s both;
+}
+.tabs-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.tab-btn {
+  display: inline-flex;
+  align-items: center;
+  background: var(--card);
+  border: 1px solid var(--cb);
+  color: var(--muted);
+  padding: 0.6rem 1.25rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.tab-btn:hover {
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--text);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+.tab-btn.active {
+  background: linear-gradient(135deg, rgba(59,130,246,0.15), rgba(6,182,212,0.1));
+  color: var(--bl);
+  border-color: rgba(59, 130, 246, 0.4);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.1);
+}
+
+/* === CONTENT SECTIONS === */
+.content-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+.policy-card {
+  background: var(--card);
+  border: 1px solid var(--cb);
+  border-radius: 24px;
+  padding: 3rem 2.5rem;
+  backdrop-filter: blur(10px);
+  scroll-margin-top: 150px; /* Accounts for sticky header + tabs */
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.policy-card:hover {
+  border-color: rgba(59, 130, 246, 0.2);
+}
+.policy-card h2 {
+  font-family: var(--fd);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.policy-card h2::before {
+  content: '';
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--blue), var(--cyan));
+}
+.policy-card h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 2rem 0 1rem;
+  color: var(--text);
+}
+.policy-card p {
+  color: var(--muted);
+  margin-bottom: 1.25rem;
+  font-size: 0.95rem;
+}
+.policy-card ul {
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+  padding-left: 1.25rem;
+  font-size: 0.95rem;
+}
+.policy-card ul li {
+  margin-bottom: 0.5rem;
+}
+.policy-card a {
+  color: var(--bl);
+  text-decoration: none;
+}
+.policy-card a:hover {
+  text-decoration: underline;
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--cb), transparent);
+  margin: 1rem 0;
+}
+
+/* === FOOTER (MATCHING) === */
+footer{border-top:1px solid var(--cb);padding:2.5rem 1.5rem;text-align:center;background:var(--bg2);}
+.finr{max-width:800px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:1.25rem}
+.flog{font-family:var(--fd);font-weight:800;font-size:1.1rem;background:linear-gradient(135deg,var(--blue),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.flnk{display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center}
+.flnk a{color:var(--muted);text-decoration:none;font-size:.88rem;transition:color .2s;display:flex;align-items:center;gap:.4rem}
+.flnk a:hover{color:var(--text)}
+.fcp{color:var(--muted);font-size:.8rem}
+
+.waf{position:fixed;bottom:1.25rem;right:1.25rem;width:52px;height:52px;background:linear-gradient(135deg,#25d366,#128c7e);border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:1.4rem;z-index:9999;animation:pwa 2s infinite;transition:transform .2s}
+.waf:hover{transform:scale(1.1)}
+@keyframes pwa{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.4)}50%{box-shadow:0 4px 45px rgba(37,211,102,.7)}}
+
+/* === ANIMATIONS === */
+@keyframes fdwn{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
+.rev{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
+.rev.vis{opacity:1;transform:translateY(0)}
+
+@media(max-width:700px){
+  nav{padding:1rem 1.25rem}
+  .mbtn{display:flex}
+  .ncta{display:none}
+  .tab-nav { top: 69px; padding: 1rem; }
+  .tabs-container { gap: 0.5rem; }
+  .tab-btn { font-size: 0.85rem; padding: 0.5rem 1rem; }
+  .legal-header { padding: 4rem 1.25rem 1.5rem; }
+  .legal-header h1 { font-size: 2.2rem; }
+  .policy-card { padding: 2rem 1.5rem; }
+  .policy-card h2 { font-size: 1.6rem; }
+  .waf{bottom:1rem;right:1rem;width:50px;height:50px;font-size:1.3rem}
+}
+</style>
+</head>
+<body>
+
+<canvas id="bgc"></canvas>
+
+<div class="movl" id="movl" onclick="closeMenu()"></div>
+<div class="smenu" id="smenu">
+  <div class="mhdr">
+    <div class="nlogo">Profilix</div>
+    <button class="mclose" onclick="closeMenu()">X</button>
+  </div>
+  <ul class="mnav">
+    <li><a href="/" onclick="closeMenu()"><span class="mi">&#127968;</span> Home</a></li>
+    <li><a href="/check-username.html" onclick="closeMenu()"><span class="mi">&#128269;</span> Check Username</a></li>
+    <div class="mdiv" style="height:1px;background:var(--cb);margin:.5rem 0;"></div>
+    <li><a href="#privacy" onclick="closeMenu()"><span class="mi">&#128274;</span> Privacy Policy</a></li>
+    <li><a href="#terms" onclick="closeMenu()"><span class="mi">&#128220;</span> Terms & Conditions</a></li>
+    <li><a href="#refund" onclick="closeMenu()"><span class="mi">&#128176;</span> Refund Policy</a></li>
+    <li><a href="#service" onclick="closeMenu()"><span class="mi">&#128203;</span> Service Policy</a></li>
+    <li><a href="mailto:profilix.in@gmail.com"><span class="mi">&#9993;&#65039;</span> Contact Us</a></li>
+  </ul>
+  <a href="https://wa.me/916207126785?text=Hi%2C%20I%20have%20a%20question%20about%20your%20policies" target="_blank" class="mwa">
+    &#128172; Chat on WhatsApp
+  </a>
+</div>
+
+<nav>
+  <div class="nleft">
+    <a href="/" class="nback" title="Back to Home">&#8592;</a>
+    <div class="nlogo">Profilix</div>
+  </div>
+  <div class="nright">
+    <button class="tbtn" id="tbtn" onclick="toggleTheme()" title="Toggle dark/light">&#127769;</button>
+    <a href="https://wa.me/916207126785?text=Hi%2C%20I%20want%20my%20personal%20profile%20website" target="_blank" class="ncta">Get Started &#8594;</a>
+    <button class="mbtn" id="mbtn" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <header class="legal-header">
+    <h1>Terms & Policies</h1>
+    <p>Everything you need to know about our rules, data handling, and service guarantees. Transparency is our priority.</p>
+  </header>
+
+  <div class="tab-nav">
+    <div class="tabs-container">
+      <a href="#privacy" class="tab-btn active" data-target="privacy">Privacy Policy</a>
+      <a href="#terms" class="tab-btn" data-target="terms">Terms & Conditions</a>
+      <a href="#refund" class="tab-btn" data-target="refund">Refund Policy</a>
+      <a href="#service" class="tab-btn" data-target="service">Service Policy</a>
+    </div>
+  </div>
+
+  <main class="content-wrapper">
+    
+    <section id="privacy" class="policy-card rev">
+      <h2>Privacy Policy</h2>
+      <p>Last updated: April 2026</p>
+      <div class="divider"></div>
+      
+      <h3>1. Information We Collect</h3>
+      <p>When you use Profilix to create your personal website, we only collect the information necessary to provide and customize our services. This includes:</p>
+      <ul>
+        <li><strong>Personal Information:</strong> Your full name, email address, WhatsApp number, and chosen username.</li>
+        <li><strong>Profile Data:</strong> Photos, biographical text, social media links, and any portfolio/resume files you choose to upload to your profile.</li>
+        <li><strong>Usage Data:</strong> Basic analytics regarding how your profile is accessed, helping us ensure fast load times and service stability.</li>
+      </ul>
+
+      <h3>2. How We Use Your Data</h3>
+      <p>Your data is exclusively used for the setup, maintenance, and hosting of your unique Profilix website. We use your contact information solely to communicate updates regarding your account, renewal reminders, and support queries.</p>
+
+      <h3>3. Data Sharing & Third Parties</h3>
+      <p><strong>We do not sell, rent, or trade your personal data.</strong> We do not inject third-party trackers or ads onto your personal profile. Your profile is public by nature, so the information you ask us to put on your page will be visible to anyone with your link.</p>
+
+      <h3>4. Your Rights & Data Removal</h3>
+      <p>You own your content. If you wish to take down your website, update your details, or completely erase your data from our servers, simply contact our support team via WhatsApp or email, and we will process the deletion within 48 hours.</p>
+    </section>
+
+    <section id="terms" class="policy-card rev">
+      <h2>Terms & Conditions</h2>
+      <p>Last updated: April 2026</p>
+      <div class="divider"></div>
+      
+      <h3>1. Acceptance of Terms</h3>
+      <p>By accessing and using the services provided by Profilix, you agree to be bound by these Terms & Conditions. If you do not agree with any part of these terms, please do not use our services.</p>
+
+      <h3>2. Usernames & Exclusivity</h3>
+      <p>Usernames (e.g., profilix.in/yourname) are distributed on a strict <strong>first-come, first-served</strong> basis. Reserving a username requires active payment of a subscription plan. If your plan expires and the grace period passes, the username may be released to the public.</p>
+
+      <h3>3. Acceptable Use</h3>
+      <p>You agree to use your Profilix page responsibly. You must not use our service to:</p>
+      <ul>
+        <li>Host or share illegal, harmful, or explicitly offensive content.</li>
+        <li>Impersonate another individual, brand, or entity.</li>
+        <li>Distribute malware, spam, or engage in phishing activities.</li>
+      </ul>
+      <p>We reserve the right to suspend or terminate any profile that violates these guidelines without prior notice or refund.</p>
+
+      <h3>4. Intellectual Property</h3>
+      <p>You retain full ownership of the text, images, and files you provide to us. However, Profilix retains all ownership and intellectual property rights over the custom design templates, underlying code, layouts, and overall UI/UX of the platform.</p>
+    </section>
+
+    <section id="refund" class="policy-card rev">
+      <h2>Refund Policy</h2>
+      <p>Last updated: April 2026</p>
+      <div class="divider"></div>
+      
+      <h3>1. One-Time Setup Fee</h3>
+      <p>The initial setup fee covers the manual labor and technical resources required to design and deploy your custom profile within 48 hours. Because this is a personalized digital service, the setup fee is <strong>non-refundable once development has begun</strong>.</p>
+
+      <h3>2. Satisfaction Guarantee</h3>
+      <p>We want you to love your profile. If you are not satisfied with the initial delivery, we offer revisions to tweak the design, colors, and layout until it meets the standards of your chosen template. If we completely fail to deliver the website as promised, a full refund will be issued.</p>
+
+      <h3>3. Subscription Cancellations</h3>
+      <p>You can choose not to renew your 4-month or 12-month subscription at any time. There are no lock-in contracts or cancellation fees. However, we do not offer prorated refunds for mid-cycle cancellations. Your profile will remain active until the end of your currently paid billing cycle.</p>
+    </section>
+
+    <section id="service" class="policy-card rev">
+      <h2>Service Policy</h2>
+      <p>Last updated: April 2026</p>
+      <div class="divider"></div>
+      
+      <h3>1. Delivery Timeline</h3>
+      <p>Our standard delivery promise is <strong>48 hours</strong> from the moment we receive all your required information (photos, text, links) and payment confirmation. If there are delays on our end, you will be notified immediately.</p>
+
+      <h3>2. Profile Updates</h3>
+      <p>The frequency of content updates (changing a photo, updating a link, adding a new resume) depends on your plan:</p>
+      <ul>
+        <li><strong>Setup Plan:</strong> No recurring free updates (updates incur a small fee).</li>
+        <li><strong>4-Month Plan:</strong> 1 free update per month.</li>
+        <li><strong>12-Month Plan:</strong> Unlimited free updates.</li>
+      </ul>
+      <p>Update requests are typically processed within 24-48 hours via WhatsApp support.</p>
+
+      <h3>3. Uptime & Maintenance</h3>
+      <p>We strive for a 99.9% uptime for all user profiles. Occasionally, short maintenance windows are required to upgrade our infrastructure. These are generally performed during off-peak hours to minimize disruption to your digital presence.</p>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <div class="finr">
+    <div class="flog">Profilix</div>
+
+    <div class="flnk">
+      <a href="/#pricing">Pricing</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/check-username.html">Check Username</a>
+    </div>
+
+    <div class="flnk">
+      <a href="mailto:profilix.in@gmail.com">📧 profilix.in@gmail.com</a>
+      <a href="https://wa.me/916207126785" target="_blank">💬 WhatsApp</a>
+    </div>
+
+    <div class="flnk">
+      <a href="/legal.html#privacy">Privacy Policy</a>
+      <a href="/legal.html#terms">Terms & Conditions</a>
+      <a href="/legal.html#refund">Refund Policy</a>
+    </div>
+
+    <p class="fcp">
+      © 2026 Profilix · Turn your name into a website 🚀
+    </p>
+  </div>
+</footer>
+
+<a href="https://wa.me/916207126785?text=Hi%2C%20I%20have%20a%20question%20about%20Profilix" target="_blank" class="waf" title="Chat on WhatsApp">&#128172;</a>
+
+
+<script>
+// --- Canvas Background Animation ---
+(function(){
+  var c=document.getElementById('bgc'),ctx=c.getContext('2d'),W,H,pts=[];
+  function rs(){W=c.width=window.innerWidth;H=c.height=window.innerHeight}
+  rs();window.addEventListener('resize',rs);
+  function P(){this.x=Math.random()*W;this.y=Math.random()*H;this.r=Math.random()*1.4+0.3;this.vx=(Math.random()-.5)*.35;this.vy=(Math.random()-.5)*.35;this.a=Math.random()*.5+.1;this.col=Math.random()>.5?'#3b82f6':'#06b6d4'}
+  for(var i=0;i<80;i++)pts.push(new P());
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    for(var i=0;i<pts.length;i++){
+      for(var j=i+1;j<pts.length;j++){
+        var dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);
+        if(d<130){
+          ctx.beginPath();
+          ctx.strokeStyle='rgba(59,130,246,'+(0.07*(1-d/130))+')';
+          ctx.lineWidth=.5;
+          ctx.moveTo(pts[i].x,pts[i].y);
+          ctx.lineTo(pts[j].x,pts[j].y);
+          ctx.stroke()
+        }
+      }
+    }
+    pts.forEach(function(p){
+      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle=p.col;ctx.globalAlpha=p.a;ctx.fill();ctx.globalAlpha=1;
+      p.x+=p.vx;p.y+=p.vy;
+      if(p.x<0||p.x>W)p.vx*=-1;
+      if(p.y<0||p.y>H)p.vy*=-1
+    });
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+// --- Theme Toggle ---
+function toggleTheme(){
+  var h=document.documentElement,b=document.getElementById('tbtn'),d=h.getAttribute('data-theme')==='dark';
+  h.setAttribute('data-theme',d?'light':'dark');
+  b.innerHTML=d?'&#9728;&#65039;':'&#127769;';
+}
+
+// --- Mobile Menu Toggle ---
+function toggleMenu(){
+  var m=document.getElementById('smenu'),o=document.getElementById('movl'),b=document.getElementById('mbtn');
+  if(m.classList.contains('open')){closeMenu()}
+  else{m.classList.add('open');o.classList.add('show');b.classList.add('open');document.body.style.overflow='hidden'}
+}
+function closeMenu(){
+  document.getElementById('smenu').classList.remove('open');
+  document.getElementById('movl').classList.remove('show');
+  document.getElementById('mbtn').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+// --- Scroll Reveal Animations ---
+var revs=document.querySelectorAll('.rev');
+var obs=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){
+      e.target.classList.add('vis');
+    }
+  })
+},{threshold:.1});
+revs.forEach(function(r){obs.observe(r)});
+
+// --- Tabs Interactivity & Scroll Spy ---
+const sections = document.querySelectorAll('.policy-card');
+const navLinks = document.querySelectorAll('.tab-btn');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  const scrollY = window.pageYOffset;
+  
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    // Offset calculation to account for sticky header
+    if (scrollY >= (sectionTop - 200)) {
+      current = section.getAttribute('id');
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('data-target') === current) {
+      link.classList.add('active');
+    }
+  });
+});
+</script>
+</body>
+</html>
