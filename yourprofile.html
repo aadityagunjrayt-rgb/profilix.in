@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Get Your Personal Website in 48 Hours | domain.in/yourname</title>
-<meta name="description" content="Get your own personal profile website. Unique link like domain.in/yourname. Setup in 48 hours for just Rs.999.">
-<meta name="keywords" content="personal website, profile link, freelancer website, online resume, digital identity, linktree alternative India">
+<title>Get Your Personal Website in 48 Hours | profilix.in/yourname</title>
+<meta name="description" content="Get your own personal profile website. Unique link like profilix.in/yourname. Setup in 48 hours for just Rs.999.">
+<meta name="keywords" content="personal website, profile link, freelancer website, online resume, digital identity, domain alternative India">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -32,17 +32,17 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 2
 .ncta:hover{opacity:.85;transform:translateY(-1px)}
 .movl{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:250;opacity:0;pointer-events:none;transition:opacity .3s;backdrop-filter:blur(4px)}
 .movl.show{opacity:1;pointer-events:all}
-.smenu{position:fixed;top:0;right:-320px;width:300px;height:100vh;background:var(--bg2);border-left:1px solid var(--cb);z-index:300;transition:right .35s cubic-bezier(.4,0,.2,1);backdrop-filter:blur(20px);display:flex;flex-direction:column;padding:2rem 1.5rem;box-shadow:-10px 0 60px rgba(0,0,0,.4)}
+.smenu{position:fixed;top:0;right:-320px;width:300px;height:100vh;height:100dvh;background:var(--bg2);border-left:1px solid var(--cb);z-index:300;transition:right .35s cubic-bezier(.4,0,.2,1);backdrop-filter:blur(20px);display:flex;flex-direction:column;padding:0;box-shadow:-10px 0 60px rgba(0,0,0,.4);overflow:hidden}
 .smenu.open{right:0}
-.mhdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:2.5rem}
+.mhdr{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 1.5rem 1rem;flex-shrink:0;border-bottom:1px solid var(--cb);margin-bottom:0}
 .mlogo{font-family:var(--fd);font-weight:800;font-size:1.1rem;background:linear-gradient(135deg,var(--blue),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .mclose{width:32px;height:32px;border-radius:8px;border:1px solid var(--cb);background:var(--card);color:var(--text);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem}
-.mnav{list-style:none;display:flex;flex-direction:column;gap:.25rem;flex:1}
+.mnav{list-style:none;display:flex;flex-direction:column;gap:.15rem;flex:1;overflow-y:auto;padding:1rem 1.5rem;-webkit-overflow-scrolling:touch}
 .mnav li a{display:flex;align-items:center;gap:.85rem;color:var(--muted);text-decoration:none;padding:.85rem 1rem;border-radius:12px;font-size:.95rem;font-weight:500;transition:background .2s,color .2s}
 .mnav li a:hover{background:rgba(59,130,246,.1);color:var(--text)}
 .mi{font-size:1.1rem;width:24px;text-align:center}
-.mdiv{height:1px;background:var(--cb);margin:.75rem 0}
-.mwa{display:flex;align-items:center;gap:.75rem;background:linear-gradient(135deg,#25d366,#128c7e);color:#fff;padding:1rem 1.25rem;border-radius:14px;text-decoration:none;font-weight:600;font-size:.95rem;margin-top:1rem;transition:opacity .2s}
+.mdiv{height:1px;background:var(--cb);margin:.5rem 0}
+.mwa{display:flex;align-items:center;gap:.75rem;background:linear-gradient(135deg,#25d366,#128c7e);color:#fff;padding:1rem 1.25rem;border-radius:14px;text-decoration:none;font-weight:600;font-size:.95rem;margin:0 1.5rem 1.5rem;flex-shrink:0;transition:opacity .2s}
 .mwa:hover{opacity:.9}
 .hero{min-height:92vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:5rem 1.5rem 4rem;position:relative}
 .hglow{position:absolute;width:700px;height:700px;background:radial-gradient(circle,rgba(59,130,246,.18) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
@@ -223,27 +223,27 @@ footer{border-top:1px solid var(--cb);padding:2.5rem 1.5rem;text-align:center}
 <div class="movl" id="movl" onclick="closeMenu()"></div>
 <div class="smenu" id="smenu">
   <div class="mhdr">
-    <div class="mlogo">YourProfile.in</div>
+    <div class="mlogo">Profilix.in</div>
     <button class="mclose" onclick="closeMenu()">X</button>
   </div>
   <ul class="mnav">
     <li><a href="#" onclick="closeMenu()"><span class="mi">&#127968;</span> Home</a></li>
     <li><a href="#about" onclick="closeMenu()"><span class="mi">&#8505;&#65039;</span> About Us</a></li>
-    <li><a href="https://wa.me/916207126785?text=Hi%2C%20check%20username" target="_blank" onclick="closeMenu()"><span class="mi">&#128269;</span> Check Username</a></li>
+   <li> <a href="check-username.html" onclick="closeMenu()"> <span class="mi">&#128269;</span> Check Username </a></li>
     <li><a href="#pricing" onclick="closeMenu()"><span class="mi">&#128176;</span> Pricing</a></li>
     <li><a href="#compare" onclick="closeMenu()"><span class="mi">&#9878;&#65039;</span> Us vs Others</a></li>
     <li><a href="#how" onclick="closeMenu()"><span class="mi">&#128203;</span> How It Works</a></li>
     <li><a href="#faq" onclick="closeMenu()"><span class="mi">&#10067;</span> FAQ</a></li>
     <div class="mdiv"></div>
-    <li><a href="#privacy" onclick="closeMenu()"><span class="mi">&#128274;</span> Privacy Policy</a></li>
-    <li><a href="mailto:contact@yourprofile.in"><span class="mi">&#9993;&#65039;</span> Contact Us</a></li>
+    <li><a href="/legal.html#privacy" onclick="closeMenu()"><span class="mi">&#128274;</span> Privacy Policy</a></li>
+    <li><a href="mailto: profilix.in@gmail.com"><span class="mi">&#9993;&#65039;</span> Contact Us</a></li>
   </ul>
   <a href="https://wa.me/916207126785?text=Hi%2C%20I%20want%20my%20personal%20profile%20website" target="_blank" class="mwa">
     &#128172; Chat on WhatsApp
   </a>
 </div>
 <nav>
-  <div class="nlogo">YourProfile.in</div>
+  <div class="nlogo">Profilix.in</div>
   <div class="nright">
     <button class="tbtn" id="tbtn" onclick="toggleTheme()" title="Toggle dark/light">&#127769;</button>
     <a href="https://wa.me/916207126785?text=Hi%2C%20I%20want%20my%20personal%20profile%20website" target="_blank" class="ncta">Get Started &#8594;</a>
@@ -258,7 +258,7 @@ footer{border-top:1px solid var(--cb);padding:2.5rem 1.5rem;text-align:center}
   <h1>Get Your Personal<br><span>Website in 48 Hours</span></h1>
   <p class="hsub">Your own unique profile link. Customize your website &amp; attract your audience. Share it everywhere &mdash; Instagram bio, LinkedIn, business cards.</p>
   <div class="hurl">
-    <span class="ud">domain.in/</span><span class="un" id="unname">yourname</span>
+    <span class="ud">profilix.in/</span><span class="un" id="unname">yourname</span>
   </div>
   <div class="ctag">
     <a href="https://wa.me/916207126785?text=Hi%2C%20I%20want%20my%20personal%20profile%20website" target="_blank" class="btnp">&#128172; Get Your Profile Now</a>
@@ -270,15 +270,15 @@ footer{border-top:1px solid var(--cb);padding:2.5rem 1.5rem;text-align:center}
   <div class="dprof">
     <a href="#" class="dcard">
       <div class="dav" style="background:linear-gradient(135deg,#3b82f6,#06b6d4)">R</div>
-      <div><div>Rahul Sharma</div><div class="dlnk">domain.in/rahul</div></div>
+      <div><div>Rahul Sharma</div><div class="dlnk">profilix.in/rahul</div></div>
     </a>
     <a href="#" class="dcard">
       <div class="dav" style="background:linear-gradient(135deg,#8b5cf6,#ec4899)">A</div>
-      <div><div>Aman Verma</div><div class="dlnk">domain.in/aman</div></div>
+      <div><div>Aaditya Kumar</div><div class="dlnk">profilix.in/aaditya</div></div>
     </a>
     <a href="#" class="dcard">
       <div class="dav" style="background:linear-gradient(135deg,#10b981,#3b82f6)">P</div>
-      <div><div>Priya Singh</div><div class="dlnk">domain.in/priya</div></div>
+      <div><div>Priya Singh</div><div class="dlnk">profilix.in/priya</div></div>
     </a>
   </div>
 </div>
@@ -291,8 +291,8 @@ footer{border-top:1px solid var(--cb);padding:2.5rem 1.5rem;text-align:center}
     <div class="ugrid rev">
       <div class="ucard cb"><div class="cico">&#127978;</div><span class="ctg tb">Local Business</span><h3>Get more customers online</h3><p>Share your shop link on WhatsApp groups, Google Maps, and Instagram. Customers find you faster.</p></div>
       <div class="ucard cc"><div class="cico">&#128187;</div><span class="ctg tc">Freelancers</span><h3>Show your portfolio</h3><p>One clean link for your work samples, testimonials, and contact. Stop sending boring PDFs.</p></div>
-      <div class="ucard cpurp"><div class="cico">&#127909;</div><span class="ctg tpu">Content Creators</span><h3>Better than Linktree bio</h3><p>Your own branded page &mdash; not a third-party app. YouTube, Instagram, brand deals &mdash; all in one.</p></div>
-      <div class="ucard cg"><div class="cico">&#127891;</div><span class="ctg tg">Job Seekers</span><h3>Online resume + download CV</h3><p>Share domain.in/yourname with recruiters. Let them download your CV from your own website.</p></div>
+      <div class="ucard cpurp"><div class="cico">&#127909;</div><span class="ctg tpu">Content Creators</span><h3>Better than other free sites</h3><p>Your own branded page &mdash; not a third-party app. YouTube, Instagram, brand deals &mdash; all in one.</p></div>
+      <div class="ucard cg"><div class="cico">&#127891;</div><span class="ctg tg">Job Seekers</span><h3>Online resume + download CV</h3><p>Share profilix.in/yourname with recruiters. Let them download your CV from your own website.</p></div>
     </div>
   </div>
 </section>
@@ -307,8 +307,8 @@ footer{border-top:1px solid var(--cb);padding:2.5rem 1.5rem;text-align:center}
         <div class="tinf"><div><h4>Simple Profile</h4><span>Clean, minimal bio page</span></div><a href="https://wa.me/916207126785?text=Simple%20Profile%20template" target="_blank" class="bprev">Preview &#8594;</a></div>
       </div>
       <div class="tcard">
-        <div class="tprev tpm"><span class="tbdg bpo">&#11088; Popular</span><div class="tav" style="background:linear-gradient(135deg,#8b5cf6,#ec4899)">&#10024;</div><div class="tn">Aman Verma</div><div class="tro">Content Creator &middot; Delhi</div><div class="tls"><span class="tlp">YouTube</span><span class="tlp">Collab</span></div></div>
-        <div class="tinf"><div><h4>Premium Profile</h4><span>Full brand page w/ animations</span></div><a href="https://wa.me/916207126785?text=Premium%20Profile%20template" target="_blank" class="bprev">Preview &#8594;</a></div>
+        <div class="tprev tpm"><span class="tbdg bpo">&#11088; Popular</span><div class="tav" style="background:linear-gradient(135deg,#8b5cf6,#ec4899)">&#10024;</div><div class="tn">Aaditya Kumar</div><div class="tro"> Businessman &middot; India </div><div class="tls"><span class="tlp">YouTube</span><span class="tlp">Collab</span></div></div>
+        <div class="tinf"><div><h4>Premium Profile</h4><span>Full brand page with animations</span></div><a href="https://wa.me/916207126785?text=Premium%20Profile%20template" target="_blank" class="bprev">Preview &#8594;</a></div>
       </div>
       <div class="tcard">
         <div class="tprev trr"><span class="tbdg bnw">New</span><div class="tav" style="background:linear-gradient(135deg,#10b981,#3b82f6)">&#128196;</div><div class="tn">Priya Singh</div><div class="tro">Marketing Manager &middot; Pune</div><div class="tls"><span class="tlp">Resume</span><span class="tlp">LinkedIn</span></div></div>
@@ -324,7 +324,7 @@ footer{border-top:1px solid var(--cb);padding:2.5rem 1.5rem;text-align:center}
     <p class="ssub">No hidden fees. No tech skills needed.</p>
     <div class="fgrid rev">
       <div class="fitm"><div class="fico">&#128172;</div><div><h4>WhatsApp Integration</h4><p>Direct WhatsApp button so clients reach you instantly.</p></div></div>
-      <div class="fitm"><div class="fico">&#128272;</div><div><h4>Custom Username</h4><p>Only one person owns domain.in/yourname. Reserve yours now.</p></div></div>
+      <div class="fitm"><div class="fico">&#128272;</div><div><h4>Custom Username</h4><p>Only one person owns profilix.in/yourname. Reserve yours now.</p></div></div>
       <div class="fitm"><div class="fico">&#9889;</div><div><h4>48-Hour Delivery</h4><p>Your website goes live within 48 hours of sending your details.</p></div></div>
       <div class="fitm"><div class="fico">&#128241;</div><div><h4>User Friendly</h4><p>Looks great on any device. Easy to navigate and share anywhere.</p></div></div>
       <div class="fitm"><div class="fico">&#128229;</div><div><h4>Resume Download</h4><p>Add a downloadable CV so recruiters get your resume instantly.</p></div></div>
@@ -340,13 +340,13 @@ footer{border-top:1px solid var(--cb);padding:2.5rem 1.5rem;text-align:center}
     <div class="cmpwrap rev">
       <div class="cmphdr">
         <div class="chl fc">Feature</div>
-        <div class="chl usc">&#10022; YourProfile.in</div>
+        <div class="chl usc">&#10022; Profilix.in</div>
         <div class="chl oth">Others / Free Tools</div>
       </div>
       <div class="crow"><div class="ccel fn">Design Quality</div><div class="ccel good"><span class="ci">&#9989;</span>Fully customized</div><div class="ccel bad"><span class="ci">&#10060;</span>Generic template</div></div>
       <div class="crow"><div class="ccel fn">Customisation</div><div class="ccel good"><span class="ci">&#9989;</span>100% personalised</div><div class="ccel bad"><span class="ci">&#10060;</span>Little to no control</div></div>
       <div class="crow"><div class="ccel fn">Loading Speed</div><div class="ccel good"><span class="ci">&#9989;</span>Ultra fast</div><div class="ccel bad"><span class="ci">&#10060;</span>Slow &amp; heavy</div></div>
-      <div class="crow"><div class="ccel fn">Watermark</div><div class="ccel good"><span class="ci">&#9989;</span>Zero watermarks</div><div class="ccel bad"><span class="ci">&#10060;</span>"Made with Linktree"</div></div>
+      <div class="crow"><div class="ccel fn">Watermark</div><div class="ccel good"><span class="ci">&#9989;</span>Zero watermarks</div><div class="ccel bad"><span class="ci">&#10060;</span>"Made with site name"</div></div>
       <div class="crow"><div class="ccel fn">Exclusivity</div><div class="ccel good"><span class="ci">&#9989;</span>Only for elite people</div><div class="ccel bad"><span class="ci">&#10060;</span>Same as millions</div></div>
       <div class="crow"><div class="ccel fn">Website Quality</div><div class="ccel good"><span class="ci">&#9989;</span>Premium &amp; professional</div><div class="ccel bad"><span class="ci">&#10060;</span>Cheap, basic look</div></div>
       <div class="crow"><div class="ccel fn">Unique Profile Link</div><div class="ccel good"><span class="ci">&#9989;</span>Your name, forever</div><div class="ccel bad"><span class="ci">&#10060;</span>Random or shared URLs</div></div>
@@ -411,14 +411,14 @@ footer{border-top:1px solid var(--cb);padding:2.5rem 1.5rem;text-align:center}
     <div class="sbox rev">
       <div class="sico">&#9203;</div>
       <h2>Usernames are first come, first served</h2>
-      <p>Only one person can own domain.in/yourname &mdash; ever. Once it's taken, it's gone forever.</p>
+      <p>Only one person can own profilix.in/yourname &mdash; ever. Once it's taken, it's gone forever.</p>
       <div class="ucks">
-        <div class="uck"><span class="ucn">domain.in/rahul</span><span class="stk">&#10060; Taken</span></div>
-        <div class="uck"><span class="ucn">domain.in/aman</span><span class="sav">&#9989; Available</span></div>
-        <div class="uck"><span class="ucn">domain.in/priya</span><span class="stk">&#10060; Taken</span></div>
-        <div class="uck" id="cyours" style="cursor:pointer"><span class="ucn" style="color:var(--muted)">domain.in/yours?</span><span style="color:var(--bl);font-size:.82rem;font-weight:600">Check &#8594;</span></div>
+        <div class="uck"><span class="ucn">profilix.in/rahul</span><span class="stk">&#10060; Taken</span></div>
+        <div class="uck"><span class="ucn">profilix.in/aman</span><span class="sav">&#9989; Available</span></div>
+        <div class="uck"><span class="ucn">profilix.in/priya</span><span class="stk">&#10060; Taken</span></div>
+        <div class="uck" id="cyours" style="cursor:pointer"><span class="ucn" style="color:var(--muted)">profilix.in/yours?</span><span style="color:var(--bl);font-size:.82rem;font-weight:600">Check &#8594;</span></div>
       </div>
-      <a href="https://wa.me/916207126785?text=Hi%2C%20please%20check%20if%20my%20username%20is%20available" target="_blank" class="btnp" style="display:inline-flex">
+      <a href="/check-username.html" target="_blank" class="btnp" style="display:inline-flex">
         &#128172; Check Your Username
       </a>
     </div>
@@ -442,8 +442,9 @@ footer{border-top:1px solid var(--cb);padding:2.5rem 1.5rem;text-align:center}
     <h2 class="stit">Common questions</h2>
     <p class="ssub">Everything you need to know before getting started.</p>
     <div class="flist rev">
-      <div class="fitem"><button class="fq" onclick="toggleFaq(this)">Why not use free tools like Linktree or Google Sites?<span class="arr">&#8595;</span></button><div class="fa">Free tools put their branding on your profile, have limited customization, and look generic. With us, you get a clean branded link like domain.in/yourname &mdash; no ads, no third-party logos. 10x more professional when sharing with clients or recruiters.</div></div>
-      <div class="fitem"><button class="fq" onclick="toggleFaq(this)">How will this improve my reputation online?<span class="arr">&#8595;</span></button><div class="fa">Your unique username is exclusive &mdash; only you own domain.in/yourname. This gives you a personal identity no one else has. When someone searches your name, they find your own website, not a random social media page. A unique username builds instant trust, credibility, and a lasting professional reputation.</div></div>
+      <div class="fitem"><button class="fq" onclick="toggleFaq(this)">Why not use free tools like others?<span class="arr">&#8595;</span></button><div class="fa">Free tools put their branding on your profile, have limited customization, and look generic. With us, you get a clean branded link like profilix.in/yourname &mdash; no ads, no third-party logos. 10x more professional when sharing with clients or recruiters.</div></div>
+      <div class="fitem"><button class="fq" onclick="toggleFaq(this)">How will this improve my reputation online?<span class="arr">&#8595;</span></button><div class="fa">Your unique username is exclusive &mdash; only you own
+profilix.in/yourname. This gives you a personal identity no one else has. When someone searches your name, they find your own website, not a random social media page. A unique username builds instant trust, credibility, and a lasting professional reputation.</div></div>
       <div class="fitem"><button class="fq" onclick="toggleFaq(this)">Why is your pricing slightly higher than others?<span class="arr">&#8595;</span></button><div class="fa">Because we don't give you a copy-paste template. We build a fully customized website tailored specifically for your profile, your audience, and your goals. Every detail &mdash; design, layout, colors, content &mdash; is made just for you. That's the difference between a cheap website and a professional one.</div></div>
       <div class="fitem"><button class="fq" onclick="toggleFaq(this)">Can I renew my profile later if I pause?<span class="arr">&#8595;</span></button><div class="fa">Yes! Your username stays reserved for a short grace period. You can renew your plan anytime on WhatsApp and we'll restore your profile exactly as it was. If the grace period expires, your username may become available to others.</div></div>
       <div class="fitem"><button class="fq" onclick="toggleFaq(this)">Can I edit my profile after it goes live?<span class="arr">&#8595;</span></button><div class="fa">Yes. On the 4-month plan you get 1 free update per month, and on the 12-month plan you get unlimited updates. Just message us on WhatsApp and we'll update within 48 hours.</div></div>
@@ -465,7 +466,7 @@ footer{border-top:1px solid var(--cb);padding:2.5rem 1.5rem;text-align:center}
     <h2 class="stit">Privacy Policy</h2>
     <p style="color:var(--muted);font-size:.92rem;line-height:1.8;margin-bottom:1rem">We respect your privacy. Any information you share with us &mdash; including your name, photo, social links, and contact details &mdash; is used only to build and maintain your profile website. We do not sell, share, or misuse your personal data.</p>
     <p style="color:var(--muted);font-size:.92rem;line-height:1.8;margin-bottom:1rem">Your profile content remains your own. We may display your profile link as a reference example unless you request otherwise. Payments are handled securely and are not stored on our end.</p>
-    <p style="color:var(--muted);font-size:.92rem;line-height:1.8">For privacy concerns, contact us at <a href="mailto:contact@yourprofile.in" style="color:var(--bl)">contact@yourprofile.in</a> or WhatsApp +91 62071 26785.</p>
+    <p style="color:var(--muted);font-size:.92rem;line-height:1.8">For privacy concerns, contact us at <a href="mailto:" style="color:var(--bl)">profilix.in@gmail.com</a> or WhatsApp +91 62071 26785.</p>
   </div>
 </section>
 <section class="bcta">
@@ -477,21 +478,45 @@ footer{border-top:1px solid var(--cb);padding:2.5rem 1.5rem;text-align:center}
     </a>
   </div>
 </section>
+  
 <footer>
   <div class="finr">
-    <div class="flog">YourProfile.in</div>
+
+    <!-- Logo / Brand -->
+    <div class="flog">Profilix</div>
+
+    <!-- Quick Links -->
     <div class="flnk">
-      <a href="mailto:contact@yourprofile.in">&#9993;&#65039; contact@yourprofile.in</a>
-      <a href="https://wa.me/916207126785" target="_blank">&#128172; +91 62071 26785</a>
-      <a href="#faq">FAQ</a>
       <a href="#pricing">Pricing</a>
-      <a href="#privacy">Privacy</a>
+      <a href="#faq">FAQ</a>
+      <a href="/check-username.html">Check Username</a>
     </div>
-    <p class="fcp">&#169; 2025 YourProfile.in &middot; Your identity. Your link. Your web.</p>
+
+    <!-- Contact -->
+    <div class="flnk">
+      <a href="mailto:profilix.in@gmail.com">📧 profilix.in@gmail.com</a>
+      <a href="https://wa.me/916207126785" target="_blank">💬 WhatsApp</a>
+    </div>
+
+    <!-- Legal -->
+    <div class="flnk">
+      <a href="/legal.html#privacy">Privacy Policy</a>
+      <a href="/legal.html#terms">Terms & Conditions</a>
+      <a href="/legal.html#refund">Refund Policy</a>
+    </div>
+
+    <!-- Copyright -->
+    <p class="fcp">
+      © 2026 Profilix · Turn your name into a website 🚀
+    </p>
+
   </div>
 </footer>
-<a href="https://wa.me/916207126785?text=Hi%2C%20I%20want%20my%20personal%20profile%20website" target="_blank" class="waf" title="Chat on WhatsApp">&#128172;</a>
-<script>
+  
+  <a href="https://wa.me/916207126785?text=Hi%2C%20I%20want%20my%20personal%20profile%20website" target="_blank" class="waf" title="Chat on WhatsApp">&#128172;</a>
+<p style="font-size:12px; opacity:0.7;"> Powered by <a href="https://profilix.in">Profilix</a> </p>
+  
+  <script>
 (function(){
   var c=document.getElementById('bgc'),ctx=c.getContext('2d'),W,H,pts=[];
   function rs(){W=c.width=window.innerWidth;H=c.height=window.innerHeight}
@@ -545,9 +570,9 @@ function typeUrl(){
 }
 setTimeout(typeUrl,1200);
 
-document.getElementById('cyours').addEventListener('click',function(){
-  window.open('https://wa.me/916207126785?text=Hi%2C%20please%20check%20if%20my%20username%20is%20available','_blank');
+document.getElementById('cyours').addEventListener('click', function () {
+  window.location.href = 'check-username.html';
 });
-</script>
+  </script>
 </body>
 </html>
