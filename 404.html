@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 - Page Not Found | Profilix.in</title>
+<meta name="description" content="Oops! The page you are looking for doesn't exist.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#050810;--bg2:#080d1a;--card:rgba(255,255,255,0.04);--cb:rgba(255,255,255,0.08);--blue:#3b82f6;--bl:#60a5fa;--cyan:#06b6d4;--purple:#8b5cf6;--green:#10b981;--text:#f1f5f9;--muted:#94a3b8;--fd:'Syne',sans-serif;--fb:'DM Sans',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--fb);font-size:16px;line-height:1.6;overflow-x:hidden;min-height:100vh;display:flex;flex-direction:column}
+
+/* BACKGROUNDS */
+#bgc{position:fixed;inset:0;z-index:0;pointer-events:none}
+.page-glow{position:fixed;width:600px;height:600px;background:radial-gradient(circle,rgba(59,130,246,.12) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;z-index:0}
+
+/* MAIN LAYOUT */
+main{position:relative;z-index:1;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:4rem 1.5rem;text-align:center;animation:fdwn .6s ease both}
+.error-wrap{max-width:600px;width:100%;display:flex;flex-direction:column;align-items:center}
+
+/* 404 TEXT */
+.e-code{font-family:var(--fd);font-size:clamp(5rem, 15vw, 9rem);font-weight:800;background:linear-gradient(135deg,var(--blue),var(--cyan),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1;margin-bottom:0.5rem;letter-spacing:-4px}
+.e-title{font-family:var(--fd);font-size:clamp(1.8rem, 5vw, 2.8rem);font-weight:700;margin-bottom:1rem;color:var(--text)}
+.e-sub{color:var(--muted);font-size:clamp(0.95rem, 3vw, 1.1rem);max-width:480px;margin:0 auto 2.5rem}
+
+/* BUTTONS */
+.action-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;width:100%}
+.btn-main{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;padding:.85rem 1.8rem;border-radius:50px;text-decoration:none;font-weight:600;font-size:1rem;transition:transform .2s,opacity .2s;box-shadow:0 10px 20px rgba(59,130,246,.2)}
+.btn-main:hover{transform:translateY(-2px);opacity:.9}
+.btn-sec{display:inline-flex;align-items:center;gap:.5rem;background:var(--card);border:1px solid var(--cb);color:var(--text);padding:.85rem 1.8rem;border-radius:50px;text-decoration:none;font-weight:500;font-size:1rem;transition:background .2s,transform .2s;backdrop-filter:blur(10px)}
+.btn-sec:hover{background:rgba(255,255,255,.08);transform:translateY(-2px)}
+
+/* CONTACT CARD (Modernized) */
+.contact-card{margin-top:4rem;padding:2rem;background:var(--card);border:1px solid var(--cb);border-radius:24px;width:100%;max-width:560px;backdrop-filter:blur(12px);animation:fdwn .6s ease .2s both;box-shadow:0 20px 40px rgba(0,0,0,0.2)}
+.contact-title{font-family:var(--fd);font-size:1.2rem;font-weight:700;margin-bottom:0.5rem;color:var(--text)}
+.contact-desc{color:var(--muted);font-size:0.9rem;margin-bottom:1.5rem}
+.contact-links{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn-wa{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,#25d366,#128c7e);color:#fff;padding:.75rem 1.5rem;border-radius:14px;text-decoration:none;font-weight:600;font-size:.95rem;transition:transform .2s}
+.btn-wa:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(37,211,102,.3)}
+.btn-mail{display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,255,255,0.05);border:1px solid var(--cb);color:var(--text);padding:.75rem 1.5rem;border-radius:14px;text-decoration:none;font-weight:600;font-size:.95rem;transition:background .2s}
+.btn-mail:hover{background:rgba(255,255,255,0.1)}
+
+/* FLOATING WA BUTTON */
+.waf{position:fixed;bottom:1.5rem;right:1.5rem;width:56px;height:56px;background:linear-gradient(135deg,#25d366,#128c7e);border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:1.8rem;z-index:9999;animation:pwa 2s infinite;transition:transform .2s;color:#fff}
+.waf:hover{transform:scale(1.1)}
+
+/* FOOTER */
+footer{border-top:1px solid var(--cb);padding:2rem 1.5rem;text-align:center;position:relative;z-index:1;background:var(--nav)}
+.flnk{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin-bottom:1rem}
+.flnk a{color:var(--muted);text-decoration:none;font-size:.9rem;font-weight:500;transition:color .2s}
+.flnk a:hover{color:var(--blue)}
+.fcp{color:var(--muted);font-size:.8rem}
+
+/* ANIMATIONS */
+@keyframes fdwn{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pwa{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.4)}50%{box-shadow:0 4px 45px rgba(37,211,102,.7)}}
+
+/* MOBILE RESPONSIVE */
+@media(max-width:600px){
+  main{padding:3rem 1.25rem}
+  .contact-card{padding:1.5rem;margin-top:3rem}
+  .action-buttons, .contact-links{flex-direction:column;width:100%}
+  .btn-main, .btn-sec, .btn-wa, .btn-mail{width:100%;justify-content:center}
+  .waf{bottom:1.2rem;right:1.2rem;width:50px;height:50px;font-size:1.5rem}
+}
+</style>
+</head>
+<body>
+
+<canvas id="bgc"></canvas>
+<div class="page-glow"></div>
+
+<main>
+    <div class="error-wrap">
+        <div class="e-code">404</div>
+        <h1 class="e-title">Lost in Space?</h1>
+        <p class="e-sub">The profile or page you are looking for doesn't exist, has been claimed by someone else, or was moved.</p>
+        
+        <div class="action-buttons">
+            <a href="https://profilix.in/" class="btn-main">&#127968; Back to Home</a>
+            <a href="https://profilix.in/check-username.html" class="btn-sec">&#128269; Check Username</a>
+        </div>
+    </div>
+
+    <div class="contact-card">
+        <h3 class="contact-title">Found a broken link?</h3>
+        <p class="contact-desc">Let us know so we can fix it. Feel free to reach out to our support team.</p>
+        <div class="contact-links">
+            <a href="https://wa.me/916207126785?text=Hi%2C%20I%20found%20a%20broken%20link%20on%20your%20website.%20Here%20is%20the%20link:%20" target="_blank" class="btn-wa">
+                &#128172; WhatsApp Us
+            </a>
+            <a href="mailto:profilix.in@gmail.com?subject=Broken%20Link%20Report&body=Hi%20Profilix%20Team,%0A%0AI%20found%20a%20broken%20link%20on%20your%20website.%0A%0ABroken%20Link%20URL:%20" class="btn-mail">
+                &#9993;&#65039; Email Support
+            </a>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="flnk">
+        <a href="https://profilix.in/">Home</a>
+        <a href="https://profilix.in/check-username.html">Check Username</a>
+        <a href="https://profilix.in/legal.html#privacy">Privacy Policy</a>
+    </div>
+    <p class="fcp">© 2026 Profilix · Turn your name into a website 🚀</p>
+</footer>
+
+<a href="https://wa.me/916207126785?text=Hi%2C%20I%20need%20help%20with%20my%20profilix%20website." target="_blank" class="waf" title="Chat on WhatsApp">&#128172;</a>
+
+<script>
+/* Background Canvas Animation */
+(function(){
+  var c=document.getElementById('bgc'),ctx=c.getContext('2d'),W,H,pts=[];
+  function rs(){W=c.width=window.innerWidth;H=c.height=window.innerHeight}
+  rs();window.addEventListener('resize',rs);
+  function P(){this.x=Math.random()*W;this.y=Math.random()*H;this.r=Math.random()*1.4+0.3;this.vx=(Math.random()-.5)*.3;this.vy=(Math.random()-.5)*.3;this.a=Math.random()*.45+.08;this.col=Math.random()>.5?'#3b82f6':'#06b6d4'}
+  for(var i=0;i<80;i++)pts.push(new P());
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    for(var i=0;i<pts.length;i++){
+        for(var j=i+1;j<pts.length;j++){
+            var dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);
+            if(d<130){
+                ctx.beginPath();
+                ctx.strokeStyle='rgba(59,130,246,'+(0.06*(1-d/130))+')';
+                ctx.lineWidth=.5;
+                ctx.moveTo(pts[i].x,pts[i].y);
+                ctx.lineTo(pts[j].x,pts[j].y);
+                ctx.stroke();
+            }
+        }
+        ctx.beginPath();
+        ctx.arc(pts[i].x,pts[i].y,pts[i].r,0,Math.PI*2);
+        ctx.fillStyle=pts[i].col;
+        ctx.globalAlpha=pts[i].a;
+        ctx.fill();
+        ctx.globalAlpha=1;
+        pts[i].x+=pts[i].vx;
+        pts[i].y+=pts[i].vy;
+        if(pts[i].x<0||pts[i].x>W)pts[i].vx*=-1;
+        if(pts[i].y<0||pts[i].y>H)pts[i].vy*=-1;
+    }
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+</script>
+</body>
+</html>
