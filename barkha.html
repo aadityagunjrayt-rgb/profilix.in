@@ -45,7 +45,7 @@
   @keyframes floatBlob { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(100px, 50px) scale(1.2); } }
 
   /* --- Container & Animations --- */
-  .container { max-width: 440px; margin: 0 auto; padding: 30px 20px; display: flex; flex-direction: column; gap: 20px; }
+  .container { max-width: 440px; margin: 0 auto; padding: 30px 20px; display: flex; flex-direction: column; gap: 20px; transition: 0.3s; }
   .fade-in { opacity: 0; transform: translateY(20px); animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
   .delay-1 { animation-delay: 0.1s; }
   .delay-2 { animation-delay: 0.2s; }
@@ -63,7 +63,7 @@
 
   /* --- Profile & Stats --- */
   .profile-section { text-align: center; }
-  .avatar-wrapper { position: relative; width: 110px; height: 110px; margin: 0 auto 15px; }
+  .avatar-wrapper { position: relative; width: 110px; height: 110px; margin: 0 auto 15px; transition: 0.3s; }
   .avatar-wrapper::before {
     content: ''; position: absolute; inset: -5px; border-radius: 50%;
     background: linear-gradient(45deg, var(--primary), var(--secondary));
@@ -71,9 +71,9 @@
   }
   @keyframes spinRotate { 100% { transform: rotate(360deg); } }
   .profile-section img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 4px solid var(--bg-color); }
-  .profile-section h1 { margin: 0; font-size: 26px; font-weight: 800; }
+  .profile-section h1 { margin: 0; font-size: 26px; font-weight: 800; transition: 0.3s; }
   .stats-row { display: flex; justify-content: space-around; margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--glass-border); }
-  .stat-num { font-size: 18px; font-weight: 800; color: var(--primary); }
+  .stat-num { font-size: 18px; font-weight: 800; color: var(--primary); transition: 0.3s; }
   .stat-label { font-size: 10px; color: #888; text-transform: uppercase; margin-top: 4px; }
 
   /* --- Latest Vlog Card --- */
@@ -105,7 +105,7 @@
   .testimonials-wrapper::-webkit-scrollbar { display: none; }
   .testimonial-card {
     min-width: 250px; scroll-snap-align: start; background: rgba(255,255,255,0.02);
-    border-left: 3px solid var(--primary); padding: 15px; border-radius: 0 12px 12px 0;
+    border-left: 3px solid var(--primary); padding: 15px; border-radius: 0 12px 12px 0; transition: 0.3s;
   }
   .quote-text { font-size: 13px; font-style: italic; color: #ccc; line-height: 1.5; margin-bottom: 10px; }
   .slider-dots { display: flex; justify-content: center; gap: 6px; margin-top: 15px; }
@@ -114,7 +114,7 @@
 
   /* --- Worked With Brands --- */
   .section-title { font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: #888; text-align: center; margin-bottom: 15px; }
-  .brands-grid { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; opacity: 0.6; }
+  .brands-grid { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; opacity: 0.6; transition: 0.3s; }
   .brands-grid i { font-size: 24px; transition: 0.3s; }
   .brands-grid i:hover { color: var(--primary); opacity: 1; }
 
@@ -138,6 +138,41 @@
 
   .footer { text-align: center; font-size: 12px; color: #555; margin: 20px 0 40px; }
   .footer a { color: var(--primary); text-decoration: none; font-weight: bold; }
+
+  /* ======================================================= */
+  /* --- RESPONSIVE DESIGN FOR TABLET & DESKTOP --- */
+  /* ======================================================= */
+  @media (min-width: 768px) {
+    .container { 
+      max-width: 750px; /* Badi screen par container wide ho jayega */
+      padding: 50px 20px; 
+    }
+    .avatar-wrapper { width: 140px; height: 140px; }
+    .profile-section h1 { font-size: 32px; }
+    .stat-num { font-size: 24px; }
+    
+    /* Description card ka text bada aur readable */
+    .desc-card { font-size: 16px !important; padding: 30px !important; }
+    
+    /* Video thumbnail ki height badh jayegi */
+    .featured-img { height: 280px; }
+    .featured-title { font-size: 20px; }
+
+    /* Links ab aamne-saamne aayenge (2 columns me) */
+    .links-grid { 
+      display: grid; 
+      grid-template-columns: 1fr 1fr; 
+      gap: 15px; 
+    }
+    .link-btn { margin-bottom: 0; padding: 18px 20px; font-size: 16px; }
+    
+    /* Testimonials card thode wide ho jayenge */
+    .testimonial-card { min-width: 320px; }
+    
+    /* Brand icons bade aur spacing zyada */
+    .brands-grid { gap: 40px; }
+    .brands-grid i { font-size: 32px; }
+  }
 </style>
 </head>
 <body>
@@ -162,12 +197,11 @@
     </div>
   </div>
      
-  <!-- User Ka Description -->
-     
-<div class="card fade-in delay-2" style="text-align: center; font-size: 14px; color: #ccc; line-height: 1.6; padding: 20px;">
+  <div class="card desc-card fade-in delay-2" style="text-align: center; font-size: 14px; color: #ccc; line-height: 1.6; padding: 20px;">
     Hi, I'm Barkha! 👋 <br>
     I love exploring new fashion trends, styling outfits, and sharing my daily lifestyle aesthetic. Let's collaborate and create magic together! 💖
-</div>
+  </div>
+
   <div class="card featured-card fade-in delay-2">
     <a href="https://youtube.com">
       <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=600&q=80" class="featured-img">
@@ -178,12 +212,12 @@
     </a>
   </div>
 
-  <div class="fade-in delay-3">
+  <div class="links-grid fade-in delay-3">
     <a href="#" class="link-btn"><span><i class="fa-brands fa-instagram icon-box" style="color:#E1306C"></i> Instagram</span><i class="fa-solid fa-chevron-right"></i></a>
     <a href="#" class="link-btn"><span><i class="fa-brands fa-youtube icon-box" style="color:#FF0000"></i> YouTube</span><i class="fa-solid fa-chevron-right"></i></a>
     <a href="#" class="link-btn"><span><i class="fa-brands fa-facebook icon-box" style="color:#1877F2"></i> Facebook</span><i class="fa-solid fa-chevron-right"></i></a>
     <a href="#" class="link-btn"><span><i class="fa-brands fa-whatsapp icon-box" style="color:#25D366"></i> WhatsApp</span><i class="fa-solid fa-chevron-right"></i></a>
-    <a href="#" class="link-btn"><span><i class="fa-solid fa-envelope icon-box" style="color:#fbbc05"></i> Business Email</span><i class="fa-solid fa-chevron-right"></i></a>
+    <a href="#" class="link-btn" style="grid-column: 1 / -1; justify-content: center;"><span><i class="fa-solid fa-envelope icon-box" style="color:#fbbc05"></i> Business Email</span></a>
   </div>
 
   <div class="card fade-in delay-4">
