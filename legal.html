@@ -3,254 +3,427 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Terms & Policies | Profilix</title>
-<meta name="description" content="Legal agreements, terms, and privacy policies for Profilix services.">
+<title>Legal &amp; Policies | Profilix — Turn your name into a website</title>
+<meta name="description" content="Read Profilix's Privacy Policy, Terms & Conditions, Refund Policy, and Service Policy. Transparent, fair, and clear.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://profilix.in/legal">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-/* === CORE STYLES FROM HOMEPAGE === */
-:root{--bg:#050810;--bg2:#080d1a;--card:rgba(255,255,255,0.04);--cb:rgba(255,255,255,0.08);--blue:#3b82f6;--bl:#60a5fa;--cyan:#06b6d4;--purple:#8b5cf6;--green:#10b981;--red:#ef4444;--text:#f1f5f9;--muted:#94a3b8;--fd:'Syne',sans-serif;--fb:'Inter',sans-serif;--nav:rgba(5,8,16,0.88)}
-[data-theme="light"]{--bg:#f0f4ff;--bg2:#e4eaf7;--card:rgba(255,255,255,0.8);--cb:rgba(59,130,246,0.15);--text:#0f172a;--muted:#475569;--nav:rgba(240,244,255,0.92)}
+/* ═══════════════════════════════════════════
+   TOKENS — identical to homepage
+═══════════════════════════════════════════ */
+:root{
+  --bg:#050810;--bg2:#080d1a;
+  --card:rgba(255,255,255,0.04);--cb:rgba(255,255,255,0.08);
+  --blue:#3b82f6;--bl:#60a5fa;--cyan:#06b6d4;
+  --purple:#8b5cf6;--green:#10b981;--red:#ef4444;
+  --text:#f1f5f9;--muted:#94a3b8;
+  --fd:'Syne',sans-serif;--fb:'DM Sans',sans-serif;
+  --nav:rgba(5,8,16,0.88);
+}
+[data-theme="light"]{
+  --bg:#f0f4ff;--bg2:#e4eaf7;
+  --card:rgba(255,255,255,0.82);--cb:rgba(59,130,246,0.15);
+  --text:#0f172a;--muted:#475569;--nav:rgba(240,244,255,0.92);
+}
+
+/* ═══════════════════════════════════════════
+   RESET & BASE
+═══════════════════════════════════════════ */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;overflow-x:hidden}
-body{background:var(--bg);color:var(--text);font-family:var(--fb);font-size:16px;line-height:1.6;overflow-x:hidden;transition:background .4s,color .3s}
-#bgc{position:fixed;inset:0;z-index:0;pointer-events:none}
-section,nav,footer,.smenu,.page-wrap{position:relative;z-index:1}
+body{background:var(--bg);color:var(--text);font-family:var(--fb);font-size:16px;line-height:1.7;overflow-x:hidden;transition:background .4s,color .3s}
 
-/* === NAVBAR === */
-nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;backdrop-filter:blur(20px);background:var(--nav);border-bottom:1px solid var(--cb);position:sticky;top:0;z-index:200}
-.nleft{display:flex;align-items:center;gap:0.75rem}
-.nback{color:var(--muted);font-size:1.4rem;text-decoration:none;transition:color 0.2s, transform 0.2s;display:flex;align-items:center;justify-content:center}
-.nback:hover{color:var(--text);transform:translateX(-3px)}
-.nlogo{font-family:var(--fd);font-weight:800;font-size:1.2rem;background:linear-gradient(135deg,var(--blue),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+/* BG CANVAS */
+#bgc{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.7}
+
+/* Stacking */
+nav,main,footer,.smenu{position:relative;z-index:1}
+
+/* ═══════════════════════════════════════════
+   NAV — identical to homepage
+═══════════════════════════════════════════ */
+nav{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1rem 2rem;
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  background:var(--nav);
+  border-bottom:1px solid var(--cb);
+  position:sticky;top:0;z-index:200;
+}
+.nleft{display:flex;align-items:center;gap:.75rem}
+.back-btn{
+  display:flex;align-items:center;justify-content:center;
+  width:34px;height:34px;border-radius:10px;
+  border:1px solid var(--cb);background:var(--card);
+  color:var(--text);text-decoration:none;font-size:1.1rem;
+  transition:background .2s,transform .2s;backdrop-filter:blur(10px);
+  flex-shrink:0;
+}
+.back-btn:hover{background:rgba(59,130,246,.15);transform:translateX(-2px)}
+.nlogo{
+  font-family:var(--fd);font-weight:800;font-size:1.2rem;
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  text-decoration:none;
+}
 .nright{display:flex;align-items:center;gap:.75rem}
-.tbtn{width:36px;height:36px;border-radius:50%;border:1px solid var(--cb);background:var(--card);color:var(--text);font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s,transform .2s;backdrop-filter:blur(10px)}
+.tbtn{
+  width:36px;height:36px;border-radius:50%;
+  border:1px solid var(--cb);background:var(--card);
+  color:var(--text);font-size:1rem;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  transition:background .2s,transform .2s;backdrop-filter:blur(10px);
+}
 .tbtn:hover{background:rgba(59,130,246,.15);transform:rotate(20deg)}
-.mbtn{width:36px;height:36px;border-radius:8px;border:1px solid var(--cb);background:var(--card);cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:8px;transition:background .2s;}
+.mbtn{
+  width:36px;height:36px;border-radius:8px;
+  border:1px solid var(--cb);background:var(--card);
+  cursor:pointer;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:4px;padding:8px;
+  transition:background .2s;
+}
 .mbtn:hover{background:rgba(59,130,246,.15)}
 .mbtn span{display:block;width:18px;height:2px;background:var(--text);border-radius:2px;transition:transform .3s,opacity .3s}
 .mbtn.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
 .mbtn.open span:nth-child(2){opacity:0}
 .mbtn.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
-.ncta{background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;border:none;padding:.6rem 1.4rem;border-radius:50px;font-family:var(--fb);font-weight:500;font-size:.9rem;cursor:pointer;text-decoration:none;transition:opacity .2s,transform .2s}
+.ncta{
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
+  color:#fff;border:none;padding:.6rem 1.4rem;border-radius:50px;
+  font-family:var(--fb);font-weight:500;font-size:.9rem;
+  cursor:pointer;text-decoration:none;transition:opacity .2s,transform .2s;
+}
 .ncta:hover{opacity:.85;transform:translateY(-1px)}
 
-/* === MOBILE MENU === */
+/* ═══════════════════════════════════════════
+   SIDE MENU — identical to homepage
+═══════════════════════════════════════════ */
 .movl{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:250;opacity:0;pointer-events:none;transition:opacity .3s;backdrop-filter:blur(4px)}
 .movl.show{opacity:1;pointer-events:all}
-.smenu{position:fixed;top:0;right:-320px;width:300px;height:100vh;height:100dvh;background:var(--bg2);border-left:1px solid var(--cb);z-index:300;transition:right .35s cubic-bezier(.4,0,.2,1);backdrop-filter:blur(20px);display:flex;flex-direction:column;padding:0;box-shadow:-10px 0 60px rgba(0,0,0,.4);overflow:hidden}
+.smenu{
+  position:fixed;top:0;right:-320px;width:300px;
+  height:100vh;height:100dvh;
+  background:var(--bg2);border-left:1px solid var(--cb);
+  z-index:300;transition:right .35s cubic-bezier(.4,0,.2,1);
+  backdrop-filter:blur(20px);display:flex;flex-direction:column;
+  padding:0;box-shadow:-10px 0 60px rgba(0,0,0,.4);overflow:hidden;
+}
 .smenu.open{right:0}
-.mhdr{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 1.5rem 1rem;flex-shrink:0;border-bottom:1px solid var(--cb);margin-bottom:0}
+.mhdr{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 1.5rem 1rem;flex-shrink:0;border-bottom:1px solid var(--cb)}
+.mlogo{font-family:var(--fd);font-weight:800;font-size:1.1rem;background:linear-gradient(135deg,var(--blue),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .mclose{width:32px;height:32px;border-radius:8px;border:1px solid var(--cb);background:var(--card);color:var(--text);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem}
 .mnav{list-style:none;display:flex;flex-direction:column;gap:.15rem;flex:1;overflow-y:auto;padding:1rem 1.5rem;-webkit-overflow-scrolling:touch}
 .mnav li a{display:flex;align-items:center;gap:.85rem;color:var(--muted);text-decoration:none;padding:.85rem 1rem;border-radius:12px;font-size:.95rem;font-weight:500;transition:background .2s,color .2s}
-.mnav li a:hover{background:rgba(59,130,246,.1);color:var(--text)}
+.mnav li a:hover,.mnav li a.active{background:rgba(59,130,246,.1);color:var(--text)}
 .mi{font-size:1.1rem;width:24px;text-align:center}
+.mdiv{height:1px;background:var(--cb);margin:.5rem 0}
 .mwa{display:flex;align-items:center;gap:.75rem;background:linear-gradient(135deg,#25d366,#128c7e);color:#fff;padding:1rem 1.25rem;border-radius:14px;text-decoration:none;font-weight:600;font-size:.95rem;margin:0 1.5rem 1.5rem;flex-shrink:0;transition:opacity .2s}
 .mwa:hover{opacity:.9}
 
-/* === PAGE SPECIFIC STYLES === */
-.legal-header {
-  text-align: center;
-  padding: 5rem 1.5rem 2rem;
+/* ═══════════════════════════════════════════
+   PAGE HERO
+═══════════════════════════════════════════ */
+.page-hero{
+  text-align:center;
+  padding:5rem 1.5rem 2.5rem;
+  position:relative;
 }
-.legal-header h1 {
-  font-family: var(--fd);
-  font-size: clamp(2.4rem, 5vw, 4rem);
-  font-weight: 800;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-  margin-bottom: 1rem;
-  animation: fdwn .7s ease .1s both;
+.hero-glow{
+  position:absolute;
+  width:600px;height:600px;
+  background:radial-gradient(circle,rgba(59,130,246,.15) 0%,transparent 70%);
+  top:0;left:50%;transform:translateX(-50%);
+  pointer-events:none;z-index:0;
 }
-.legal-header p {
-  color: var(--muted);
-  font-size: 1.1rem;
-  max-width: 600px;
-  margin: 0 auto;
-  animation: fdwn .7s ease .2s both;
+.page-hero .badge{
+  display:inline-flex;align-items:center;gap:.5rem;
+  background:rgba(59,130,246,.12);border:1px solid rgba(59,130,246,.3);
+  color:var(--bl);padding:.4rem 1rem;border-radius:50px;
+  font-size:.82rem;font-weight:500;margin-bottom:1.5rem;
+  animation:fdwn .5s ease both;position:relative;z-index:1;
 }
-
-/* === TABS UI === */
-.tab-nav {
-  position: sticky;
-  top: 73px; /* Just below navbar */
-  z-index: 150;
-  background: var(--nav);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--cb);
-  padding: 1rem 1.5rem;
-  animation: fdwn .7s ease .3s both;
+.page-hero h1{
+  font-family:var(--fd);font-size:clamp(2.2rem,5vw,3.8rem);
+  font-weight:800;letter-spacing:-.03em;line-height:1.1;
+  margin-bottom:.75rem;
+  background:linear-gradient(135deg,var(--text) 40%,var(--muted));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  animation:fdwn .6s ease .1s both;position:relative;z-index:1;
 }
-.tabs-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  max-width: 900px;
-  margin: 0 auto;
-}
-.tab-btn {
-  display: inline-flex;
-  align-items: center;
-  background: var(--card);
-  border: 1px solid var(--cb);
-  color: var(--muted);
-  padding: 0.6rem 1.25rem;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 0.95rem;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.tab-btn:hover {
-  background: rgba(59, 130, 246, 0.1);
-  color: var(--text);
-  border-color: rgba(59, 130, 246, 0.3);
-}
-.tab-btn.active {
-  background: linear-gradient(135deg, rgba(59,130,246,0.15), rgba(6,182,212,0.1));
-  color: var(--bl);
-  border-color: rgba(59, 130, 246, 0.4);
-  box-shadow: 0 0 20px rgba(59, 130, 246, 0.1);
+.page-hero p{
+  color:var(--muted);font-size:1rem;
+  max-width:440px;margin:0 auto 2.5rem;
+  animation:fdwn .6s ease .15s both;position:relative;z-index:1;
 }
 
-/* === CONTENT SECTIONS === */
-.content-wrapper {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 3rem 1.5rem 6rem;
-  display: flex;
-  flex-direction: column;
-  gap: 3.5rem;
+/* ═══════════════════════════════════════════
+   TAB TOGGLE NAVIGATION
+═══════════════════════════════════════════ */
+.tab-nav{
+  display:flex;justify-content:center;
+  padding:0 1.5rem 1rem;
+  position:sticky;
+  top:65px;
+  z-index:100;
+  animation:fdwn .6s ease .2s both;
 }
-.policy-card {
-  background: var(--card);
-  border: 1px solid var(--cb);
-  border-radius: 24px;
-  padding: 3rem 2.5rem;
-  backdrop-filter: blur(10px);
-  scroll-margin-top: 150px; /* Accounts for sticky header + tabs */
-  transition: border-color 0.3s, box-shadow 0.3s;
+.tab-inner{
+  display:flex;
+  background:var(--card);
+  border:1px solid var(--cb);
+  border-radius:50px;
+  padding:5px;
+  gap:4px;
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  flex-wrap:wrap;
+  justify-content:center;
+  max-width:680px;
+  box-shadow:0 8px 32px rgba(0,0,0,.25);
 }
-.policy-card:hover {
-  border-color: rgba(59, 130, 246, 0.2);
+.tab-btn{
+  display:flex;align-items:center;gap:.45rem;
+  padding:.55rem 1.2rem;
+  border-radius:50px;
+  border:none;
+  background:transparent;
+  color:var(--muted);
+  font-family:var(--fb);
+  font-size:.88rem;
+  font-weight:500;
+  cursor:pointer;
+  transition:background .25s,color .25s,box-shadow .25s;
+  white-space:nowrap;
 }
-.policy-card h2 {
-  font-family: var(--fd);
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  letter-spacing: -0.02em;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
+.tab-btn:hover{color:var(--text);background:rgba(255,255,255,.06)}
+.tab-btn.active{
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
+  color:#fff;
+  box-shadow:0 0 20px rgba(59,130,246,.35);
 }
-.policy-card h2::before {
-  content: '';
-  display: block;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--blue), var(--cyan));
+.tab-btn .tab-ico{font-size:1rem}
+
+/* ═══════════════════════════════════════════
+   MAIN CONTENT
+═══════════════════════════════════════════ */
+main{padding:3rem 1.5rem 5rem}
+.content-wrap{max-width:780px;margin:0 auto}
+
+/* Policy section */
+.policy-section{
+  padding:3.5rem 0 3rem;
+  border-bottom:1px solid var(--cb);
+  opacity:0;
+  transform:translateY(28px);
+  transition:opacity .6s ease,transform .6s ease;
 }
-.policy-card h3 {
-  font-size: 1.15rem;
-  font-weight: 600;
-  margin: 2rem 0 1rem;
-  color: var(--text);
+.policy-section:last-child{border-bottom:none}
+.policy-section.visible{opacity:1;transform:translateY(0)}
+
+/* Section header */
+.sec-header{
+  display:flex;align-items:center;gap:1rem;
+  margin-bottom:2.25rem;
 }
-.policy-card p {
-  color: var(--muted);
-  margin-bottom: 1.25rem;
-  font-size: 0.95rem;
+.sec-icon{
+  width:52px;height:52px;border-radius:16px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.5rem;flex-shrink:0;
 }
-.policy-card ul {
-  color: var(--muted);
-  margin-bottom: 1.5rem;
-  padding-left: 1.25rem;
-  font-size: 0.95rem;
+.ico-blue{background:rgba(59,130,246,.12);border:1px solid rgba(59,130,246,.2)}
+.ico-purple{background:rgba(139,92,246,.12);border:1px solid rgba(139,92,246,.2)}
+.ico-green{background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.2)}
+.ico-cyan{background:rgba(6,182,212,.12);border:1px solid rgba(6,182,212,.2)}
+
+.sec-meta{}
+.sec-tag{
+  font-size:.72rem;font-weight:700;text-transform:uppercase;
+  letter-spacing:.1em;margin-bottom:.3rem;
+  display:block;
 }
-.policy-card ul li {
-  margin-bottom: 0.5rem;
-}
-.policy-card a {
-  color: var(--bl);
-  text-decoration: none;
-}
-.policy-card a:hover {
-  text-decoration: underline;
+.tag-blue{color:var(--bl)}
+.tag-purple{color:#a78bfa}
+.tag-green{color:#34d399}
+.tag-cyan{color:#22d3ee}
+
+.sec-title{
+  font-family:var(--fd);
+  font-size:clamp(1.5rem,3vw,2rem);
+  font-weight:800;letter-spacing:-.02em;
+  line-height:1.2;
 }
 
-.divider {
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--cb), transparent);
-  margin: 1rem 0;
+/* Last updated pill */
+.last-updated{
+  display:inline-flex;align-items:center;gap:.4rem;
+  background:var(--card);border:1px solid var(--cb);
+  border-radius:50px;padding:.3rem .9rem;
+  font-size:.75rem;color:var(--muted);
+  margin-bottom:1.75rem;
 }
 
-/* === FOOTER (MATCHING) === */
-footer{border-top:1px solid var(--cb);padding:2.5rem 1.5rem;text-align:center;background:var(--bg2);}
+/* Policy card */
+.policy-card{
+  background:var(--card);
+  border:1px solid var(--cb);
+  border-radius:20px;
+  padding:2rem 2.25rem;
+  backdrop-filter:blur(10px);
+  margin-bottom:1.25rem;
+}
+.policy-card:last-child{margin-bottom:0}
+
+.policy-card h3{
+  font-family:var(--fd);
+  font-size:1rem;font-weight:700;
+  margin-bottom:.85rem;
+  display:flex;align-items:center;gap:.5rem;
+  color:var(--text);
+}
+.policy-card h3 .dot{
+  width:8px;height:8px;border-radius:50%;flex-shrink:0;
+}
+.dot-blue{background:var(--blue)}
+.dot-purple{background:var(--purple)}
+.dot-green{background:var(--green)}
+.dot-cyan{background:var(--cyan)}
+
+.policy-card p{
+  color:var(--muted);
+  font-size:.9rem;
+  line-height:1.85;
+  margin-bottom:1rem;
+}
+.policy-card p:last-child{margin-bottom:0}
+.policy-card p strong{color:var(--text);font-weight:700}
+
+.policy-card ul{
+  list-style:none;
+  display:flex;flex-direction:column;
+  gap:.75rem;
+  margin:1rem 0;
+}
+.policy-card ul li{
+  color:var(--muted);font-size:.9rem;line-height:1.75;
+  word-break:normal;overflow-wrap:break-word;
+  padding-left:1.4rem;
+  position:relative;
+}
+.policy-card ul li strong{color:var(--text);font-weight:700}
+.policy-card ul li::before{
+  content:'›';
+  color:var(--bl);font-weight:700;font-size:1.1rem;
+  position:absolute;left:0;top:-.05rem;
+}
+
+/* Highlight box */
+.highlight-box{
+  background:rgba(59,130,246,.07);
+  border:1px solid rgba(59,130,246,.2);
+  border-radius:14px;
+  padding:1.25rem 1.5rem;
+  margin-top:1.25rem;
+  display:flex;align-items:flex-start;gap:.85rem;
+}
+.highlight-box .hico{font-size:1.3rem;flex-shrink:0;margin-top:.1rem}
+.highlight-box p{color:var(--text);font-size:.875rem;line-height:1.75;margin:0}
+.highlight-box strong{color:var(--bl)}
+
+.highlight-green{background:rgba(16,185,129,.07);border-color:rgba(16,185,129,.2)}
+.highlight-green p strong{color:#34d399}
+.highlight-purple{background:rgba(139,92,246,.07);border-color:rgba(139,92,246,.2)}
+.highlight-purple p strong{color:#a78bfa}
+.highlight-cyan{background:rgba(6,182,212,.07);border-color:rgba(6,182,212,.2)}
+.highlight-cyan p strong{color:#22d3ee}
+
+/* Contact link */
+.contact-link{color:var(--bl);text-decoration:none;border-bottom:1px solid rgba(96,165,250,.3);transition:border-color .2s}
+.contact-link:hover{border-color:var(--bl)}
+
+/* ═══════════════════════════════════════════
+   FOOTER — identical to homepage
+═══════════════════════════════════════════ */
+footer{border-top:1px solid var(--cb);padding:2.5rem 1.5rem;text-align:center;position:relative;z-index:1}
 .finr{max-width:800px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:1.25rem}
 .flog{font-family:var(--fd);font-weight:800;font-size:1.1rem;background:linear-gradient(135deg,var(--blue),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.ftagline{color:var(--muted);font-size:.8rem;margin-top:.1rem}
 .flnk{display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center}
 .flnk a{color:var(--muted);text-decoration:none;font-size:.88rem;transition:color .2s;display:flex;align-items:center;gap:.4rem}
 .flnk a:hover{color:var(--text)}
 .fcp{color:var(--muted);font-size:.8rem}
 
+/* WA FLOAT */
 .waf{position:fixed;bottom:1.25rem;right:1.25rem;width:52px;height:52px;background:linear-gradient(135deg,#25d366,#128c7e);border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:1.4rem;z-index:9999;animation:pwa 2s infinite;transition:transform .2s}
 .waf:hover{transform:scale(1.1)}
 @keyframes pwa{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.4)}50%{box-shadow:0 4px 45px rgba(37,211,102,.7)}}
 
-/* === ANIMATIONS === */
-@keyframes fdwn{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
-.rev{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
-.rev.vis{opacity:1;transform:translateY(0)}
+/* ═══════════════════════════════════════════
+   ANIMATIONS
+═══════════════════════════════════════════ */
+@keyframes fdwn{from{opacity:0;transform:translateY(-16px)}to{opacity:1;transform:translateY(0)}}
 
-@media(max-width:700px){
+/* ═══════════════════════════════════════════
+   ACTIVE TAB INDICATOR (section highlight glow)
+═══════════════════════════════════════════ */
+.policy-section.section-active .policy-card{
+  border-color:rgba(59,130,246,.25);
+}
+
+/* ═══════════════════════════════════════════
+   MOBILE
+═══════════════════════════════════════════ */
+@media(max-width:680px){
   nav{padding:1rem 1.25rem}
-  .mbtn{display:flex}
+  .tab-inner{gap:3px;padding:4px}
+  .tab-btn{padding:.45rem .85rem;font-size:.8rem}
+  .tab-btn .tab-ico{display:none}
+  .page-hero{padding:3.5rem 1.25rem 2rem}
+  main{padding:2rem 1.25rem 4rem}
+  .policy-card{padding:1.5rem}
   .ncta{display:none}
-  .tab-nav { top: 69px; padding: 1rem; }
-  .tabs-container { gap: 0.5rem; }
-  .tab-btn { font-size: 0.85rem; padding: 0.5rem 1rem; }
-  .legal-header { padding: 4rem 1.25rem 1.5rem; }
-  .legal-header h1 { font-size: 2.2rem; }
-  .policy-card { padding: 2rem 1.5rem; }
-  .policy-card h2 { font-size: 1.6rem; }
-  .waf{bottom:1rem;right:1rem;width:50px;height:50px;font-size:1.3rem}
+  .sec-title{font-size:1.4rem}
+  .tab-nav{top:60px}
+}
+@media(max-width:420px){
+  .tab-btn{font-size:.75rem;padding:.4rem .7rem}
 }
 </style>
 </head>
 <body>
 
 <canvas id="bgc"></canvas>
-
 <div class="movl" id="movl" onclick="closeMenu()"></div>
+
+<!-- SIDE MENU -->
 <div class="smenu" id="smenu">
   <div class="mhdr">
-    <div class="nlogo">Profilix</div>
-    <button class="mclose" onclick="closeMenu()">X</button>
+    <div class="mlogo">Profilix</div>
+    <button class="mclose" onclick="closeMenu()">&#10005;</button>
   </div>
   <ul class="mnav">
-    <li><a href="/" onclick="closeMenu()"><span class="mi">&#127968;</span> Home</a></li>
-    <li><a href="/check-username.html" onclick="closeMenu()"><span class="mi">&#128269;</span> Check Username</a></li>
-    <div class="mdiv" style="height:1px;background:var(--cb);margin:.5rem 0;"></div>
-    <li><a href="#privacy" onclick="closeMenu()"><span class="mi">&#128274;</span> Privacy Policy</a></li>
-    <li><a href="#terms" onclick="closeMenu()"><span class="mi">&#128220;</span> Terms & Conditions</a></li>
-    <li><a href="#refund" onclick="closeMenu()"><span class="mi">&#128176;</span> Refund Policy</a></li>
-    <li><a href="#service" onclick="closeMenu()"><span class="mi">&#128203;</span> Service Policy</a></li>
+    <li><a href="https://profilix.in/" onclick="closeMenu()"><span class="mi">&#127968;</span> Home</a></li>
+    <li><a href="https://profilix.in/#about" onclick="closeMenu()"><span class="mi">&#8505;&#65039;</span> About Us</a></li>
+    <li><a href="https://profilix.in/check-username" onclick="closeMenu()"><span class="mi">&#128269;</span> Check Username</a></li>
+    <li><a href="https://profilix.in/#pricing" onclick="closeMenu()"><span class="mi">&#128176;</span> Pricing</a></li>
+    <li><a href="https://profilix.in/#compare" onclick="closeMenu()"><span class="mi">&#9878;&#65039;</span> Us vs Others</a></li>
+    <li><a href="https://profilix.in/#how" onclick="closeMenu()"><span class="mi">&#128203;</span> How It Works</a></li>
+    <li><a href="https://profilix.in/#faq" onclick="closeMenu()"><span class="mi">&#10067;</span> FAQ</a></li>
+    <div class="mdiv"></div>
+    <li><a href="https://profilix.in/legal" class="active" onclick="closeMenu()"><span class="mi">&#128274;</span> Legal &amp; Policies</a></li>
     <li><a href="mailto:profilix.in@gmail.com"><span class="mi">&#9993;&#65039;</span> Contact Us</a></li>
   </ul>
-  <a href="https://wa.me/916207126785?text=Hi%2C%20I%20have%20a%20question%20about%20your%20policies" target="_blank" class="mwa">
+  <a href="https://wa.me/916207126785?text=Hi%2C%20I%20want%20my%20personal%20profile%20website" target="_blank" class="mwa">
     &#128172; Chat on WhatsApp
   </a>
 </div>
 
+<!-- NAV -->
 <nav>
   <div class="nleft">
-    <a href="/" class="nback" title="Back to Home">&#8592;</a>
-    <div class="nlogo">Profilix</div>
+    <a href="https://profilix.in/" class="back-btn" title="Back to Home">&#8592;</a>
+    <a href="https://profilix.in/" class="nlogo">Profilix</a>
   </div>
   <div class="nright">
     <button class="tbtn" id="tbtn" onclick="toggleTheme()" title="Toggle dark/light">&#127769;</button>
@@ -261,182 +434,405 @@ footer{border-top:1px solid var(--cb);padding:2.5rem 1.5rem;text-align:center;ba
   </div>
 </nav>
 
-<div class="page-wrap">
-  <header class="legal-header">
-    <h1>Terms & Policies</h1>
-    <p>Everything you need to know about our rules, data handling, and service guarantees. Transparency is our priority.</p>
-  </header>
-
-  <div class="tab-nav">
-    <div class="tabs-container">
-      <a href="#privacy" class="tab-btn active" data-target="privacy">Privacy Policy</a>
-      <a href="#terms" class="tab-btn" data-target="terms">Terms & Conditions</a>
-      <a href="#refund" class="tab-btn" data-target="refund">Refund Policy</a>
-      <a href="#service" class="tab-btn" data-target="service">Service Policy</a>
-    </div>
-  </div>
-
-  <main class="content-wrapper">
-    
-    <section id="privacy" class="policy-card rev">
-      <h2>Privacy Policy</h2>
-      <p>Last updated: April 2026</p>
-      <div class="divider"></div>
-      
-      <h3>1. Information We Collect</h3>
-      <p>When you use Profilix to create your personal website, we only collect the information necessary to provide and customize our services. This includes:</p>
-      <ul>
-        <li><strong>Personal Information:</strong> Your full name, email address, WhatsApp number, and chosen username.</li>
-        <li><strong>Profile Data:</strong> Photos, biographical text, social media links, and any portfolio/resume files you choose to upload to your profile.</li>
-        <li><strong>Usage Data:</strong> Basic analytics regarding how your profile is accessed, helping us ensure fast load times and service stability.</li>
-      </ul>
-
-      <h3>2. How We Use Your Data</h3>
-      <p>Your data is exclusively used for the setup, maintenance, and hosting of your unique Profilix website. We use your contact information solely to communicate updates regarding your account, renewal reminders, and support queries.</p>
-
-      <h3>3. Data Sharing & Third Parties</h3>
-      <p><strong>We do not sell, rent, or trade your personal data.</strong> We do not inject third-party trackers or ads onto your personal profile. Your profile is public by nature, so the information you ask us to put on your page will be visible to anyone with your link.</p>
-
-      <h3>4. Your Rights & Data Removal</h3>
-      <p>You own your content. If you wish to take down your website, update your details, or completely erase your data from our servers, simply contact our support team via WhatsApp or email, and we will process the deletion within 48 hours.</p>
-    </section>
-
-    <section id="terms" class="policy-card rev">
-      <h2>Terms & Conditions</h2>
-      <p>Last updated: April 2026</p>
-      <div class="divider"></div>
-      
-      <h3>1. Acceptance of Terms</h3>
-      <p>By accessing and using the services provided by Profilix, you agree to be bound by these Terms & Conditions. If you do not agree with any part of these terms, please do not use our services.</p>
-
-      <h3>2. Usernames & Exclusivity</h3>
-      <p>Usernames (e.g., profilix.in/yourname) are distributed on a strict <strong>first-come, first-served</strong> basis. Reserving a username requires active payment of a subscription plan. If your plan expires and the grace period passes, the username may be released to the public.</p>
-
-      <h3>3. Acceptable Use</h3>
-      <p>You agree to use your Profilix page responsibly. You must not use our service to:</p>
-      <ul>
-        <li>Host or share illegal, harmful, or explicitly offensive content.</li>
-        <li>Impersonate another individual, brand, or entity.</li>
-        <li>Distribute malware, spam, or engage in phishing activities.</li>
-      </ul>
-      <p>We reserve the right to suspend or terminate any profile that violates these guidelines without prior notice or refund.</p>
-
-      <h3>4. Intellectual Property</h3>
-      <p>You retain full ownership of the text, images, and files you provide to us. However, Profilix retains all ownership and intellectual property rights over the custom design templates, underlying code, layouts, and overall UI/UX of the platform.</p>
-    </section>
-
-    <section id="refund" class="policy-card rev">
-      <h2>Refund Policy</h2>
-      <p>Last updated: April 2026</p>
-      <div class="divider"></div>
-      
-      <h3>1. One-Time Setup Fee</h3>
-      <p>The initial setup fee covers the manual labor and technical resources required to design and deploy your custom profile within 48 hours. Because this is a personalized digital service, the setup fee is <strong>non-refundable once development has begun</strong>.</p>
-
-      <h3>2. Satisfaction Guarantee</h3>
-      <p>We want you to love your profile. If you are not satisfied with the initial delivery, we offer revisions to tweak the design, colors, and layout until it meets the standards of your chosen template. If we completely fail to deliver the website as promised, a full refund will be issued.</p>
-
-      <h3>3. Subscription Cancellations</h3>
-      <p>You can choose not to renew your 4-month or 12-month subscription at any time. There are no lock-in contracts or cancellation fees. However, we do not offer prorated refunds for mid-cycle cancellations. Your profile will remain active until the end of your currently paid billing cycle.</p>
-    </section>
-
-    <section id="service" class="policy-card rev">
-      <h2>Service Policy</h2>
-      <p>Last updated: April 2026</p>
-      <div class="divider"></div>
-      
-      <h3>1. Delivery Timeline</h3>
-      <p>Our standard delivery promise is <strong>48 hours</strong> from the moment we receive all your required information (photos, text, links) and payment confirmation. If there are delays on our end, you will be notified immediately.</p>
-
-      <h3>2. Profile Updates</h3>
-      <p>The frequency of content updates (changing a photo, updating a link, adding a new resume) depends on your plan:</p>
-      <ul>
-        <li><strong>Setup Plan:</strong> No recurring free updates (updates incur a small fee).</li>
-        <li><strong>4-Month Plan:</strong> 1 free update per month.</li>
-        <li><strong>12-Month Plan:</strong> Unlimited free updates.</li>
-      </ul>
-      <p>Update requests are typically processed within 24-48 hours via WhatsApp support.</p>
-
-      <h3>3. Uptime & Maintenance</h3>
-      <p>We strive for a 99.9% uptime for all user profiles. Occasionally, short maintenance windows are required to upgrade our infrastructure. These are generally performed during off-peak hours to minimize disruption to your digital presence.</p>
-    </section>
-
-  </main>
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="hero-glow"></div>
+  <div class="badge">&#128274; Legal Center</div>
+  <h1>Terms &amp; Policies</h1>
+  <p>Everything you need to know about how Profilix works, what we promise, and how we protect you.</p>
 </div>
 
+<!-- TAB NAVIGATION -->
+<div class="tab-nav">
+  <div class="tab-inner">
+    <button class="tab-btn active" onclick="goTo('privacy',this)">
+      <span class="tab-ico">&#128274;</span> Privacy Policy
+    </button>
+    <button class="tab-btn" onclick="goTo('terms',this)">
+      <span class="tab-ico">&#128203;</span> Terms &amp; Conditions
+    </button>
+    <button class="tab-btn" onclick="goTo('refund',this)">
+      <span class="tab-ico">&#128176;</span> Refund Policy
+    </button>
+    <button class="tab-btn" onclick="goTo('service',this)">
+      <span class="tab-ico">&#9881;&#65039;</span> Service Policy
+    </button>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<main>
+  <div class="content-wrap">
+
+    <!-- ══════════════════════════════════
+         PRIVACY POLICY
+    ══════════════════════════════════ -->
+    <div class="policy-section" id="privacy">
+      <div class="sec-header">
+        <div class="sec-icon ico-blue">&#128274;</div>
+        <div class="sec-meta">
+          <span class="sec-tag tag-blue">Legal Document</span>
+          <h2 class="sec-title">Privacy Policy</h2>
+        </div>
+      </div>
+      <div class="last-updated">&#128197; Last updated: April 2026</div>
+
+      <div class="policy-card">
+        <h3><span class="dot dot-blue"></span>Introduction &amp; Our Commitment</h3>
+        <p>At Profilix, we believe your personal data belongs to you — not us. This Privacy Policy explains in plain language what information we collect when you use our services, how we use it, and the rights you have over it. We are committed to handling your data with the highest level of care, transparency, and respect.</p>
+        <p>By accessing profilix.in or using any of our services, you agree to the terms described in this policy. If you do not agree, please discontinue use of our platform immediately.</p>
+      </div>
+
+      <div class="policy-card">
+        <h3><span class="dot dot-blue"></span>Information We Collect</h3>
+        <p>We only collect information that <strong>you voluntarily provide to us</strong> for the purpose of building your profile website. This includes:</p>
+        <ul>
+          <li><strong>Your full name</strong> — as you want it displayed on your profile page</li>
+          <li><strong>Profile photo</strong> — the image you share with us to be shown on your profile</li>
+          <li><strong>Professional role or tagline</strong> — a short description of what you do</li>
+          <li><strong>Bio or about text</strong> — a brief introduction about yourself that you write or ask us to help with</li>
+          <li><strong>Social media &amp; website links</strong> — URLs to your Instagram, LinkedIn, YouTube, portfolio, or other platforms you choose to display</li>
+          <li><strong>Contact details</strong> — your WhatsApp number or email address, shared by you to coordinate the profile creation process</li>
+          <li><strong>CV or resume file</strong> — only if you opt for the resume download feature and choose to share it</li>
+          <li><strong>Payment confirmation</strong> — we note that payment was received but we do not store any card, bank, or financial credentials</li>
+        </ul>
+        <div class="highlight-box">
+          <span class="hico">&#128161;</span>
+          <p>We do <strong>not</strong> collect any data automatically, use tracking cookies, advertising pixels, or sell your information to any third party — ever. Profilix is ad-free and always will be.</p>
+        </div>
+      </div>
+
+      <div class="policy-card">
+        <h3><span class="dot dot-blue"></span>How We Use Your Information</h3>
+        <p>Your information is used solely to create, maintain, and improve your personal profile website. Specifically, we use it to:</p>
+        <ul>
+          <li>Build and publish your profile page at profilix.in/username</li>
+          <li>Communicate with you about updates, renewals, and revisions to your profile</li>
+          <li>Verify your identity and prevent duplicate or fraudulent username claims</li>
+          <li>Provide customer support and respond to your queries</li>
+          <li>Occasionally showcase your public profile link as a demo (you can opt out at any time by messaging us)</li>
+        </ul>
+      </div>
+
+      <div class="policy-card">
+        <h3><span class="dot dot-blue"></span>Data Storage &amp; Security</h3>
+        <p>Your profile data is stored on secure servers. We follow industry-standard practices to protect your information from unauthorised access, alteration, or disclosure. While no system is 100% immune to breaches, we take every reasonable measure to keep your data safe.</p>
+        <p>We retain your data for as long as your profile subscription is active. If you choose not to renew and your grace period expires, we may delete your profile data after a reasonable period. You may request deletion at any time by contacting us.</p>
+      </div>
+
+      <div class="policy-card">
+        <h3><span class="dot dot-blue"></span>Your Rights</h3>
+        <ul>
+          <li><strong>Access</strong> — Request a copy of the data we hold about you</li>
+          <li><strong>Correction</strong> — Ask us to correct any inaccurate information</li>
+          <li><strong>Deletion</strong> — Request complete removal of your profile and associated data</li>
+          <li><strong>Opt-out</strong> — Ask us not to display your profile as a public demo</li>
+          <li><strong>Portability</strong> — Receive your profile content in a readable format</li>
+        </ul>
+        <p>To exercise any of these rights, contact us at <a href="mailto:profilix.in@gmail.com" class="contact-link">profilix.in@gmail.com</a> or WhatsApp +91 62071 26785. We respond within 48 hours.</p>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════
+         TERMS & CONDITIONS
+    ══════════════════════════════════ -->
+    <div class="policy-section" id="terms">
+      <div class="sec-header">
+        <div class="sec-icon ico-purple">&#128203;</div>
+        <div class="sec-meta">
+          <span class="sec-tag tag-purple">Legal Document</span>
+          <h2 class="sec-title">Terms &amp; Conditions</h2>
+        </div>
+      </div>
+      <div class="last-updated">&#128197; Last updated: April 2026</div>
+
+      <div class="policy-card">
+        <h3><span class="dot dot-purple"></span>Agreement to Terms</h3>
+        <p>By purchasing a profile from Profilix, messaging us on WhatsApp to initiate the process, or using profilix.in in any way, you confirm that you have read, understood, and agreed to these Terms and Conditions in full. If you are under 18 years of age, you must have a parent or guardian's consent before using our services.</p>
+        <p>These terms form a legally binding agreement between you ("the Client") and Profilix ("the Service Provider"). We reserve the right to update these terms at any time. Continued use of our services after any update constitutes acceptance of the new terms.</p>
+      </div>
+
+      <div class="policy-card">
+        <h3><span class="dot dot-purple"></span>Username Ownership &amp; Exclusivity</h3>
+        <p>Each username on profilix.in is unique and permanently assigned to one client. Once a username is reserved and payment is confirmed:</p>
+        <ul>
+          <li>That username cannot be transferred to another person</li>
+          <li>No other client can claim or purchase the same username</li>
+          <li>Username availability is checked on a first-come, first-served basis</li>
+          <li>Profilix reserves the right to refuse any username that is offensive, misleading, or impersonates a public figure or brand</li>
+          <li>If a username subscription lapses and the grace period ends, the username may become available again</li>
+        </ul>
+        <div class="highlight-box highlight-purple">
+          <span class="hico">&#9888;&#65039;</span>
+          <p><strong>Important:</strong> Claiming a username that impersonates another person, brand, or public figure is strictly prohibited and may result in immediate termination without refund.</p>
+        </div>
+      </div>
+
+      <div class="policy-card">
+        <h3><span class="dot dot-purple"></span>Content Responsibility</h3>
+        <p>You are solely responsible for all content provided to us for your profile page, including your name, bio, photos, social media links, and any other information displayed. By submitting content to Profilix, you confirm that:</p>
+        <ul>
+          <li>You own or have the legal right to use all submitted content</li>
+          <li>The content does not violate any copyright, trademark, or intellectual property rights</li>
+          <li>The content is not defamatory, obscene, illegal, or misleading</li>
+          <li>The content does not promote violence, hate, or illegal activities</li>
+        </ul>
+        <p>Profilix reserves the right to refuse or remove any content that violates these conditions without prior notice and without obligation to issue a refund.</p>
+      </div>
+
+      <div class="policy-card">
+        <h3><span class="dot dot-purple"></span>Service Delivery &amp; Timeline</h3>
+        <p>We commit to delivering your profile website within <strong>48 hours</strong> of receiving all necessary content (photo, bio, links, username preference) and confirmed payment. Delays caused by incomplete information or late responses from the client are not the responsibility of Profilix.</p>
+        <ul>
+          <li>Standard delivery: within 48 hours</li>
+          <li>Priority delivery (12-month plan): within 24–36 hours where possible</li>
+          <li>Profile revisions: completed within 48 hours of receiving revision request</li>
+        </ul>
+      </div>
+
+      <div class="policy-card">
+        <h3><span class="dot dot-purple"></span>Prohibited Uses</h3>
+        <p>You agree not to use Profilix services for any of the following:</p>
+        <ul>
+          <li>Impersonating any individual, brand, company, or public figure</li>
+          <li>Publishing false, misleading, or fraudulent information</li>
+          <li>Promoting illegal products, services, or activities</li>
+          <li>Attempting to hack, overload, or disrupt the profilix.in platform</li>
+          <li>Reselling or subletting your profile page or username to a third party</li>
+        </ul>
+        <p>Violation of any of the above will result in immediate termination of your profile without refund.</p>
+      </div>
+
+      <div class="policy-card">
+        <h3><span class="dot dot-purple"></span>Limitation of Liability</h3>
+        <p>Profilix provides its services "as is." While we strive for 99%+ uptime and the highest quality, we cannot guarantee uninterrupted availability. Profilix shall not be held liable for any indirect, incidental, or consequential damages arising from the use or inability to use our services, including loss of business, revenue, or data.</p>
+        <p>Our total liability to you for any claim related to our services shall not exceed the amount you paid for the current subscription period.</p>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════
+         REFUND POLICY
+    ══════════════════════════════════ -->
+    <div class="policy-section" id="refund">
+      <div class="sec-header">
+        <div class="sec-icon ico-green">&#128176;</div>
+        <div class="sec-meta">
+          <span class="sec-tag tag-green">Legal Document</span>
+          <h2 class="sec-title">Refund Policy</h2>
+        </div>
+      </div>
+      <div class="last-updated">&#128197; Last updated: April 2026</div>
+
+      <div class="policy-card">
+        <h3><span class="dot dot-green"></span>Our Clear Refund Stance</h3>
+        <p>At Profilix, we invest real time and effort into building every profile website. Because of this, our refund policy is <strong>simple, transparent, and strict</strong>. Please read this carefully before making a payment.</p>
+        <div class="highlight-box highlight-green">
+          <span class="hico">&#9989;</span>
+          <p><strong>Simple rule:</strong> If we successfully build and deliver your website, <strong>no refund will be issued</strong>. A refund is only possible if we are completely unable to build your website.</p>
+        </div>
+      </div>
+
+      <div class="policy-card">
+        <h3><span class="dot dot-green"></span>No Refund After Website is Built</h3>
+        <p>Once your profile website has been designed, built, and delivered — <strong>no refund will be provided under any circumstances</strong>, including:</p>
+        <ul>
+          <li>You change your mind after delivery</li>
+          <li>You feel the design could be better — we offer <strong>free revisions</strong> instead</li>
+          <li>You decide not to use the profile after it goes live</li>
+          <li>You found a cheaper alternative elsewhere</li>
+          <li>You no longer need the service after delivery</li>
+          <li>Your plan expired and you chose not to renew</li>
+        </ul>
+        <p>This policy exists because once a website is built, our team's time and work cannot be recovered. We encourage you to review demo profiles and ask all questions <strong>before</strong> making a payment.</p>
+      </div>
+
+      <div class="policy-card">
+        <h3><span class="dot dot-green"></span>When a Refund IS Given</h3>
+        <p>A full refund will be issued <strong>only</strong> if:</p>
+        <ul>
+          <li>We are <strong>completely unable to build your website</strong> — for example, your chosen username is unavailable and no alternative was agreed upon, or a technical issue on our end prevents delivery entirely</li>
+          <li>We fail to deliver within <strong>7 days</strong> of confirmed payment and all required content received — and the delay is <strong>solely our fault</strong>, not due to missing information from your side</li>
+        </ul>
+        <div class="highlight-box">
+          <span class="hico">&#128161;</span>
+          <p>If we face any difficulty building your profile, we will <strong>always contact you first</strong> via WhatsApp to resolve it before any refund is considered.</p>
+        </div>
+      </div>
+
+      <div class="policy-card">
+        <h3><span class="dot dot-green"></span>Free Revisions — Our Alternative to Refunds</h3>
+        <p>Not satisfied with the delivered profile? We offer <strong>free revisions</strong>. Tell us exactly what you want changed — layout, content, colors, links — and we will fix it promptly.</p>
+        <ul>
+          <li>Request revisions via WhatsApp within <strong>7 days</strong> of delivery</li>
+          <li>Revisions after 7 days may be treated as a standard update charged as per your plan</li>
+          <li>Revision requests must include <strong>clear, specific instructions</strong></li>
+        </ul>
+      </div>
+
+      <div class="policy-card">
+        <h3><span class="dot dot-green"></span>How to Contact Us for a Refund Request</h3>
+        <p>If you believe you qualify for a refund based on the conditions above, contact us within <strong>48 hours</strong> of the issue arising:</p>
+        <ul>
+          <li>WhatsApp: <strong>+91 62071 26785</strong></li>
+          <li>Email: <a href="mailto:profilix.in@gmail.com" class="contact-link">profilix.in@gmail.com</a></li>
+        </ul>
+        <p>Include your username, the reason for your request, and any supporting context. We will review and respond within <strong>48 business hours</strong>. Approved refunds are processed within 5–7 business days.</p>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════
+         SERVICE POLICY
+    ══════════════════════════════════ -->
+    <div class="policy-section" id="service">
+      <div class="sec-header">
+        <div class="sec-icon ico-cyan">&#9881;&#65039;</div>
+        <div class="sec-meta">
+          <span class="sec-tag tag-cyan">Legal Document</span>
+          <h2 class="sec-title">Service Policy</h2>
+        </div>
+      </div>
+      <div class="last-updated">&#128197; Last updated: April 2026</div>
+
+      <div class="policy-card">
+        <h3><span class="dot dot-cyan"></span>What Profilix Provides</h3>
+        <p>Profilix is a personal profile website creation and hosting service. We design, build, and host a custom profile page for you at a unique URL — profilix.in/yourusername. Our service is tailored, meaning every profile is individually crafted based on your details and preferences — not generated from a generic template.</p>
+        <p>Our current service includes the following plans:</p>
+        <ul>
+          <li><strong>Setup Fee (&#8377;999, one-time)</strong> — Username reservation, profile design, and initial launch</li>
+          <li><strong>4-Month Plan (&#8377;1199)</strong> — Profile hosting for 4 months, 1 free update per month, WhatsApp support</li>
+          <li><strong>12-Month Plan (&#8377;2500)</strong> — Profile hosting for 12 months, unlimited updates, priority support, full customisation flexibility</li>
+        </ul>
+      </div>
+
+      <div class="policy-card">
+        <h3><span class="dot dot-cyan"></span>Profile Updates &amp; Revisions</h3>
+        <p>After your profile is live, you can request <strong>content updates</strong> as follows:</p>
+        <ul>
+          <li><strong>4-Month Plan</strong> — 1 free content update per calendar month. Additional updates beyond this are charged at &#8377;99 per request.</li>
+          <li><strong>12-Month Plan</strong> — Unlimited <strong>content updates</strong> throughout the subscription period at no extra charge.</li>
+          <li><strong>Setup-only clients</strong> — Post-launch updates are not included and will be quoted separately.</li>
+        </ul>
+        <div class="highlight-box highlight-cyan">
+          <span class="hico">&#128161;</span>
+          <p><strong>What counts as a content update?</strong> Changes to your name, photo, bio, phone number, email, or social media links. These are simple text/image changes that take minutes.</p>
+        </div>
+        <div class="highlight-box highlight-purple">
+          <span class="hico">&#9888;&#65039;</span>
+          <p><strong>Design or structural changes</strong> — such as adding new sections, changing layout, adding animations, or building new pages — are <strong>developer-level work and are charged separately</strong>, regardless of your plan. We will always quote you before beginning such work.</p>
+        </div>
+        <p>All update requests must be submitted via WhatsApp and will be completed within 48 hours of receiving complete, clear instructions from your side.</p>
+      </div>
+
+      <div class="policy-card">
+        <h3><span class="dot dot-cyan"></span>Hosting &amp; Uptime</h3>
+        <p>Profilix provides hosting for all profile pages on reliable infrastructure. We aim for maximum uptime and fast load speeds. However, scheduled maintenance, server updates, or force majeure events (such as natural disasters, internet outages, or third-party infrastructure failures) may cause temporary unavailability.</p>
+        <ul>
+          <li>Planned maintenance will be communicated at least 24 hours in advance where possible</li>
+          <li>Emergency maintenance may occur without notice if required for security</li>
+          <li>Profilix is not liable for loss of business or income during downtime periods</li>
+        </ul>
+        <div class="highlight-box highlight-cyan">
+          <span class="hico">&#9889;</span>
+          <p>All Profilix profiles are optimised for <strong>fast loading</strong> — typically under 2 seconds — and are fully mobile-responsive out of the box.</p>
+        </div>
+      </div>
+
+      <div class="policy-card">
+        <h3><span class="dot dot-cyan"></span>Subscription Management &amp; Renewals</h3>
+        <p>Your profile subscription does not auto-renew. We will remind you via WhatsApp before your subscription expires so you have time to renew without interruption.</p>
+        <ul>
+          <li>Renewal reminders are sent <strong>7 days</strong> before expiry</li>
+          <li>After expiry, there is a <strong>grace period of 14 days</strong> during which your profile remains live but no updates are processed</li>
+          <li>After the grace period, your profile will be archived (not deleted) for a further 30 days</li>
+          <li>If you renew within the 30-day archive period, your profile is restored exactly as it was</li>
+          <li>After 30 days of archiving, your username may be released and made available to others</li>
+        </ul>
+      </div>
+
+      <div class="policy-card">
+        <h3><span class="dot dot-cyan"></span>Communication &amp; Support</h3>
+        <p>All Profilix support is provided via WhatsApp (+91 62071 26785) and email (profilix.in@gmail.com). Our typical response time is within 2–4 hours during working hours (9 AM – 9 PM IST, Monday to Saturday).</p>
+        <ul>
+          <li>For urgent matters, WhatsApp is the fastest way to reach us</li>
+          <li>Feature requests and feedback are always welcome</li>
+          <li>We do not provide phone call support at this time</li>
+        </ul>
+      </div>
+
+      <div class="policy-card">
+        <h3><span class="dot dot-cyan"></span>Service Termination</h3>
+        <p>Profilix reserves the right to suspend or permanently terminate a profile if the client violates our Terms and Conditions. In such cases:</p>
+        <ul>
+          <li>The client will be notified of the violation via WhatsApp or email</li>
+          <li>A reasonable opportunity to remedy the violation will be given (unless the violation is severe)</li>
+          <li>No refund will be issued for terminations resulting from policy violations</li>
+          <li>Clients may appeal termination decisions by emailing <a href="mailto:profilix.in@gmail.com" class="contact-link">profilix.in@gmail.com</a></li>
+        </ul>
+        <p>Clients may also voluntarily cancel their profile at any time by notifying us. Voluntary cancellations are not eligible for refunds on the remaining subscription period unless otherwise stated in the Refund Policy.</p>
+      </div>
+
+      <div class="policy-card">
+        <h3><span class="dot dot-cyan"></span>Changes to Our Service</h3>
+        <p>Profilix may introduce new features, modify existing features, or discontinue certain aspects of the service at any time. We will provide at least <strong>30 days' notice</strong> of any major changes that may materially affect existing clients. Minor updates or improvements will be made without notice as they generally enhance the service.</p>
+        <p>Pricing for existing clients will not increase during an active subscription period. New pricing, if any, will apply only from the next renewal cycle and will be communicated in advance.</p>
+      </div>
+
+    </div><!-- end content-wrap -->
+  </div>
+</main>
+
+<!-- FOOTER -->
 <footer>
   <div class="finr">
-    <div class="flog">Profilix</div>
-
-    <div class="flnk">
-      <a href="/#pricing">Pricing</a>
-      <a href="/#faq">FAQ</a>
-      <a href="/check-username.html">Check Username</a>
+    <div>
+      <div class="flog">Profilix</div>
+      <div class="ftagline">Turn your name into a website &#128640;</div>
     </div>
-
     <div class="flnk">
-      <a href="mailto:profilix.in@gmail.com">📧 profilix.in@gmail.com</a>
-      <a href="https://wa.me/916207126785" target="_blank">💬 WhatsApp</a>
+      <a href="mailto:profilix.in@gmail.com">&#9993;&#65039; profilix.in@gmail.com</a>
+      <a href="https://wa.me/916207126785" target="_blank">&#128172; +91 62071 26785</a>
+      <a href="https://profilix.in/#pricing">Pricing</a>
+      <a href="https://profilix.in/legal">Legal</a>
+      <a href="https://profilix.in/check-username">Check Username</a>
     </div>
-
-    <div class="flnk">
-      <a href="/legal.html#privacy">Privacy Policy</a>
-      <a href="/legal.html#terms">Terms & Conditions</a>
-      <a href="/legal.html#refund">Refund Policy</a>
-    </div>
-
-    <p class="fcp">
-      © 2026 Profilix · Turn your name into a website 🚀
-    </p>
+    <p class="fcp">&#169; 2026 Profilix.in &middot; Your identity. Your link. Your web.</p>
   </div>
 </footer>
 
-<a href="https://wa.me/916207126785?text=Hi%2C%20I%20have%20a%20question%20about%20Profilix" target="_blank" class="waf" title="Chat on WhatsApp">&#128172;</a>
-
+<!-- WA FLOAT -->
+<a href="https://wa.me/916207126785?text=Hi%2C%20I%20want%20my%20personal%20profile%20website" target="_blank" class="waf" title="Chat on WhatsApp">&#128172;</a>
 
 <script>
-// --- Canvas Background Animation ---
+/* ═══════════════════════════
+   BACKGROUND PARTICLES
+═══════════════════════════ */
 (function(){
   var c=document.getElementById('bgc'),ctx=c.getContext('2d'),W,H,pts=[];
   function rs(){W=c.width=window.innerWidth;H=c.height=window.innerHeight}
   rs();window.addEventListener('resize',rs);
-  function P(){this.x=Math.random()*W;this.y=Math.random()*H;this.r=Math.random()*1.4+0.3;this.vx=(Math.random()-.5)*.35;this.vy=(Math.random()-.5)*.35;this.a=Math.random()*.5+.1;this.col=Math.random()>.5?'#3b82f6':'#06b6d4'}
+  function P(){this.x=Math.random()*W;this.y=Math.random()*H;this.r=Math.random()*1.4+0.3;this.vx=(Math.random()-.5)*.3;this.vy=(Math.random()-.5)*.3;this.a=Math.random()*.45+.08;this.col=Math.random()>.5?'#3b82f6':'#06b6d4'}
   for(var i=0;i<80;i++)pts.push(new P());
   function draw(){
     ctx.clearRect(0,0,W,H);
-    for(var i=0;i<pts.length;i++){
-      for(var j=i+1;j<pts.length;j++){
-        var dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);
-        if(d<130){
-          ctx.beginPath();
-          ctx.strokeStyle='rgba(59,130,246,'+(0.07*(1-d/130))+')';
-          ctx.lineWidth=.5;
-          ctx.moveTo(pts[i].x,pts[i].y);
-          ctx.lineTo(pts[j].x,pts[j].y);
-          ctx.stroke()
-        }
-      }
-    }
-    pts.forEach(function(p){
-      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-      ctx.fillStyle=p.col;ctx.globalAlpha=p.a;ctx.fill();ctx.globalAlpha=1;
-      p.x+=p.vx;p.y+=p.vy;
-      if(p.x<0||p.x>W)p.vx*=-1;
-      if(p.y<0||p.y>H)p.vy*=-1
-    });
+    for(var i=0;i<pts.length;i++){for(var j=i+1;j<pts.length;j++){var dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);if(d<120){ctx.beginPath();ctx.strokeStyle='rgba(59,130,246,'+(0.06*(1-d/120))+')';ctx.lineWidth=.5;ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);ctx.stroke()}}}
+    pts.forEach(function(p){ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle=p.col;ctx.globalAlpha=p.a;ctx.fill();ctx.globalAlpha=1;p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1});
     requestAnimationFrame(draw);
   }
   draw();
 })();
 
-// --- Theme Toggle ---
+/* ═══════════════════════════
+   THEME TOGGLE
+═══════════════════════════ */
 function toggleTheme(){
   var h=document.documentElement,b=document.getElementById('tbtn'),d=h.getAttribute('data-theme')==='dark';
   h.setAttribute('data-theme',d?'light':'dark');
   b.innerHTML=d?'&#9728;&#65039;':'&#127769;';
 }
 
-// --- Mobile Menu Toggle ---
+/* ═══════════════════════════
+   SIDE MENU
+═══════════════════════════ */
 function toggleMenu(){
   var m=document.getElementById('smenu'),o=document.getElementById('movl'),b=document.getElementById('mbtn');
   if(m.classList.contains('open')){closeMenu()}
@@ -449,41 +845,72 @@ function closeMenu(){
   document.body.style.overflow='';
 }
 
-// --- Scroll Reveal Animations ---
-var revs=document.querySelectorAll('.rev');
-var obs=new IntersectionObserver(function(es){
-  es.forEach(function(e){
-    if(e.isIntersecting){
-      e.target.classList.add('vis');
-    }
-  })
-},{threshold:.1});
-revs.forEach(function(r){obs.observe(r)});
+/* ═══════════════════════════
+   TAB NAVIGATION
+═══════════════════════════ */
+function goTo(id, btn){
+  // Update active tab
+  document.querySelectorAll('.tab-btn').forEach(function(b){b.classList.remove('active')});
+  btn.classList.add('active');
 
-// --- Tabs Interactivity & Scroll Spy ---
-const sections = document.querySelectorAll('.policy-card');
-const navLinks = document.querySelectorAll('.tab-btn');
+  // Scroll to section with offset for sticky nav + tab bar
+  var el=document.getElementById(id);
+  if(!el) return;
+  var offset=130;
+  var top=el.getBoundingClientRect().top+window.pageYOffset-offset;
+  window.scrollTo({top:top,behavior:'smooth'});
+}
 
-window.addEventListener('scroll', () => {
-  let current = '';
-  const scrollY = window.pageYOffset;
-  
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.clientHeight;
-    // Offset calculation to account for sticky header
-    if (scrollY >= (sectionTop - 200)) {
-      current = section.getAttribute('id');
-    }
+/* ═══════════════════════════
+   SCROLL SPY — auto update tab on scroll
+═══════════════════════════ */
+var sections=['privacy','terms','refund','service'];
+var tabs=document.querySelectorAll('.tab-btn');
+var ticking=false;
+
+window.addEventListener('scroll',function(){
+  if(!ticking){
+    requestAnimationFrame(function(){
+      var scrollY=window.pageYOffset+160;
+      var current='privacy';
+      sections.forEach(function(id){
+        var el=document.getElementById(id);
+        if(el && el.offsetTop<=scrollY) current=id;
+      });
+      tabs.forEach(function(t,i){
+        t.classList.toggle('active',sections[i]===current);
+      });
+      ticking=false;
+    });
+    ticking=true;
+  }
+});
+
+/* ═══════════════════════════
+   INTERSECTION OBSERVER — fade in sections
+═══════════════════════════ */
+var obs=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting) e.target.classList.add('visible');
   });
+},{threshold:0.06,rootMargin:'0px 0px -60px 0px'});
 
-  navLinks.forEach(link => {
-    link.classList.remove('active');
-    if (link.getAttribute('data-target') === current) {
-      link.classList.add('active');
-    }
-  });
+document.querySelectorAll('.policy-section').forEach(function(s){obs.observe(s)});
+
+/* ═══════════════════════════
+   URL HASH — jump to section on load
+═══════════════════════════ */
+window.addEventListener('load',function(){
+  var hash=window.location.hash.replace('#','');
+  if(hash && document.getElementById(hash)){
+    setTimeout(function(){
+      var el=document.getElementById(hash);
+      var top=el.getBoundingClientRect().top+window.pageYOffset-130;
+      window.scrollTo({top:top,behavior:'smooth'});
+    },400);
+  }
 });
 </script>
+
 </body>
 </html>
