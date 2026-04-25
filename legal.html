@@ -198,11 +198,6 @@ nav{
   white-space:nowrap;
 }
 .tab-btn:hover{color:var(--text);background:rgba(255,255,255,.06)}
-.tab-btn.active{
-  background:linear-gradient(135deg,var(--blue),var(--cyan));
-  color:#fff;
-  box-shadow:0 0 20px rgba(59,130,246,.35);
-}
 .tab-btn .tab-ico{font-size:1rem}
 
 /* ═══════════════════════════════════════════
@@ -445,7 +440,7 @@ footer{border-top:1px solid var(--cb);padding:2.5rem 1.5rem;text-align:center;po
 <!-- TAB NAVIGATION -->
 <div class="tab-nav">
   <div class="tab-inner">
-    <button class="tab-btn active" onclick="goTo('privacy',this)">
+    <button class="tab-btn" onclick="goTo('privacy',this)">
       <span class="tab-ico">&#128274;</span> Privacy Policy
     </button>
     <button class="tab-btn" onclick="goTo('terms',this)">
@@ -848,16 +843,10 @@ function closeMenu(){
 /* ═══════════════════════════
    TAB NAVIGATION
 ═══════════════════════════ */
-function goTo(id, btn){
-  // Update active tab
-  document.querySelectorAll('.tab-btn').forEach(function(b){b.classList.remove('active')});
-  btn.classList.add('active');
-
-  // Scroll to section with offset for sticky nav + tab bar
+function goTo(id){
   var el=document.getElementById(id);
   if(!el) return;
-  var offset=130;
-  var top=el.getBoundingClientRect().top+window.pageYOffset-offset;
+  var top=el.getBoundingClientRect().top+window.pageYOffset-130;
   window.scrollTo({top:top,behavior:'smooth'});
 }
 
@@ -868,23 +857,36 @@ var sections=['privacy','terms','refund','service'];
 var tabs=document.querySelectorAll('.tab-btn');
 var ticking=false;
 
+function updateActiveTabs(){
+  var scrollY=window.pageYOffset+170;
+  var current=sections[0];
+  for(var i=0;i<sections.length;i++){
+    var el=document.getElementById(sections[i]);
+    if(el && el.getBoundingClientRect().top+window.pageYOffset<=scrollY){
+      current=sections[i];
+    }
+  }
+  tabs.forEach(function(t,i){
+    if(sections[i]===current){
+      t.classList.add('active');
+    } else {
+      t.classList.remove('active');
+    }
+  });
+}
+
 window.addEventListener('scroll',function(){
   if(!ticking){
     requestAnimationFrame(function(){
-      var scrollY=window.pageYOffset+160;
-      var current='privacy';
-      sections.forEach(function(id){
-        var el=document.getElementById(id);
-        if(el && el.offsetTop<=scrollY) current=id;
-      });
-      tabs.forEach(function(t,i){
-        t.classList.toggle('active',sections[i]===current);
-      });
+      updateActiveTabs();
       ticking=false;
     });
     ticking=true;
   }
 });
+
+// Run once on load to set correct initial state
+updateActiveTabs();
 
 /* ═══════════════════════════
    INTERSECTION OBSERVER — fade in sections
