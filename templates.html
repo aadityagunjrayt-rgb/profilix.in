@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Templates | Profilix — Choose Your Perfect Profile</title>
+<meta name="description" content="Browse Profilix profile templates — Simple, Premium, and Resume styles. Every template is fully customized for you. Starting at just ₹999.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://profilix.in/templates">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ═══ TOKENS ═══ */
+:root{
+  --bg:#050810;--bg2:#080d1a;
+  --card:rgba(255,255,255,0.04);--cb:rgba(255,255,255,0.08);
+  --blue:#3b82f6;--bl:#60a5fa;--cyan:#06b6d4;
+  --purple:#8b5cf6;--green:#10b981;--red:#ef4444;
+  --text:#f1f5f9;--muted:#94a3b8;
+  --fd:'Syne',sans-serif;--fb:'DM Sans',sans-serif;
+  --nav:rgba(5,8,16,0.88);
+}
+[data-theme="light"]{
+  --bg:#f0f4ff;--bg2:#e4eaf7;
+  --card:rgba(255,255,255,0.82);--cb:rgba(59,130,246,0.15);
+  --text:#0f172a;--muted:#475569;--nav:rgba(240,244,255,0.92);
+}
+
+/* ═══ RESET ═══ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{background:var(--bg);color:var(--text);font-family:var(--fb);font-size:16px;line-height:1.6;overflow-x:hidden;transition:background .4s,color .3s}
+#bgc{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.65}
+nav,main,footer,.smenu{position:relative;z-index:1}
+
+/* ═══ NAV ═══ */
+nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);background:var(--nav);border-bottom:1px solid var(--cb);position:sticky;top:0;z-index:200}
+.nleft{display:flex;align-items:center;gap:.75rem}
+.back-btn{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:10px;border:1px solid var(--cb);background:var(--card);color:var(--text);text-decoration:none;font-size:1.1rem;transition:background .2s,transform .2s;backdrop-filter:blur(10px);flex-shrink:0}
+.back-btn:hover{background:rgba(59,130,246,.15);transform:translateX(-2px)}
+.nlogo{font-family:var(--fd);font-weight:800;font-size:1.2rem;background:linear-gradient(135deg,var(--blue),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none}
+.nright{display:flex;align-items:center;gap:.75rem}
+.tbtn{width:36px;height:36px;border-radius:50%;border:1px solid var(--cb);background:var(--card);color:var(--text);font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s,transform .2s;backdrop-filter:blur(10px)}
+.tbtn:hover{background:rgba(59,130,246,.15);transform:rotate(20deg)}
+.mbtn{width:36px;height:36px;border-radius:8px;border:1px solid var(--cb);background:var(--card);cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:8px;transition:background .2s}
+.mbtn:hover{background:rgba(59,130,246,.15)}
+.mbtn span{display:block;width:18px;height:2px;background:var(--text);border-radius:2px;transition:transform .3s,opacity .3s}
+.mbtn.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.mbtn.open span:nth-child(2){opacity:0}
+.mbtn.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.ncta{background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;border:none;padding:.6rem 1.4rem;border-radius:50px;font-family:var(--fb);font-weight:500;font-size:.9rem;cursor:pointer;text-decoration:none;transition:opacity .2s,transform .2s}
+.ncta:hover{opacity:.85;transform:translateY(-1px)}
+
+/* ═══ SIDE MENU ═══ */
+.movl{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:250;opacity:0;pointer-events:none;transition:opacity .3s;backdrop-filter:blur(4px)}
+.movl.show{opacity:1;pointer-events:all}
+.smenu{position:fixed;top:0;right:-320px;width:300px;height:100vh;height:100dvh;background:var(--bg2);border-left:1px solid var(--cb);z-index:300;transition:right .35s cubic-bezier(.4,0,.2,1);backdrop-filter:blur(20px);display:flex;flex-direction:column;padding:0;box-shadow:-10px 0 60px rgba(0,0,0,.4);overflow:hidden}
+.smenu.open{right:0}
+.mhdr{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 1.5rem 1rem;flex-shrink:0;border-bottom:1px solid var(--cb)}
+.mlogo{font-family:var(--fd);font-weight:800;font-size:1.1rem;background:linear-gradient(135deg,var(--blue),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.mclose{width:32px;height:32px;border-radius:8px;border:1px solid var(--cb);background:var(--card);color:var(--text);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem}
+.mnav{list-style:none;display:flex;flex-direction:column;gap:.15rem;flex:1;overflow-y:auto;padding:1rem 1.5rem;-webkit-overflow-scrolling:touch}
+.mnav li a{display:flex;align-items:center;gap:.85rem;color:var(--muted);text-decoration:none;padding:.85rem 1rem;border-radius:12px;font-size:.95rem;font-weight:500;transition:background .2s,color .2s}
+.mnav li a:hover,.mnav li a.active{background:rgba(59,130,246,.1);color:var(--text)}
+.mi{font-size:1.1rem;width:24px;text-align:center}
+.mdiv{height:1px;background:var(--cb);margin:.5rem 0}
+.mwa{display:flex;align-items:center;gap:.75rem;background:linear-gradient(135deg,#25d366,#128c7e);color:#fff;padding:1rem 1.25rem;border-radius:14px;text-decoration:none;font-weight:600;font-size:.95rem;margin:0 1.5rem 1.5rem;flex-shrink:0;transition:opacity .2s}
+.mwa:hover{opacity:.9}
+
+/* ═══ PAGE HERO ═══ */
+.page-hero{text-align:center;padding:5rem 1.5rem 2.5rem;position:relative;overflow:hidden}
+.hero-glow{position:absolute;width:700px;height:500px;background:radial-gradient(circle,rgba(59,130,246,.15) 0%,transparent 70%);top:0;left:50%;transform:translateX(-50%);pointer-events:none}
+.badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(59,130,246,.12);border:1px solid rgba(59,130,246,.3);color:var(--bl);padding:.4rem 1rem;border-radius:50px;font-size:.82rem;font-weight:500;animation:fdwn .5s ease both;position:relative;z-index:1}
+.page-hero h1{font-family:var(--fd);font-size:clamp(2.2rem,5vw,3.8rem);font-weight:800;letter-spacing:-.03em;line-height:1.1;margin-bottom:.85rem;position:relative;z-index:1;animation:fdwn .6s ease .1s both}
+.page-hero h1 span{background:linear-gradient(135deg,var(--blue),var(--cyan),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.page-hero p{color:var(--muted);font-size:1rem;max-width:480px;margin:0 auto 2.5rem;animation:fdwn .6s ease .15s both;position:relative;z-index:1}
+
+/* ═══ FILTER TABS ═══ */
+.filter-wrap{display:flex;justify-content:center;padding:0 1.5rem 3rem;animation:fdwn .6s ease .2s both}
+.filter-inner{display:flex;background:var(--card);border:1px solid var(--cb);border-radius:50px;padding:5px;gap:4px;backdrop-filter:blur(20px);flex-wrap:wrap;justify-content:center;box-shadow:0 8px 32px rgba(0,0,0,.2)}
+.filter-btn{display:flex;align-items:center;gap:.4rem;padding:.55rem 1.25rem;border-radius:50px;border:none;background:transparent;color:var(--muted);font-family:var(--fb);font-size:.88rem;font-weight:500;cursor:pointer;transition:background .2s,color .2s;white-space:nowrap}
+.filter-btn:hover{color:var(--text);background:rgba(255,255,255,.06)}
+.filter-btn.active{background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;box-shadow:0 0 18px rgba(59,130,246,.3)}
+
+/* ═══ TEMPLATE GRID ═══ */
+main{padding:0 1.5rem 5rem}
+.grid-wrap{max-width:1100px;margin:0 auto}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.75rem}
+
+/* ═══ TEMPLATE CARD ═══ */
+.tcard{
+  background:var(--card);
+  border:1px solid var(--cb);
+  border-radius:24px;
+  overflow:hidden;
+  transition:transform .3s,box-shadow .3s,border-color .3s;
+  animation:popIn .5s ease both;
+  display:flex;flex-direction:column;
+}
+.tcard:hover{transform:translateY(-8px);box-shadow:0 30px 80px rgba(0,0,0,.4)}
+.tcard.hide{display:none}
+
+/* Card hover glow by category */
+.tcard[data-cat="simple"]:hover{border-color:rgba(59,130,246,.4);box-shadow:0 24px 70px rgba(59,130,246,.12)}
+.tcard[data-cat="premium"]:hover{border-color:rgba(139,92,246,.4);box-shadow:0 24px 70px rgba(139,92,246,.12)}
+.tcard[data-cat="resume"]:hover{border-color:rgba(16,185,129,.4);box-shadow:0 24px 70px rgba(16,185,129,.12)}
+
+/* ═══ CARD PREVIEW MOCKUP ═══ */
+.card-preview{
+  height:240px;
+  position:relative;
+  overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+
+/* Preview backgrounds per template */
+.prev-cleanb{background:linear-gradient(145deg,#0d1b2e,#1a2d4a)}
+.prev-creator{background:linear-gradient(145deg,#110824,#2a0d45)}
+.prev-biz{background:linear-gradient(145deg,#0a1a0e,#122b1a)}
+.prev-resume{background:linear-gradient(145deg,#0e0e18,#1a1a32)}
+.prev-portfolio{background:linear-gradient(145deg,#150a20,#261040)}
+.prev-linkhub{background:linear-gradient(145deg,#001a1f,#003040)}
+
+/* Floating decorative blobs inside preview */
+.card-preview::before{
+  content:'';position:absolute;
+  width:180px;height:180px;border-radius:50%;
+  opacity:.15;top:-40px;right:-40px;
+  pointer-events:none;
+}
+.prev-cleanb::before{background:var(--blue)}
+.prev-creator::before{background:var(--purple)}
+.prev-biz::before{background:var(--green)}
+.prev-resume::before{background:var(--bl)}
+.prev-portfolio::before{background:var(--purple)}
+.prev-linkhub::before{background:var(--cyan)}
+
+/* ── mini profile inside preview ── */
+.mini-profile{
+  display:flex;flex-direction:column;align-items:center;
+  gap:.5rem;padding:1.5rem;width:100%;position:relative;z-index:1;
+}
+.mini-avatar{
+  width:64px;height:64px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.6rem;font-weight:800;color:#fff;
+  border:3px solid rgba(255,255,255,.15);
+  flex-shrink:0;
+}
+.mini-name{font-family:var(--fd);font-size:1rem;font-weight:700;color:#f1f5f9;margin-top:.25rem}
+.mini-role{font-size:.75rem;color:rgba(255,255,255,.5);margin-bottom:.25rem}
+.mini-links{display:flex;gap:.4rem;flex-wrap:wrap;justify-content:center}
+.mini-pill{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.12);border-radius:50px;padding:.2rem .65rem;font-size:.65rem;color:rgba(255,255,255,.65)}
+.mini-badge-row{display:flex;gap:.4rem;margin-top:.2rem}
+.mini-stat{background:rgba(255,255,255,.08);border-radius:8px;padding:.3rem .6rem;font-size:.65rem;color:rgba(255,255,255,.6);text-align:center}
+
+/* resume style */
+.mini-resume{width:100%;padding:3.2rem 1.25rem .75rem;display:flex;flex-direction:column;gap:.4rem;position:relative;z-index:1}
+.resume-header{display:flex;align-items:center;gap:.75rem}
+.resume-av{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:800;color:#fff;flex-shrink:0}
+.resume-name{font-family:var(--fd);font-size:.9rem;font-weight:700;color:#f1f5f9}
+.resume-role{font-size:.68rem;color:rgba(255,255,255,.45)}
+.resume-bar{height:1px;background:rgba(255,255,255,.08);margin:.3rem 0}
+.resume-row{display:flex;gap:.4rem}
+.resume-chip{background:rgba(255,255,255,.07);border-radius:6px;padding:.25rem .55rem;font-size:.62rem;color:rgba(255,255,255,.55)}
+.resume-dl{display:inline-flex;align-items:center;gap:.3rem;background:rgba(16,185,129,.15);border:1px solid rgba(16,185,129,.25);border-radius:6px;padding:.25rem .7rem;font-size:.65rem;color:#34d399;margin-top:.25rem;width:fit-content}
+
+/* linkhub style */
+.mini-linkhub{width:100%;padding:.75rem 1.5rem;display:flex;flex-direction:column;gap:.4rem;align-items:center;position:relative;z-index:1}
+.lh-avatar{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:800;color:#fff;border:2px solid rgba(6,182,212,.3)}
+.lh-name{font-family:var(--fd);font-size:.9rem;font-weight:700;color:#f1f5f9}
+.lh-btn{width:100%;max-width:180px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:.35rem .75rem;font-size:.68rem;color:rgba(255,255,255,.65);text-align:center}
+.lh-btn-blue{background:rgba(59,130,246,.12);border-color:rgba(59,130,246,.2);color:var(--bl)}
+
+/* ═══ CARD BADGE ═══ */
+.card-cat-badge{
+  position:absolute;top:1rem;left:1rem;
+  font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;
+  padding:.25rem .75rem;border-radius:50px;z-index:2;
+}
+.badge-simple{background:rgba(59,130,246,.2);color:var(--bl);border:1px solid rgba(59,130,246,.3)}
+.badge-premium{background:rgba(139,92,246,.2);color:#a78bfa;border:1px solid rgba(139,92,246,.3)}
+.badge-resume{background:rgba(16,185,129,.2);color:#34d399;border:1px solid rgba(16,185,129,.3)}
+.badge-popular{position:absolute;top:1rem;right:1rem;background:rgba(251,191,36,.15);color:#fbbf24;border:1px solid rgba(251,191,36,.3);font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:.25rem .65rem;border-radius:50px;z-index:2}
+
+/* ═══ CARD BODY ═══ */
+.card-body{padding:1.5rem;display:flex;flex-direction:column;gap:.75rem;flex:1}
+.card-title-row{display:flex;align-items:flex-start;justify-content:space-between;gap:.5rem}
+.card-title{font-family:var(--fd);font-size:1.1rem;font-weight:800}
+.card-price{font-family:var(--fd);font-size:.9rem;font-weight:700;color:var(--bl);white-space:nowrap}
+.card-desc{color:var(--muted);font-size:.85rem;line-height:1.65}
+.card-features{display:flex;flex-wrap:wrap;gap:.4rem}
+.cfeat{background:rgba(255,255,255,.05);border:1px solid var(--cb);border-radius:50px;padding:.2rem .65rem;font-size:.72rem;color:var(--muted)}
+
+.card-footer{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1rem 1.5rem;
+  border-top:1px solid var(--cb);
+  gap:1rem;
+}
+.btn-get{
+  flex:1;display:flex;align-items:center;justify-content:center;gap:.5rem;
+  background:linear-gradient(135deg,#25d366,#128c7e);
+  color:#fff;padding:.7rem 1rem;border-radius:12px;
+  text-decoration:none;font-weight:600;font-size:.85rem;
+  transition:opacity .2s,transform .2s;
+  box-shadow:0 0 20px rgba(37,211,102,.15);
+}
+.btn-get:hover{opacity:.88;transform:translateY(-1px)}
+.btn-preview-sm{
+  display:flex;align-items:center;justify-content:center;
+  width:40px;height:40px;border-radius:10px;
+  background:var(--card);border:1px solid var(--cb);
+  color:var(--muted);font-size:1rem;text-decoration:none;
+  transition:background .2s,color .2s;flex-shrink:0;
+}
+.btn-preview-sm:hover{background:rgba(59,130,246,.12);color:var(--bl)}
+
+/* ═══ EMPTY STATE ═══ */
+.empty-state{text-align:center;padding:4rem 1.5rem;grid-column:1/-1;display:none}
+.empty-state.show{display:block}
+.empty-state p{color:var(--muted);font-size:1rem}
+
+/* ═══ CTA SECTION ═══ */
+.cta-section{
+  margin:4rem auto 0;max-width:700px;
+  background:var(--card);border:1px solid var(--cb);
+  border-radius:28px;padding:3rem 2rem;text-align:center;
+  backdrop-filter:blur(12px);
+  position:relative;overflow:hidden;
+}
+.cta-section::before{content:'';position:absolute;width:400px;height:400px;background:radial-gradient(circle,rgba(59,130,246,.1),transparent 70%);top:-100px;left:50%;transform:translateX(-50%);pointer-events:none}
+.cta-section h2{font-family:var(--fd);font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;letter-spacing:-.02em;margin-bottom:.75rem;position:relative;z-index:1}
+.cta-section p{color:var(--muted);font-size:.95rem;max-width:420px;margin:0 auto 2rem;position:relative;z-index:1}
+.btn-wa{display:inline-flex;align-items:center;gap:.6rem;background:linear-gradient(135deg,#25d366,#128c7e);color:#fff;padding:1rem 2rem;border-radius:50px;text-decoration:none;font-weight:600;font-size:1rem;box-shadow:0 0 35px rgba(37,211,102,.25);transition:transform .2s,box-shadow .2s;position:relative;z-index:1}
+.btn-wa:hover{transform:translateY(-2px);box-shadow:0 0 55px rgba(37,211,102,.4)}
+
+/* ═══ FOOTER ═══ */
+footer{border-top:1px solid var(--cb);padding:2.5rem 1.5rem;text-align:center;position:relative;z-index:1;margin-top:5rem}
+.finr{max-width:800px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:1.25rem}
+.flog{font-family:var(--fd);font-weight:800;font-size:1.1rem;background:linear-gradient(135deg,var(--blue),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.ftagline{color:var(--muted);font-size:.8rem;margin-top:.15rem}
+.flnk{display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center}
+.flnk a{color:var(--muted);text-decoration:none;font-size:.88rem;transition:color .2s;display:flex;align-items:center;gap:.4rem}
+.flnk a:hover{color:var(--text)}
+.fcp{color:var(--muted);font-size:.8rem}
+
+/* ═══ WA FLOAT ═══ */
+.waf{position:fixed;bottom:1.25rem;right:1.25rem;width:52px;height:52px;background:linear-gradient(135deg,#25d366,#128c7e);border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:1.4rem;z-index:9999;animation:pwa 2s infinite;transition:transform .2s}
+.waf:hover{transform:scale(1.1)}
+@keyframes pwa{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.4)}50%{box-shadow:0 4px 45px rgba(37,211,102,.7)}}
+
+/* ═══ ANIMATIONS ═══ */
+@keyframes fdwn{from{opacity:0;transform:translateY(-16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes popIn{from{opacity:0;transform:translateY(24px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+
+/* ═══ MOBILE ═══ */
+/* ── Badge row (hero) ── */
+.badge-row{display:flex;align-items:center;gap:.75rem;justify-content:center;flex-wrap:wrap;margin-bottom:1.5rem;animation:fdwn .5s ease both}
+.badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(59,130,246,.12);border:1px solid rgba(59,130,246,.3);color:var(--bl);padding:.4rem 1rem;border-radius:50px;font-size:.82rem;font-weight:500;position:relative;z-index:1;margin-bottom:0}
+.badge-link{text-decoration:none;background:rgba(16,185,129,.1);border-color:rgba(16,185,129,.3);color:#34d399;transition:background .2s,transform .2s}
+.badge-link:hover{background:rgba(16,185,129,.18);transform:translateY(-1px)}
+
+/* ── Customize filter btn ── */
+.filter-customize{background:linear-gradient(135deg,rgba(139,92,246,.15),rgba(236,72,153,.1))!important;border:1px solid rgba(139,92,246,.3)!important;color:#a78bfa!important}
+.filter-customize:hover{background:linear-gradient(135deg,rgba(139,92,246,.25),rgba(236,72,153,.15))!important;color:#c4b5fd!important}
+
+/* ── Customize overlay ── */
+.customize-overlay{
+  position:fixed;inset:0;background:rgba(0,0,0,.8);
+  z-index:400;display:flex;align-items:flex-end;justify-content:center;
+  padding:0;opacity:0;pointer-events:none;
+  transition:opacity .3s;backdrop-filter:blur(8px);
+}
+.customize-overlay.show{opacity:1;pointer-events:all}
+.customize-modal{
+  background:var(--bg2);border:1px solid var(--cb);
+  border-radius:28px 28px 0 0;
+  width:100%;max-width:100%;
+  max-height:92vh;overflow-y:auto;-webkit-overflow-scrolling:touch;
+  padding:1.5rem 1.25rem 2rem;position:relative;
+  box-shadow:0 -20px 60px rgba(0,0,0,.5);
+  animation:sheetIn .35s cubic-bezier(.34,1.2,.64,1) both;
+}
+@media(min-width:600px){
+  .customize-overlay{align-items:center;padding:1.5rem}
+  .customize-modal{border-radius:28px;max-width:520px;padding:2.5rem 2rem 2rem;max-height:90vh}
+  @keyframes sheetIn{from{opacity:0;transform:scale(.93) translateY(20px)}to{opacity:1;transform:scale(1) translateY(0)}}
+}
+@keyframes sheetIn{from{opacity:0;transform:translateY(100%)}to{opacity:1;transform:translateY(0)}}
+.cust-handle{width:40px;height:4px;background:var(--cb);border-radius:50px;margin:0 auto .75rem}
+.cust-close{position:absolute;top:1rem;right:1rem;width:32px;height:32px;border-radius:8px;border:1px solid var(--cb);background:var(--card);color:var(--text);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;transition:background .2s}
+.cust-close:hover{background:rgba(239,68,68,.15);color:var(--red)}
+.cust-icon{font-size:2.5rem;margin-bottom:.75rem;text-align:center}
+.cust-title{font-family:var(--fd);font-size:1.4rem;font-weight:800;text-align:center;margin-bottom:.5rem;letter-spacing:-.02em}
+.cust-subtitle{color:var(--muted);font-size:.85rem;text-align:center;line-height:1.65;margin-bottom:1.5rem}
+.cust-features{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-bottom:1.5rem}
+.cust-feat{background:var(--card);border:1px solid var(--cb);border-radius:12px;padding:.85rem .75rem;text-align:center}
+.cust-feat .cf-ico{font-size:1.25rem;margin-bottom:.3rem}
+.cust-feat .cf-txt{font-size:.75rem;color:var(--muted);line-height:1.4}
+.cust-feat .cf-txt strong{color:var(--text);display:block;font-size:.78rem;margin-bottom:.1rem}
+.cust-note{background:rgba(139,92,246,.08);border:1px solid rgba(139,92,246,.2);border-radius:12px;padding:.85rem 1rem;color:var(--muted);font-size:.8rem;line-height:1.6;margin-bottom:1.25rem;text-align:center}
+.cust-note strong{color:#a78bfa}
+.cust-btns{display:flex;gap:.6rem;flex-direction:column}
+.cust-btn-wa{display:flex;align-items:center;justify-content:center;gap:.5rem;background:linear-gradient(135deg,#25d366,#128c7e);color:#fff;padding:.9rem 1rem;border-radius:12px;text-decoration:none;font-weight:600;font-size:.9rem;transition:opacity .2s}
+.cust-btn-wa:hover{opacity:.88}
+.cust-btn-close{display:flex;align-items:center;justify-content:center;background:var(--card);border:1px solid var(--cb);color:var(--muted);padding:.85rem 1.25rem;border-radius:12px;font-size:.88rem;cursor:pointer;font-family:var(--fb);transition:background .2s}
+.cust-btn-close:hover{background:rgba(255,255,255,.08)}
+@media(max-width:680px){
+  nav{padding:1rem 1.25rem}
+  .page-hero{padding:3.5rem 1.25rem 2rem}
+  main{padding:0 1.25rem 4rem}
+  .ncta{display:none}
+  .tgrid{grid-template-columns:1fr;gap:1.25rem}
+  .filter-btn{font-size:.8rem;padding:.45rem .9rem}
+  .card-preview{height:200px}
+  .cta-section{padding:2rem 1.25rem;border-radius:20px}
+}
+</style>
+</head>
+<body>
+
+<canvas id="bgc"></canvas>
+<div class="movl" id="movl" onclick="closeMenu()"></div>
+
+<!-- SIDE MENU -->
+<div class="smenu" id="smenu">
+  <div class="mhdr">
+    <div class="mlogo">Profilix</div>
+    <button class="mclose" onclick="closeMenu()">&#10005;</button>
+  </div>
+  <ul class="mnav">
+    <li><a href="https://profilix.in/" onclick="closeMenu()"><span class="mi">&#127968;</span> Home</a></li>
+    <li><a href="https://profilix.in/#about" onclick="closeMenu()"><span class="mi">&#8505;&#65039;</span> About Us</a></li>
+    <li><a href="https://profilix.in/check-username" onclick="closeMenu()"><span class="mi">&#128269;</span> Check Username</a></li>
+    <li><a href="https://profilix.in/templates" class="active" onclick="closeMenu()"><span class="mi">&#127912;</span> Templates</a></li>
+    <li><a href="https://profilix.in/#pricing" onclick="closeMenu()"><span class="mi">&#128176;</span> Pricing</a></li>
+    <li><a href="https://profilix.in/#compare" onclick="closeMenu()"><span class="mi">&#9878;&#65039;</span> Us vs Others</a></li>
+    <li><a href="https://profilix.in/#faq" onclick="closeMenu()"><span class="mi">&#10067;</span> FAQ</a></li>
+    <div class="mdiv"></div>
+    <li><a href="https://profilix.in/legal" onclick="closeMenu()"><span class="mi">&#128274;</span> Legal &amp; Policies</a></li>
+    <li><a href="mailto:profilix.in@gmail.com"><span class="mi">&#9993;&#65039;</span> Contact Us</a></li>
+  </ul>
+  <a href="https://wa.me/916207126785?text=Hi%2C%20I%20want%20my%20personal%20profile%20website" target="_blank" class="mwa">
+    &#128172; Chat on WhatsApp
+  </a>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nleft">
+    <a href="https://profilix.in/" class="back-btn" title="Back to Home">&#8592;</a>
+    <a href="https://profilix.in/" class="nlogo">Profilix</a>
+  </div>
+  <div class="nright">
+    <button class="tbtn" id="tbtn" onclick="toggleTheme()" title="Toggle dark/light">&#127769;</button>
+    <a href="https://wa.me/916207126785?text=Hi%2C%20I%20want%20my%20personal%20profile%20website" target="_blank" class="ncta">Get Started &#8594;</a>
+    <button class="mbtn" id="mbtn" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="hero-glow"></div>
+  <div class="badge-row">
+    <div class="badge">&#127912; Template Gallery</div>
+    <a href="https://profilix.in/check-username" class="badge badge-link">&#128269; Check Username</a>
+  </div>
+  <h1>Choose Your<br><span>Perfect Profile</span></h1>
+  <p>Every template is fully customized for you — not a copy-paste design. Your profile, your style, your identity.</p>
+</div>
+
+<!-- FILTER TABS -->
+<div class="filter-wrap">
+  <div class="filter-inner">
+    <button class="filter-btn active" onclick="filterCards('all',this)">&#10024; All Templates</button>
+    <button class="filter-btn" onclick="filterCards('simple',this)">&#128100; Simple</button>
+    <button class="filter-btn" onclick="filterCards('premium',this)">&#11088; Premium</button>
+    <button class="filter-btn" onclick="filterCards('resume',this)">&#128196; Resume Style</button>
+    <button class="filter-btn filter-customize" onclick="showCustomize(this)">&#127775; Customize</button>
+  </div>
+</div>
+
+<!-- TEMPLATE GRID -->
+<main>
+  <div class="grid-wrap">
+    <div class="tgrid" id="tgrid">
+
+      <!-- 1. CLEAN BIO -->
+      <div class="tcard" data-cat="simple">
+        <div class="card-preview prev-cleanb">
+          <span class="card-cat-badge badge-simple">Simple</span>
+          <div class="mini-profile">
+            <div class="mini-avatar" style="background:linear-gradient(135deg,#3b82f6,#06b6d4)">R</div>
+            <div class="mini-name">Rahul Sharma</div>
+            <div class="mini-role">Graphic Designer &middot; Mumbai</div>
+            <div class="mini-links">
+              <span class="mini-pill">&#128247; Instagram</span>
+              <span class="mini-pill">&#128188; Portfolio</span>
+              <span class="mini-pill">&#128172; WhatsApp</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-title-row">
+            <div class="card-title">Clean Bio</div>
+            <div class="card-price">&#8377;799</div>
+          </div>
+          <div class="card-desc">A minimal, elegant profile page with your photo, bio, and all important links in one clean layout. Perfect for freelancers and professionals.</div>
+          <div class="card-features">
+            <span class="cfeat">Photo + Bio</span>
+            <span class="cfeat">Social Links</span>
+            <span class="cfeat">WhatsApp Button</span>
+            <span class="cfeat">Mobile Ready</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <a href="https://wa.me/916207126785?text=Hi%2C%20I%20want%20the%20Clean%20Bio%20template" target="_blank" class="btn-get">&#128172; Get This Template</a>
+          <a href="https://profilix.in" target="_blank" class="btn-preview-sm" title="View Live">&#128065;</a>
+        </div>
+      </div>
+
+      <!-- 2. CREATOR PRO -->
+      <div class="tcard" data-cat="premium">
+        <div class="card-preview prev-creator">
+          <span class="card-cat-badge badge-premium">Premium</span>
+          <span class="badge-popular">&#128293; Popular</span>
+          <div class="mini-profile">
+            <div class="mini-avatar" style="background:linear-gradient(135deg,#8b5cf6,#ec4899)">A</div>
+            <div class="mini-name">Aman Creator</div>
+            <div class="mini-role">Content Creator &middot; 50K Followers</div>
+            <div class="mini-links">
+              <span class="mini-pill">&#127909; YouTube</span>
+              <span class="mini-pill">&#128247; Instagram</span>
+              <span class="mini-pill">&#129309; Collabs</span>
+            </div>
+            <div class="mini-badge-row">
+              <div class="mini-stat">50K<br><span style="font-size:.55rem;opacity:.6">Subscribers</span></div>
+              <div class="mini-stat">12K<br><span style="font-size:.55rem;opacity:.6">Followers</span></div>
+              <div class="mini-stat">Open<br><span style="font-size:.55rem;opacity:.6">Collabs</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-title-row">
+            <div class="card-title">Creator Pro</div>
+            <div class="card-price">&#8377;999</div>
+          </div>
+          <div class="card-desc">A full branded page for content creators. Show your YouTube, Instagram, stats, and collab availability — all in one stunning profile.</div>
+          <div class="card-features">
+            <span class="cfeat">Animated Design</span>
+            <span class="cfeat">Stats Display</span>
+            <span class="cfeat">Collab Section</span>
+            <span class="cfeat">All Platforms</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <a href="https://wa.me/916207126785?text=Hi%2C%20I%20want%20the%20Creator%20Pro%20template" target="_blank" class="btn-get">&#128172; Get This Template</a>
+          <a href="https://profilix.in" target="_blank" class="btn-preview-sm" title="View Live">&#128065;</a>
+        </div>
+      </div>
+
+      <!-- 3. BUSINESS CARD -->
+      <div class="tcard" data-cat="simple">
+        <div class="card-preview prev-biz">
+          <span class="card-cat-badge badge-simple">Simple</span>
+          <div class="mini-profile">
+            <div class="mini-avatar" style="background:linear-gradient(135deg,#10b981,#3b82f6)">&#127978;</div>
+            <div class="mini-name">Sharma Electronics</div>
+            <div class="mini-role">&#128205; Laxmi Nagar, Delhi</div>
+            <div class="mini-links">
+              <span class="mini-pill">&#128222; Call Us</span>
+              <span class="mini-pill">&#128172; WhatsApp</span>
+              <span class="mini-pill">&#128205; Maps</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-title-row">
+            <div class="card-title">Business Card</div>
+            <div class="card-price">&#8377;799</div>
+          </div>
+          <div class="card-desc">A digital business card for local shops and businesses. Share your location, contact, WhatsApp, and Google Maps link in one tap.</div>
+          <div class="card-features">
+            <span class="cfeat">Shop Info</span>
+            <span class="cfeat">Google Maps</span>
+            <span class="cfeat">Call + WhatsApp</span>
+            <span class="cfeat">Timings</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <a href="https://wa.me/916207126785?text=Hi%2C%20I%20want%20the%20Business%20Card%20template" target="_blank" class="btn-get">&#128172; Get This Template</a>
+          <a href="https://profilix.in" target="_blank" class="btn-preview-sm" title="View Live">&#128065;</a>
+        </div>
+      </div>
+
+      <!-- 4. RESUME CLASSIC -->
+      <div class="tcard" data-cat="resume">
+        <div class="card-preview prev-resume">
+          <span class="card-cat-badge badge-resume">Resume Style</span>
+          <div class="mini-resume">
+            <div class="resume-header">
+              <div class="resume-av" style="background:linear-gradient(135deg,#60a5fa,#3b82f6)">P</div>
+              <div>
+                <div class="resume-name">Priya Mehta</div>
+                <div class="resume-role">Marketing Manager &middot; 5 Years Exp.</div>
+              </div>
+            </div>
+            <div class="resume-bar"></div>
+            <div class="resume-row">
+              <span class="resume-chip">&#128188; Experience</span>
+              <span class="resume-chip">&#127891; Education</span>
+              <span class="resume-chip">&#128296; Skills</span>
+            </div>
+            <div class="resume-row">
+              <span class="resume-chip">&#128279; LinkedIn</span>
+              <span class="resume-chip">&#128222; Contact</span>
+            </div>
+            <div class="resume-dl">&#128229; Download CV (PDF)</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-title-row">
+            <div class="card-title">Resume Classic</div>
+            <div class="card-price">&#8377;899</div>
+          </div>
+          <div class="card-desc">A professional online resume with your experience, education, skills, and a one-click CV download button. Share this link with recruiters instead of a PDF.</div>
+          <div class="card-features">
+            <span class="cfeat">CV Download</span>
+            <span class="cfeat">Experience</span>
+            <span class="cfeat">Skills Section</span>
+            <span class="cfeat">LinkedIn Link</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <a href="https://wa.me/916207126785?text=Hi%2C%20I%20want%20the%20Resume%20Classic%20template" target="_blank" class="btn-get">&#128172; Get This Template</a>
+          <a href="https://profilix.in" target="_blank" class="btn-preview-sm" title="View Live">&#128065;</a>
+        </div>
+      </div>
+
+      <!-- 5. PORTFOLIO DARK -->
+      <div class="tcard" data-cat="premium">
+        <div class="card-preview prev-portfolio">
+          <span class="card-cat-badge badge-premium">Premium</span>
+          <div class="mini-profile">
+            <div class="mini-avatar" style="background:linear-gradient(135deg,#8b5cf6,#3b82f6)">&#128187;</div>
+            <div class="mini-name">Dev Portfolio</div>
+            <div class="mini-role">Full Stack Developer</div>
+            <div class="mini-links">
+              <span class="mini-pill">&#128187; Projects</span>
+              <span class="mini-pill">&#9889; Skills</span>
+              <span class="mini-pill">&#128222; Hire Me</span>
+            </div>
+            <div class="mini-badge-row">
+              <div class="mini-stat">12+<br><span style="font-size:.55rem;opacity:.6">Projects</span></div>
+              <div class="mini-stat">3+<br><span style="font-size:.55rem;opacity:.6">Years Exp</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-title-row">
+            <div class="card-title">Portfolio Dark</div>
+            <div class="card-price">&#8377;999</div>
+          </div>
+          <div class="card-desc">A stunning dark portfolio page for developers, designers, and creative professionals. Showcase your work, skills, and let clients hire you directly.</div>
+          <div class="card-features">
+            <span class="cfeat">Project Showcase</span>
+            <span class="cfeat">Skills Grid</span>
+            <span class="cfeat">Hire Me CTA</span>
+            <span class="cfeat">GitHub Link</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <a href="https://wa.me/916207126785?text=Hi%2C%20I%20want%20the%20Portfolio%20Dark%20template" target="_blank" class="btn-get">&#128172; Get This Template</a>
+          <a href="https://profilix.in" target="_blank" class="btn-preview-sm" title="View Live">&#128065;</a>
+        </div>
+      </div>
+
+      <!-- 6. LINK HUB -->
+      <div class="tcard" data-cat="simple">
+        <div class="card-preview prev-linkhub">
+          <span class="card-cat-badge badge-simple">Simple</span>
+          <div class="mini-linkhub">
+            <div class="lh-avatar" style="background:linear-gradient(135deg,#06b6d4,#3b82f6)">&#128279;</div>
+            <div class="lh-name">Neha's Links</div>
+            <div class="lh-btn lh-btn-blue">&#127909; My YouTube Channel</div>
+            <div class="lh-btn">&#128247; Instagram Profile</div>
+            <div class="lh-btn">&#128188; Freelance Work</div>
+            <div class="lh-btn">&#128172; WhatsApp Me</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-title-row">
+            <div class="card-title">Link Hub</div>
+            <div class="card-price">&#8377;799</div>
+          </div>
+          <div class="card-desc">Your own branded link-in-bio page — better than Linktree, no watermarks, no ads. Put all your important links in one shareable URL.</div>
+          <div class="card-features">
+            <span class="cfeat">All Your Links</span>
+            <span class="cfeat">No Watermark</span>
+            <span class="cfeat">Your Domain</span>
+            <span class="cfeat">Custom Style</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <a href="https://wa.me/916207126785?text=Hi%2C%20I%20want%20the%20Link%20Hub%20template" target="_blank" class="btn-get">&#128172; Get This Template</a>
+          <a href="https://profilix.in" target="_blank" class="btn-preview-sm" title="View Live">&#128065;</a>
+        </div>
+      </div>
+
+      <!-- EMPTY STATE -->
+      <div class="empty-state" id="emptyState">
+        <p>&#128269; No templates in this category yet. <a href="https://wa.me/916207126785?text=Hi%2C%20I%20want%20a%20custom%20template" target="_blank" style="color:var(--bl)">Request a custom one &#8594;</a></p>
+      </div>
+
+    </div><!-- end tgrid -->
+
+    <!-- CTA -->
+    <div class="cta-section">
+      <h2>Don't see what you want?<br>We build custom too. &#128640;</h2>
+      <p>Tell us your idea — we'll design a profile that's completely unique to you. No limits, no templates — just your vision.</p>
+      <a href="https://wa.me/916207126785?text=Hi%2C%20I%20want%20a%20custom%20profile%20design" target="_blank" class="btn-wa">&#128172; Chat With Us on WhatsApp</a>
+    </div>
+
+  </div>
+</main>
+
+<!-- CUSTOMIZE OVERLAY -->
+<div class="customize-overlay" id="customizeOverlay" onclick="closeCustomizeOutside(event)">
+  <div class="customize-modal" id="customizeModal">
+    <div class="cust-handle"></div>
+    <button class="cust-close" onclick="closeCustomize()">&#10005;</button>
+    <div class="cust-icon">&#127775;</div>
+    <div class="cust-title">Custom Profile Design</div>
+    <div class="cust-subtitle">Don't fit into any template? We build your profile <strong>completely from scratch</strong> — designed around your vision, brand, and goals.</div>
+    <div class="cust-features">
+      <div class="cust-feat"><div class="cf-ico">&#127912;</div><div class="cf-txt"><strong>100% Custom</strong>Unique layout, colors &amp; style just for you</div></div>
+      <div class="cust-feat"><div class="cf-ico">&#128640;</div><div class="cf-txt"><strong>Any Category</strong>Business, creator, resume, portfolio &amp; more</div></div>
+      <div class="cust-feat"><div class="cf-ico">&#9889;</div><div class="cf-txt"><strong>Fast Delivery</strong>Your custom profile ready in 48–72 hours</div></div>
+      <div class="cust-feat"><div class="cf-ico">&#128172;</div><div class="cf-txt"><strong>Direct Support</strong>We work with you on WhatsApp throughout</div></div>
+    </div>
+    <div class="cust-note">&#128181; <strong>Price may vary</strong> depending on complexity and features. Contact us for a free quote — no obligation.</div>
+    <div class="cust-btns">
+      <a href="https://wa.me/916207126785?text=Hi%2C%20I%20want%20a%20custom%20profile%20design.%20Please%20tell%20me%20about%20pricing." target="_blank" class="cust-btn-wa">&#128172; Get a Free Quote</a>
+      <button class="cust-btn-close" onclick="closeCustomize()">Maybe Later</button>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="finr">
+    <div>
+      <div class="flog">Profilix</div>
+      <div class="ftagline">Turn your name into a website &#128640;</div>
+    </div>
+    <div class="flnk">
+      <a href="mailto:profilix.in@gmail.com">&#9993;&#65039; profilix.in@gmail.com</a>
+      <a href="https://wa.me/916207126785" target="_blank">&#128172; +91 62071 26785</a>
+      <a href="https://profilix.in/#pricing">Pricing</a>
+      <a href="https://profilix.in/legal">Legal</a>
+      <a href="https://profilix.in/check-username">Check Username</a>
+    </div>
+    <p class="fcp">&#169; 2026 Profilix.in &middot; Your identity. Your link. Your web.</p>
+  </div>
+</footer>
+
+<!-- WA FLOAT -->
+<a href="https://wa.me/916207126785?text=Hi%2C%20I%20want%20my%20personal%20profile%20website" target="_blank" class="waf" title="Chat on WhatsApp">&#128172;</a>
+
+<script>
+/* ═══ BG PARTICLES ═══ */
+(function(){
+  var c=document.getElementById('bgc'),ctx=c.getContext('2d'),W,H,pts=[];
+  function rs(){W=c.width=window.innerWidth;H=c.height=window.innerHeight}
+  rs();window.addEventListener('resize',rs);
+  function P(){this.x=Math.random()*W;this.y=Math.random()*H;this.r=Math.random()*1.4+0.3;this.vx=(Math.random()-.5)*.3;this.vy=(Math.random()-.5)*.3;this.a=Math.random()*.45+.08;this.col=Math.random()>.5?'#3b82f6':'#06b6d4'}
+  for(var i=0;i<80;i++)pts.push(new P());
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    for(var i=0;i<pts.length;i++){for(var j=i+1;j<pts.length;j++){var dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);if(d<120){ctx.beginPath();ctx.strokeStyle='rgba(59,130,246,'+(0.06*(1-d/120))+')';ctx.lineWidth=.5;ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);ctx.stroke()}}}
+    pts.forEach(function(p){ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle=p.col;ctx.globalAlpha=p.a;ctx.fill();ctx.globalAlpha=1;p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1});
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+/* ═══ THEME ═══ */
+function toggleTheme(){
+  var h=document.documentElement,b=document.getElementById('tbtn'),d=h.getAttribute('data-theme')==='dark';
+  h.setAttribute('data-theme',d?'light':'dark');
+  b.innerHTML=d?'&#9728;&#65039;':'&#127769;';
+}
+
+/* ═══ MENU ═══ */
+function toggleMenu(){
+  var m=document.getElementById('smenu'),o=document.getElementById('movl'),b=document.getElementById('mbtn');
+  if(m.classList.contains('open')){closeMenu()}
+  else{m.classList.add('open');o.classList.add('show');b.classList.add('open');document.body.style.overflow='hidden'}
+}
+function closeMenu(){
+  document.getElementById('smenu').classList.remove('open');
+  document.getElementById('movl').classList.remove('show');
+  document.getElementById('mbtn').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+/* ═══ CUSTOMIZE OVERLAY ═══ */
+function showCustomize(btn){
+  document.querySelectorAll('.filter-btn').forEach(function(b){b.classList.remove('active')});
+  btn.classList.add('active');
+  document.getElementById('customizeOverlay').classList.add('show');
+  document.body.style.overflow='hidden';
+}
+function closeCustomize(){
+  document.getElementById('customizeOverlay').classList.remove('show');
+  document.body.style.overflow='';
+  // reset active filter back to All
+  document.querySelectorAll('.filter-btn').forEach(function(b,i){
+    b.classList.toggle('active', i===0);
+  });
+}
+function closeCustomizeOutside(e){
+  if(e.target===document.getElementById('customizeOverlay')) closeCustomize();
+}
+
+/* ═══ FILTER ═══ */
+function filterCards(cat, btn){
+  /* update active button */
+  document.querySelectorAll('.filter-btn').forEach(function(b){b.classList.remove('active')});
+  btn.classList.add('active');
+
+  var cards=document.querySelectorAll('.tcard');
+  var visible=0;
+  cards.forEach(function(card){
+    if(cat==='all'||card.getAttribute('data-cat')===cat){
+      card.classList.remove('hide');
+      /* re-trigger animation */
+      card.style.animation='none';
+      card.offsetHeight; /* reflow */
+      card.style.animation='';
+      visible++;
+    } else {
+      card.classList.add('hide');
+    }
+  });
+
+  var empty=document.getElementById('emptyState');
+  if(visible===0){empty.classList.add('show')}
+  else{empty.classList.remove('show')}
+}
+
+/* ═══ SCROLL REVEAL ═══ */
+var obs=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){
+      e.target.style.animationPlayState='running';
+    }
+  });
+},{threshold:.08});
+document.querySelectorAll('.tcard').forEach(function(c){
+  c.style.animationPlayState='paused';
+  obs.observe(c);
+});
+</script>
+</body>
+</html>
