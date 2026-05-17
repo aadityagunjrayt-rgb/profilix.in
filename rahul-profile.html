@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rahul Sharma | Graphic Designer</title>
+<meta name="description" content="Rahul Sharma — Freelance Graphic Designer based in Mumbai. Portfolio, contact, and social links.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Plus Jakarta Sans',sans-serif;
+  background:#0e0e0e;
+  color:#f0f0f0;
+  min-height:100vh;
+  display:flex;flex-direction:column;
+  align-items:center;
+}
+
+/* ── NOISE LAYER ── */
+body::before{
+  content:'';position:fixed;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events:none;z-index:0;
+}
+
+/* ── BG ACCENT ── */
+.bg-accent{
+  position:fixed;top:-180px;left:50%;transform:translateX(-50%);
+  width:600px;height:600px;
+  background:radial-gradient(circle,rgba(99,102,241,.18) 0%,transparent 65%);
+  pointer-events:none;z-index:0;
+}
+
+/* ── WRAPPER ── */
+.wrap{
+  width:100%;max-width:420px;
+  padding:3rem 1.5rem 2rem;
+  position:relative;z-index:1;
+  display:flex;flex-direction:column;align-items:center;
+  gap:0;
+}
+
+/* ── AVATAR ── */
+.avatar-wrap{
+  position:relative;margin-bottom:1.5rem;
+}
+.avatar{
+  width:96px;height:96px;border-radius:50%;
+  background:linear-gradient(135deg,#6366f1,#8b5cf6,#ec4899);
+  display:flex;align-items:center;justify-content:center;
+  font-size:2.4rem;font-weight:800;color:#fff;
+  box-shadow:0 0 0 4px rgba(99,102,241,.25),0 0 40px rgba(99,102,241,.2);
+  position:relative;z-index:1;overflow:hidden;
+}
+.avatar img{width:100%;height:100%;object-fit:cover;border-radius:50%;display:block}
+.avatar-ring{
+  position:absolute;inset:-6px;border-radius:50%;
+  border:2px solid rgba(99,102,241,.3);
+  animation:spin 8s linear infinite;
+  border-top-color:rgba(99,102,241,.7);
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+.status-dot{
+  position:absolute;bottom:4px;right:4px;
+  width:16px;height:16px;border-radius:50%;
+  background:#22c55e;
+  border:2.5px solid #0e0e0e;
+  z-index:2;
+}
+
+/* ── NAME & ROLE ── */
+.name{
+  font-size:1.75rem;font-weight:800;
+  letter-spacing:-.03em;text-align:center;
+  margin-bottom:.35rem;
+  background:linear-gradient(135deg,#fff 30%,rgba(255,255,255,.65));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.role{
+  font-size:.9rem;color:rgba(255,255,255,.45);
+  text-align:center;margin-bottom:.75rem;font-weight:500;
+}
+.location{
+  display:inline-flex;align-items:center;gap:.35rem;
+  font-size:.78rem;color:rgba(255,255,255,.35);
+  margin-bottom:2rem;
+}
+
+/* ── BIO ── */
+.bio{
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:16px;padding:1.1rem 1.25rem;
+  font-size:.875rem;color:rgba(255,255,255,.55);
+  line-height:1.75;text-align:center;
+  margin-bottom:2rem;width:100%;
+}
+
+/* ── STATS ── */
+.stats{
+  display:flex;width:100%;
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:16px;overflow:hidden;
+  margin-bottom:2rem;
+}
+.stat{
+  flex:1;padding:.9rem .5rem;text-align:center;
+  border-right:1px solid rgba(255,255,255,.06);
+}
+.stat:last-child{border-right:none}
+.stat-num{font-size:1.15rem;font-weight:800;color:#fff;line-height:1}
+.stat-lbl{font-size:.68rem;color:rgba(255,255,255,.35);margin-top:.3rem;font-weight:500}
+
+/* ── LINKS ── */
+.links{width:100%;display:flex;flex-direction:column;gap:.75rem;margin-bottom:2rem}
+
+.link-btn{
+  display:flex;align-items:center;gap:.9rem;
+  width:100%;padding:.95rem 1.25rem;border-radius:14px;
+  text-decoration:none;font-weight:600;font-size:.9rem;
+  transition:transform .2s,box-shadow .2s,opacity .2s;
+  position:relative;overflow:hidden;
+}
+.link-btn:hover{transform:translateY(-2px)}
+.link-btn::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(255,255,255,.06),transparent);
+  opacity:0;transition:opacity .2s;
+}
+.link-btn:hover::before{opacity:1}
+
+.link-ico{
+  width:38px;height:38px;border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.1rem;flex-shrink:0;
+}
+
+.link-text{flex:1}
+.link-title{font-size:.88rem;font-weight:700;display:block;line-height:1.2}
+.link-sub{font-size:.72rem;opacity:.65;font-weight:400;margin-top:.1rem;display:block}
+
+.link-arrow{font-size:.8rem;opacity:.5;flex-shrink:0}
+
+/* Button variants */
+.btn-wa{background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.25);color:#4ade80}
+.btn-wa .link-ico{background:rgba(34,197,94,.15)}
+.btn-wa:hover{box-shadow:0 8px 30px rgba(34,197,94,.15)}
+
+.btn-portfolio{background:rgba(99,102,241,.12);border:1px solid rgba(99,102,241,.25);color:#a5b4fc}
+.btn-portfolio .link-ico{background:rgba(99,102,241,.15)}
+.btn-portfolio:hover{box-shadow:0 8px 30px rgba(99,102,241,.15)}
+
+.btn-insta{background:rgba(236,72,153,.1);border:1px solid rgba(236,72,153,.2);color:#f9a8d4}
+.btn-insta .link-ico{background:rgba(236,72,153,.12)}
+.btn-insta:hover{box-shadow:0 8px 30px rgba(236,72,153,.12)}
+
+.btn-mail{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);color:rgba(255,255,255,.7)}
+.btn-mail .link-ico{background:rgba(255,255,255,.07)}
+.btn-mail:hover{box-shadow:0 8px 30px rgba(255,255,255,.05)}
+
+.btn-linkedin{background:rgba(14,118,188,.12);border:1px solid rgba(14,118,188,.25);color:#7dd3fc}
+.btn-linkedin .link-ico{background:rgba(14,118,188,.15)}
+.btn-linkedin:hover{box-shadow:0 8px 30px rgba(14,118,188,.12)}
+
+/* ── SKILLS ── */
+.section-lbl{
+  font-size:.72rem;font-weight:700;text-transform:uppercase;
+  letter-spacing:.12em;color:rgba(255,255,255,.3);
+  margin-bottom:.85rem;align-self:flex-start;
+}
+.skills{display:flex;flex-wrap:wrap;gap:.5rem;width:100%;margin-bottom:2rem}
+.skill{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:50px;padding:.3rem .85rem;
+  font-size:.75rem;color:rgba(255,255,255,.55);font-weight:500;
+}
+.skill.hi{background:rgba(99,102,241,.1);border-color:rgba(99,102,241,.2);color:#a5b4fc}
+
+/* ── AVAILABILITY BADGE ── */
+.avail{
+  display:inline-flex;align-items:center;gap:.5rem;
+  background:rgba(34,197,94,.08);
+  border:1px solid rgba(34,197,94,.2);
+  border-radius:50px;padding:.45rem 1rem;
+  font-size:.78rem;font-weight:600;color:#4ade80;
+  margin-bottom:2rem;
+  animation:pulse 2.5s ease infinite;
+}
+.avail-dot{width:7px;height:7px;border-radius:50%;background:#22c55e;flex-shrink:0}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(34,197,94,.3)}50%{box-shadow:0 0 0 6px rgba(34,197,94,0)}}
+
+/* ── WORKED WITH ── */
+.worked-wrap{width:100%;margin-bottom:2rem}
+.worked-logos{display:flex;flex-wrap:wrap;gap:.55rem;width:100%}
+.worked-logo{
+  display:flex;align-items:center;gap:.5rem;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:10px;padding:.45rem .9rem;
+  font-size:.75rem;color:rgba(255,255,255,.5);font-weight:600;
+  transition:background .2s,border-color .2s;
+}
+.worked-logo:hover{background:rgba(99,102,241,.1);border-color:rgba(99,102,241,.25);color:#a5b4fc}
+.worked-logo .wl-ico{font-size:1rem}
+
+/* ── TESTIMONIALS ── */
+.testi-wrap{width:100%;display:flex;flex-direction:column;gap:.85rem;margin-bottom:2rem}
+.testi-card{
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:16px;padding:1.1rem 1.15rem;
+  transition:border-color .2s,background .2s;
+}
+.testi-card:hover{background:rgba(99,102,241,.05);border-color:rgba(99,102,241,.2)}
+.testi-top{display:flex;align-items:center;gap:.75rem;margin-bottom:.75rem}
+.testi-av{
+  width:38px;height:38px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:.95rem;font-weight:800;color:#fff;flex-shrink:0;
+}
+.testi-info{}
+.testi-name{font-size:.85rem;font-weight:700;color:rgba(255,255,255,.85);line-height:1.2}
+.testi-role{font-size:.7rem;color:rgba(255,255,255,.35);margin-top:.1rem}
+.testi-stars{margin-left:auto;font-size:.8rem;letter-spacing:.1rem;color:#fbbf24;flex-shrink:0}
+.testi-text{font-size:.82rem;color:rgba(255,255,255,.45);line-height:1.75;font-style:italic}
+.testi-text::before{content:'"';font-size:1.1rem;color:rgba(99,102,241,.5);font-style:normal}
+.testi-text::after{content:'"';font-size:1.1rem;color:rgba(99,102,241,.5);font-style:normal}
+
+/* ── CV / RESUME CARD ── */
+.cv-card{
+  width:100%;
+  background:rgba(99,102,241,.07);
+  border:1px solid rgba(99,102,241,.2);
+  border-radius:14px;
+  padding:.85rem 1.1rem;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:.75rem;
+  margin-bottom:1.25rem;
+}
+.cv-label{
+  display:flex;align-items:center;gap:.5rem;
+  font-size:.82rem;font-weight:700;color:#a5b4fc;
+}
+.cv-label .cv-ico{font-size:1rem}
+.cv-actions{display:flex;gap:.5rem;flex-shrink:0}
+.cv-btn{
+  display:flex;align-items:center;gap:.35rem;
+  padding:.4rem .85rem;border-radius:8px;
+  font-size:.75rem;font-weight:600;
+  text-decoration:none;cursor:pointer;border:none;font-family:'Plus Jakarta Sans',sans-serif;
+  transition:background .2s,transform .2s;
+}
+.cv-btn:hover{transform:translateY(-1px)}
+.cv-btn-view{background:rgba(99,102,241,.15);border:1px solid rgba(99,102,241,.3);color:#a5b4fc}
+.cv-btn-view:hover{background:rgba(99,102,241,.25)}
+.cv-btn-dl{background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff;border:none}
+.cv-btn-dl:hover{opacity:.88}
+.float-contact{
+  position:fixed;bottom:1.5rem;right:1.5rem;
+  display:flex;align-items:center;gap:.6rem;
+  background:linear-gradient(135deg,#6366f1,#8b5cf6);
+  color:#fff;text-decoration:none;
+  padding:.7rem 1.2rem;border-radius:50px;
+  font-size:.85rem;font-weight:700;
+  box-shadow:0 8px 30px rgba(99,102,241,.4);
+  z-index:999;
+  transition:transform .2s,box-shadow .2s;
+  animation:floatIn .6s ease .8s both;
+}
+.float-contact:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(99,102,241,.55)}
+.float-contact .fc-ico{font-size:1.05rem}
+@keyframes floatIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── WATERMARK / FOOTER ── */
+.watermark{
+  width:100%;text-align:center;padding:1.25rem 0 .5rem;
+  border-top:1px solid rgba(255,255,255,.05);
+  margin-top:.5rem;
+}
+.watermark a{
+  display:inline-flex;align-items:center;gap:.45rem;
+  text-decoration:none;
+  font-size:.75rem;color:rgba(255,255,255,.2);
+  font-weight:500;
+  transition:color .2s;
+}
+.watermark a:hover{color:rgba(255,255,255,.45)}
+.watermark a span{
+  background:linear-gradient(135deg,#6366f1,#06b6d4);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  font-weight:700;
+}
+
+/* ── ANIMATIONS ── */
+.wrap > *{
+  animation:fadeUp .5s ease both;
+}
+.wrap > *:nth-child(1){animation-delay:.05s}
+.wrap > *:nth-child(2){animation-delay:.1s}
+.wrap > *:nth-child(3){animation-delay:.13s}
+.wrap > *:nth-child(4){animation-delay:.16s}
+.wrap > *:nth-child(5){animation-delay:.19s}
+.wrap > *:nth-child(6){animation-delay:.22s}
+.wrap > *:nth-child(7){animation-delay:.25s}
+.wrap > *:nth-child(8){animation-delay:.28s}
+.wrap > *:nth-child(9){animation-delay:.31s}
+.wrap > *:nth-child(10){animation-delay:.34s}
+.wrap > *:nth-child(11){animation-delay:.37s}
+.wrap > *:nth-child(12){animation-delay:.40s}
+.wrap > *:nth-child(13){animation-delay:.43s}
+.wrap > *:nth-child(14){animation-delay:.46s}
+.wrap > *:nth-child(15){animation-delay:.49s}
+.wrap > *:nth-child(16){animation-delay:.52s}
+.wrap > *:nth-child(17){animation-delay:.55s}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── MOBILE ── */
+@media(max-width:480px){
+  .wrap{padding:2.5rem 1.25rem 1.5rem}
+  .name{font-size:1.5rem}
+}
+</style>
+</head>
+<body>
+
+<div class="bg-accent"></div>
+
+<div class="wrap">
+
+  <!-- AVATAR -->
+  <div class="avatar-wrap">
+    <div class="avatar">
+      <img src="https://i.ibb.co/n8LdfSDm/IMG-20260414-055513-136.jpg" alt="Rahul Sharma" onerror="this.style.display='none';this.parentNode.innerHTML+='R'">
+    </div>
+    <div class="avatar-ring"></div>
+    <div class="status-dot"></div>
+  </div>
+
+  <!-- NAME -->
+  <div class="name">Rahul Sharma</div>
+  <div class="role">Freelance Graphic Designer</div>
+  <div class="location">&#128205; Mumbai, India</div>
+
+  <!-- CV / RESUME -->
+  <div class="cv-card">
+    <div class="cv-label">
+      <span class="cv-ico">&#128196;</span> CV / Resume
+    </div>
+    <div class="cv-actions">
+      <a href="https://drive.google.com/your-resume-link-here" target="_blank" class="cv-btn cv-btn-view">
+        &#128065; View
+      </a>
+      <a href="https://drive.google.com/uc?export=download&id=your-file-id-here" download="Rahul_Sharma_Resume.pdf" class="cv-btn cv-btn-dl">
+        &#11015; Download
+      </a>
+    </div>
+  </div>
+
+  <!-- AVAILABILITY -->
+  <div class="avail">
+    <div class="avail-dot"></div>
+    Available for freelance work
+  </div>
+
+  <!-- BIO -->
+  <div class="bio">
+    Hey! I'm Rahul — a graphic designer with 4+ years of experience crafting brands, social media content, and visual identities that actually convert. Let's build something great together. &#128640;
+  </div>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-num">4+</div>
+      <div class="stat-lbl">Years Exp</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">120+</div>
+      <div class="stat-lbl">Projects</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">50+</div>
+      <div class="stat-lbl">Happy Clients</div>
+    </div>
+  </div>
+
+  <!-- LINKS -->
+  <div class="links">
+
+    <a href="https://wa.me/919999999999" target="_blank" class="link-btn btn-wa">
+      <div class="link-ico">&#128172;</div>
+      <div class="link-text">
+        <span class="link-title">WhatsApp Me</span>
+        <span class="link-sub">Let's discuss your project</span>
+      </div>
+      <span class="link-arrow">&#8250;</span>
+    </a>
+
+    <a href="#" target="_blank" class="link-btn btn-portfolio">
+      <div class="link-ico">&#128188;</div>
+      <div class="link-text">
+        <span class="link-title">View My Portfolio</span>
+        <span class="link-sub">Branding, posters, UI designs</span>
+      </div>
+      <span class="link-arrow">&#8250;</span>
+    </a>
+
+    <a href="#" target="_blank" class="link-btn btn-insta">
+      <div class="link-ico">&#128247;</div>
+      <div class="link-text">
+        <span class="link-title">Instagram</span>
+        <span class="link-sub">@rahul.designs</span>
+      </div>
+      <span class="link-arrow">&#8250;</span>
+    </a>
+
+    <a href="#" target="_blank" class="link-btn btn-linkedin">
+      <div class="link-ico">&#128279;</div>
+      <div class="link-text">
+        <span class="link-title">LinkedIn</span>
+        <span class="link-sub">Connect professionally</span>
+      </div>
+      <span class="link-arrow">&#8250;</span>
+    </a>
+
+    <a href="mailto:rahul@example.com" class="link-btn btn-mail">
+      <div class="link-ico">&#9993;&#65039;</div>
+      <div class="link-text">
+        <span class="link-title">Email Me</span>
+        <span class="link-sub">rahul@example.com</span>
+      </div>
+      <span class="link-arrow">&#8250;</span>
+    </a>
+
+  </div>
+
+  <!-- SKILLS -->
+  <div class="section-lbl">&#9889; Skills</div>
+  <div class="skills">
+    <span class="skill hi">Branding</span>
+    <span class="skill hi">Logo Design</span>
+    <span class="skill hi">Social Media</span>
+    <span class="skill">Figma</span>
+    <span class="skill">Canva Pro</span>
+    <span class="skill">Photoshop</span>
+    <span class="skill">Illustrator</span>
+    <span class="skill">UI Design</span>
+    <span class="skill">Poster Design</span>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- WORKED WITH -->
+  <div class="section-lbl">&#127931; Worked With</div>
+  <div class="worked-wrap">
+    <div class="worked-logos">
+      <div class="worked-logo"><span class="wl-ico">&#128722;</span> StartupX</div>
+      <div class="worked-logo"><span class="wl-ico">&#127968;</span> ZestBrands</div>
+      <div class="worked-logo"><span class="wl-ico">&#128640;</span> LaunchPad Co.</div>
+      <div class="worked-logo"><span class="wl-ico">&#127803;</span> GreenLeaf Org</div>
+      <div class="worked-logo"><span class="wl-ico">&#128248;</span> PixelMedia</div>
+      <div class="worked-logo"><span class="wl-ico">&#128091;</span> BrandBlast</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- TESTIMONIALS -->
+  <div class="section-lbl">&#11088; What Clients Say</div>
+  <div class="testi-wrap">
+
+    <div class="testi-card">
+      <div class="testi-top">
+        <div class="testi-av" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">A</div>
+        <div class="testi-info">
+          <div class="testi-name">Arjun Mehta</div>
+          <div class="testi-role">Founder, StartupX</div>
+        </div>
+        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      </div>
+      <div class="testi-text">Rahul completely transformed our brand identity. The logo and social media kit he delivered exceeded our expectations. Super fast, super professional.</div>
+    </div>
+
+    <div class="testi-card">
+      <div class="testi-top">
+        <div class="testi-av" style="background:linear-gradient(135deg,#10b981,#06b6d4)">P</div>
+        <div class="testi-info">
+          <div class="testi-name">Pooja Nair</div>
+          <div class="testi-role">Marketing Head, ZestBrands</div>
+        </div>
+        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      </div>
+      <div class="testi-text">We hired Rahul for our product launch campaign — Instagram creatives, banners, everything. Results were amazing. 3x engagement in the first week!</div>
+    </div>
+
+    <div class="testi-card">
+      <div class="testi-top">
+        <div class="testi-av" style="background:linear-gradient(135deg,#8b5cf6,#ec4899)">S</div>
+        <div class="testi-info">
+          <div class="testi-name">Sahil Kapoor</div>
+          <div class="testi-role">CEO, PixelMedia</div>
+        </div>
+        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      </div>
+      <div class="testi-text">Best designer I've worked with in years. Understands the brief perfectly and always delivers on time. Will definitely work again.</div>
+    </div>
+
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- WATERMARK -->
+  <div class="watermark">
+    <a href="https://profilix.in" target="_blank">
+      Powered by <span>Profilix.in</span> &nbsp;&#128640;
+    </a>
+  </div>
+
+</div>
+
+<!-- FLOATING CONTACT BUTTON -->
+<a href="https://wa.me/919999999999?text=Hi%20Rahul%2C%20I%20saw%20your%20profile%20and%20I%27d%20like%20to%20discuss%20a%20project" target="_blank" class="float-contact">
+  <span class="fc-ico">&#128172;</span> Contact Me
+</a>
+
+</body>
+</html>
